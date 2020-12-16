@@ -393,6 +393,7 @@ var CBINetworkSelect = form.ListValue.extend({
 			select_placeholder: E('em', _('unspecified')),
 			display_items: this.display_size || this.size || 3,
 			dropdown_items: this.dropdown_size || this.size || 5,
+			datatype: this.multiple ? 'list(uciname)' : 'uciname',
 			validate: L.bind(this.validate, this, section_id),
 			create: !this.nocreate,
 			create_markup: '' +
@@ -580,6 +581,8 @@ var CBIUserSelect = form.ListValue.extend({
 
 	load: function(section_id) {
 		return getUsers().then(L.bind(function(users) {
+			delete this.keylist;
+			delete this.vallist;
 			for (var i = 0; i < users.length; i++) {
 				this.value(users[i]);
 			}

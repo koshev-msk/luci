@@ -1224,6 +1224,22 @@ Network = baseclass.extend(/** @lends LuCI.network.prototype */ {
 				devices[netid] = this.instantiateDevice(netid);
 			}
 
+			/* find uci declared devices */
+			var uciDevices = uci.sections('network', 'device');
+
+			for (var i = 0; i < uciDevices.length; i++) {
+				var type = uciDevices[i].type,
+				    name = uciDevices[i].name;
+
+				if (!type || !name || devices.hasOwnProperty(name))
+					continue;
+
+				if (type == 'bridge')
+					_state.isBridge[name] = true;
+
+				devices[name] = this.instantiateDevice(name);
+			}
+
 			var rv = [];
 
 			for (var netdev in devices)
@@ -3555,6 +3571,24 @@ WifiNetwork = baseclass.extend(/** @lends LuCI.network.WifiNetwork.prototype */ 
 	},
 
 	/**
+	 * Get the Linux VLAN network device names.
+	 *
+	 * @returns {string[]}
+	 * Returns the current Linux VLAN network device name as resolved
+	 * from `ubus` runtime information or empty array if this network
+	 * has no associated VLAN network devices.
+	 */
+	getVlanIfnames: function() {
+		var vlans = L.toArray(this.ubus('net', 'vlans')),
+		    ifnames = [];
+
+		for (var i = 0; i < vlans.length; i++)
+			ifnames.push(vlans[i]['ifname']);
+
+		return ifnames;
+	},
+
+	/**
 	 * Get the name of the corresponding wifi radio device.
 	 *
 	 * @returns {null|string}
@@ -3864,7 +3898,15 @@ WifiNetwork = baseclass.extend(/** @lends LuCI.network.WifiNetwork.prototype */ 
 	 * with this network.
 	 */
 	getAssocList: function() {
-		return callIwinfoAssoclist(this.getIfname());
+		var tasks = [];
+		var ifnames = [ this.getIfname() ].concat(this.getVlanIfnames());
+
+		for (var i = 0; i < ifnames.length; i++)
+			tasks.push(callIwinfoAssoclist(ifnames[i]));
+
+		return Promise.all(tasks).then(function(values) {
+			return Array.prototype.concat.apply([], values);
+		});
 	},
 
 	/**

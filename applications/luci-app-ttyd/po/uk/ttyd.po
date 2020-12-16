@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-02-18 11:32+0000\n"
+"PO-Revision-Date: 2020-09-04 13:36+0000\n"
 "Last-Translator: Olexandr Nesterenko <olexn@ukr.net>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsttyd/uk/>\n"
 "Language: uk\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.11\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:56
 msgid "Accept only one client and exit on disconnection"
@@ -37,7 +37,7 @@ msgstr ""
 msgid "Client option"
 msgstr ""
 
-#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:76
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:80
 msgid "Command"
 msgstr "Команда"
 
@@ -81,6 +81,10 @@ msgstr "Увімкнути підтримку IPv6"
 msgid "Enable SSL"
 msgstr "Увімкнути SSL"
 
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:74
+msgid "Error"
+msgstr "Помилка"
+
 #: applications/luci-app-ttyd/root/usr/share/rpcd/acl.d/luci-app-ttyd.json:3
 msgid "Grant UCI access for luci-app-ttyd"
 msgstr ""
@@ -101,6 +105,10 @@ msgstr "IPv6"
 msgid "Index"
 msgstr "Індекс"
 
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:77
+msgid "Info"
+msgstr "Інформація"
+
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:24
 msgid "Interface"
 msgstr "Інтерфейс"
@@ -118,6 +126,10 @@ msgid ""
 "Network interface to bind (eg: eth0), or UNIX domain socket path (eg: /var/"
 "run/ttyd.sock)"
 msgstr ""
+
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:76
+msgid "Notice"
+msgstr "Зауваження"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:56
 msgid "Once"
@@ -185,6 +197,7 @@ msgstr "Сигнал"
 msgid "Signal to send to the command when exit it (default: 1, SIGHUP)"
 msgstr ""
 
+#: applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json:3
 #: applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json:14
 msgid "Terminal"
 msgstr "Термінал"
@@ -205,9 +218,9 @@ msgstr ""
 msgid "User id to run with"
 msgstr ""
 
-#: applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json:3
-msgid "ttyd"
-msgstr ""
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:75
+msgid "Warning"
+msgstr "Застереження"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:12
 msgid "ttyd Instance"

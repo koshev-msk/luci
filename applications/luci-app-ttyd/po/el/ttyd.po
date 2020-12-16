@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-11-23 18:06+0000\n"
-"Last-Translator: lamprakis <lamprakisa@yahoo.gr>\n"
+"PO-Revision-Date: 2020-12-01 16:16+0000\n"
+"Last-Translator: Marios Koutsoukis <marioskoutsoukis2006@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsttyd/el/>\n"
 "Language: el\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:56
 msgid "Accept only one client and exit on disconnection"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Client option"
 msgstr ""
 
-#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:76
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:80
 msgid "Command"
 msgstr ""
 
@@ -70,7 +70,7 @@ msgstr ""
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:17
 msgid "Enable"
-msgstr ""
+msgstr "Ενεργοποίηση"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:60
 msgid "Enable IPv6 support"
@@ -78,6 +78,10 @@ msgstr ""
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:62
 msgid "Enable SSL"
+msgstr ""
+
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:74
+msgid "Error"
 msgstr ""
 
 #: applications/luci-app-ttyd/root/usr/share/rpcd/acl.d/luci-app-ttyd.json:3
@@ -100,6 +104,10 @@ msgstr ""
 msgid "Index"
 msgstr ""
 
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:77
+msgid "Info"
+msgstr ""
+
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:24
 msgid "Interface"
 msgstr "Διεπαφή"
@@ -118,13 +126,17 @@ msgid ""
 "run/ttyd.sock)"
 msgstr ""
 
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:76
+msgid "Notice"
+msgstr ""
+
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:56
 msgid "Once"
 msgstr ""
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:20
 msgid "Port"
-msgstr ""
+msgstr "Θύρα"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:20
 msgid "Port to listen (default: 7681, use `0` for random port)"
@@ -184,6 +196,7 @@ msgstr ""
 msgid "Signal to send to the command when exit it (default: 1, SIGHUP)"
 msgstr ""
 
+#: applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json:3
 #: applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json:14
 msgid "Terminal"
 msgstr ""
@@ -204,8 +217,8 @@ msgstr ""
 msgid "User id to run with"
 msgstr ""
 
-#: applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json:3
-msgid "ttyd"
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:75
+msgid "Warning"
 msgstr ""
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:12

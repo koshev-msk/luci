@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LuCI: aria2\n"
 "POT-Creation-Date: 2017-11-30 23:45+0300\n"
-"PO-Revision-Date: 2020-06-07 15:48+0000\n"
-"Last-Translator: Artem <KovalevArtem.ru@gmail.com>\n"
+"PO-Revision-Date: 2020-09-29 14:41+0000\n"
+"Last-Translator: sergio <sergio+it@outerface.net>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsaria2/ru/>\n"
 "Language: ru\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.3-dev\n"
 "Project-Info: Это технический перевод, не дословный. Главное-удобный русский "
 "интерфейс, все проверялось в графическом режиме, совместим с другими apps\n"
 
@@ -22,15 +22,15 @@ msgstr "<abbr title=\"Обнаружение локальных пиров\">LPD
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:414
 msgid "Additional BT tracker"
-msgstr ""
+msgstr "Дополнительный BT трекер"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:419
 msgid "Advanced Options"
-msgstr ""
+msgstr "Расширенные параметры"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:169
 msgid "All proxy"
-msgstr ""
+msgstr "Все прокси"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:228
 msgid "Append HEADERs to HTTP request header."
@@ -51,15 +51,15 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:428
 msgid "Auto save interval"
-msgstr ""
+msgstr "Интервал автосохранения"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:56
 msgid "Basic Options"
-msgstr ""
+msgstr "Основные параметры"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:276
 msgid "BitTorrent Options"
-msgstr ""
+msgstr "Параметры BitTorrent"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:335
 msgid "BitTorrent listen port"
@@ -71,11 +71,11 @@ msgstr "Сертификат удостоверяющего центра"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:195
 msgid "Certificate"
-msgstr ""
+msgstr "Сертификат"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:182
 msgid "Check certificate"
-msgstr ""
+msgstr "Проверить сертификат"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:242
 msgid ""
@@ -98,7 +98,7 @@ msgstr "Конфигурация"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:230
 msgid "Connect timeout"
-msgstr ""
+msgstr "Тайм-аут подключения"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/files.lua:19
 msgid "Content of config file: <code>%s</code>"
@@ -141,7 +141,7 @@ msgstr "Папка для загрузки"
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/files.lua:26
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/files.lua:36
 msgid "Empty file."
-msgstr ""
+msgstr "Пустой файл."
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:280
 msgid "Enable IPv4 DHT functionality. It also enables UDP tracker support."
@@ -169,11 +169,11 @@ msgstr "Включить ведение системного журнала"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:305
 msgid "Enable peer exchange"
-msgstr ""
+msgstr "Включить обмен пирами"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:166
 msgid "Enable proxy"
-msgstr ""
+msgstr "Включить прокси"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:58
 msgid "Enabled"
@@ -201,17 +201,17 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:447
 msgid "File allocation"
-msgstr ""
+msgstr "Расположение файла"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/files.lua:25
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/files.lua:35
 msgid "File does not exist."
-msgstr ""
+msgstr "Файл не существует."
 
 #: applications/luci-app-aria2/luasrc/controller/aria2.lua:25
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/files.lua:14
 msgid "Files"
-msgstr ""
+msgstr "Файлы"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:348
 msgid "Follow torrent"
@@ -247,7 +247,7 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:227
 msgid "Header"
-msgstr ""
+msgstr "Заголовок"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/files.lua:15
 msgid "Here shows the files used by aria2."
@@ -263,7 +263,7 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:421
 msgid "IPv6 disabled"
-msgstr ""
+msgstr "Протокол IPv6 отключен"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:379
 msgid ""
@@ -279,7 +279,7 @@ msgstr "Информация"
 
 #: applications/luci-app-aria2/luasrc/view/aria2/settings_header.htm:33
 msgid "Installed web interface:"
-msgstr ""
+msgstr "Установленный веб-интерфейс:"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:158
 msgid "Json-RPC URL"
@@ -287,7 +287,7 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:351
 msgid "Keep in memory"
-msgstr ""
+msgstr "Хранить в памяти"
 
 #: applications/luci-app-aria2/luasrc/view/aria2/log_template.htm:34
 msgid "Last 50 lines of log file:"
@@ -299,7 +299,7 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:62
 msgid "Leave blank to use default user."
-msgstr ""
+msgstr "Оставьте пустым, чтобы использовать пользователя по умолчанию."
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:415
 msgid "List of additional BitTorrent tracker's announce URI."
@@ -329,7 +329,7 @@ msgstr "Файл журнала приложения"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:85
 msgid "Log level"
-msgstr "Записывать в журнал"
+msgstr "Уровень журналирования"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:240
 msgid "Lowest speed limit"
@@ -394,11 +394,11 @@ msgstr "Ничего"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:89
 msgid "Notice"
-msgstr "Заметка"
+msgstr "Сообщение"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:99
 msgid "Pause"
-msgstr ""
+msgstr "Пауза"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:99
 msgid "Pause download after added."
@@ -426,15 +426,15 @@ msgstr "Приватный ключ"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:177
 msgid "Proxy password"
-msgstr ""
+msgstr "Пароль прокси-сервера"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:174
 msgid "Proxy user"
-msgstr ""
+msgstr "Пользователь прокси-сервера"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:97
 msgid "RPC Options"
-msgstr ""
+msgstr "Параметры RPC"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:114
 msgid "RPC authentication method"
@@ -442,7 +442,7 @@ msgstr "Метод аутентификации для доступа к уда�
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:140
 msgid "RPC certificate"
-msgstr ""
+msgstr "Сертификат RPC"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:122
 msgid "RPC password"
@@ -454,7 +454,7 @@ msgstr "Порт для доступа к удаленному управлен�
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:149
 msgid "RPC private key"
-msgstr ""
+msgstr "Закрытый ключ RPC"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:133
 msgid "RPC secure"
@@ -476,7 +476,7 @@ msgstr "Логин для доступа к удаленному управле�
 
 #: applications/luci-app-aria2/luasrc/view/aria2/log_template.htm:51
 msgid "Refresh every 10 seconds."
-msgstr ""
+msgstr "Обновлять каждые 10 секунд."
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:322
 msgid "Remove unselected file"
@@ -499,7 +499,7 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:61
 msgid "Run daemon as user"
-msgstr "Запуск демона с правами пользователя"
+msgstr "Запуск демона от имени пользователя"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:429
 msgid ""
@@ -529,7 +529,7 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:315
 msgid "Save metadata"
-msgstr ""
+msgstr "Сохранить метаданные"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:434
 msgid "Save session interval"
@@ -545,7 +545,7 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:408
 msgid "Seed time"
-msgstr ""
+msgstr "Время раздачи"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:329
 msgid "Seed unverified"
@@ -572,6 +572,9 @@ msgid ""
 "\"6881-6999\" and \"6881-6889,6999\". Make sure that the specified ports are "
 "open for incoming TCP traffic."
 msgstr ""
+"Установить TCP порт для BitTorrent загрузок. Допустимые форматы: \"6881,"
+"6885\", \"6881-6999\" и \"6881-6889,6999\". Убедитесь что указанные порты "
+"открыты для входящего TCP трафика."
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:342
 msgid ""
@@ -622,11 +625,11 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:487
 msgid "Settings list"
-msgstr ""
+msgstr "Список настроек"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:161
 msgid "Show URL"
-msgstr ""
+msgstr "Показать URL-адрес"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:448
 msgid ""
@@ -662,6 +665,8 @@ msgstr ""
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:373
 msgid "Specify the maximum number of peers per torrent, 0 means unlimited."
 msgstr ""
+"Укажите максимальное количество пиров для каждого торрента, 0 значит "
+"неограниченно."
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:394
 msgid ""
@@ -732,7 +737,7 @@ msgstr "Использовать WebSockets"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:170
 msgid "Use a proxy server for all protocols."
-msgstr ""
+msgstr "Использовать прокси-сервер для всех протоколов."
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:190
 msgid ""
@@ -772,7 +777,7 @@ msgstr ""
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:271
 msgid "User agent"
-msgstr ""
+msgstr "User agent"
 
 #: applications/luci-app-aria2/luasrc/model/cbi/aria2/config.lua:116
 msgid "Username & Password"

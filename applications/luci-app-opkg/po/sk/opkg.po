@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2020-04-04 17:34+0000\n"
+"PO-Revision-Date: 2020-09-29 14:41+0000\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsopkg/sk/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:1044
 msgid "Actions"
@@ -22,7 +22,7 @@ msgstr "Automatické odstránenie nepoužitých závislostí"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:1054
 msgid "Available"
-msgstr "Dostupné"
+msgstr "Dostupný"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:775
 msgid ""
@@ -68,7 +68,7 @@ msgstr "Podrobnosti balíka <em>%h</em>"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:923
 msgid "Dismiss"
-msgstr "Zamietnuť"
+msgstr "Zahodiť"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:332
 msgid "Displaying %d-%d of %d"
@@ -96,7 +96,7 @@ msgstr "Voľné miesto"
 
 #: applications/luci-app-opkg/root/usr/share/rpcd/acl.d/luci-app-opkg.json:3
 msgid "Grant access to opkg management"
-msgstr ""
+msgstr "Poskytnite prístup k správe opkg"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:705
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:721
@@ -317,7 +317,7 @@ msgstr "Inovovať…"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:1047
 msgid "Upload Package…"
-msgstr "Nahrať balík…"
+msgstr "Odovzdať balík…"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:682
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:842

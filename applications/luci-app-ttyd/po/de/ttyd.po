@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-27 21:41+0000\n"
-"Last-Translator: Paul Spooren <mail@aparcar.org>\n"
+"PO-Revision-Date: 2020-10-10 13:26+0000\n"
+"Last-Translator: Sandro Volery <sandro@volery.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsttyd/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:56
 msgid "Accept only one client and exit on disconnection"
@@ -36,7 +36,7 @@ msgstr "Prüfe Quelle"
 msgid "Client option"
 msgstr "Client Option"
 
-#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:76
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:80
 msgid "Command"
 msgstr "Befehl"
 
@@ -80,9 +80,13 @@ msgstr "IPv6 Unterstützung aktivieren"
 msgid "Enable SSL"
 msgstr "SSL aktivieren"
 
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:74
+msgid "Error"
+msgstr "Fehler"
+
 #: applications/luci-app-ttyd/root/usr/share/rpcd/acl.d/luci-app-ttyd.json:3
 msgid "Grant UCI access for luci-app-ttyd"
-msgstr ""
+msgstr "Gewähre UCI Zugriff auf luci-app-ttyd"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:34
 msgid "Group ID"
@@ -99,6 +103,10 @@ msgstr "IPv6"
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:58
 msgid "Index"
 msgstr "Index"
+
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:77
+msgid "Info"
+msgstr "Info"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:24
 msgid "Interface"
@@ -117,6 +125,10 @@ msgid ""
 "Network interface to bind (eg: eth0), or UNIX domain socket path (eg: /var/"
 "run/ttyd.sock)"
 msgstr ""
+
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:76
+msgid "Notice"
+msgstr "Notiz"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:56
 msgid "Once"
@@ -184,6 +196,7 @@ msgstr "Signal"
 msgid "Signal to send to the command when exit it (default: 1, SIGHUP)"
 msgstr ""
 
+#: applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json:3
 #: applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json:14
 msgid "Terminal"
 msgstr ""
@@ -204,10 +217,13 @@ msgstr "Benutzer ID"
 msgid "User id to run with"
 msgstr ""
 
-#: applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json:3
-msgid "ttyd"
-msgstr "ttyd"
+#: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:75
+msgid "Warning"
+msgstr "Warnung"
 
 #: applications/luci-app-ttyd/htdocs/luci-static/resources/view/ttyd/config.js:12
 msgid "ttyd Instance"
 msgstr "ttyd Instanz"
+
+#~ msgid "ttyd"
+#~ msgstr "ttyd"
