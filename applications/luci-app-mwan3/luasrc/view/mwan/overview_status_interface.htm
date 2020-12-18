@@ -23,7 +23,7 @@ XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface
 			var statusDiv = document.getElementById('mwan_status_text');
 			if (status.interfaces)
 			{
-				var statusview = '<div class="cbi-section" style=""><div class="table"><div class="tr cbi-rowstyle-2"><div class="td left" width="33%"><strong><%:Interface></strong></div><div class="td left" width="33%"><strong><%:Status></strong></div><div class="td left" width="33%"><strong><%:Time></strong></div></div>';
+				var statusview = '<div class="cbi-section" style=""><div class="table"><div class="tr cbi-rowstyle-2"><div class="td left" width="33%"><strong><%:Interface%></strong></div><div class="td left" width="33%"><strong><%:Status%></strong></div><div class="td left" width="33%"><strong><%:Upime%></strong></div></div>';
 				for ( var iface in status.interfaces)
 				{
 					if (row_style == 2) {
