@@ -19,48 +19,54 @@ function secondsToString(time) {
 XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface_status")%>', null,
 		function(x, status)
 		{
+			var row_style='2';
 			var statusDiv = document.getElementById('mwan_status_text');
 			if (status.interfaces)
 			{
-				var statusview = '';
+				var statusview = '<div class="cbi-section" style=""><div class="table"><div class="tr cbi-rowstyle-2"><div class="td left" width="33%"><strong>Interface</strong></div><div class="td left" width="33%"><strong>Status</strong></div><div class="td left" width="33%"><strong>Time</strong></div></div>';
 				for ( var iface in status.interfaces)
 				{
+					if (row_style == 2) {
+						var row_style = '1';
+					} else {
+						var row_style = '2';
+					}
 					var state = '';
 					var css = '';
 					var time = '';
 					switch (status.interfaces[iface].status)
 					{
 						case 'online':
-							state = '<%:Online%>';
+							state = '<strong><p style="color:green"><b><%:Online%></b></p></strong>';
 							time = String.format(
-								'<div><strong>Uptime: </strong>%s</div>',
+								'<div class="td">%s</div>',
 								secondsToString(status.interfaces[iface].online)
 							);
 							css = 'success';
 							break;
 						case 'offline':
-							state = '<%:Offline%>';
+							state = '<strong><p style="color:red"><b><%:Offline%></b></p></strong>';
 							time = String.format(
-								'<div><strong>Downtime: </strong>%s</div>',
+								'<div class="td">%s</div>',
 								secondsToString(status.interfaces[iface].offline)
 							);
 							css = 'danger';
 							break;
 						default:
-							state = '<%:Disabled%>';
+							state = '<strong><p style="color:black"><b><%:Disabled%></b></p></strong>';
 							css = 'warning';
 							break;
 					}
 					statusview += String.format(
-						'<div class="alert-message %s">',
-						css
+						'<div class="tr cbi-rowstyle-%s">',
+						row_style
 					);
 					statusview += String.format(
-						'<div><strong>Interface: </strong>%s</div>',
+						'<div class="td"><span class="ifacebadge">%s</span></div>',
 						iface
 					);
 					statusview += String.format(
-						'<div><strong>Status: </strong>%s</div>',
+						'<div class="td">%s</div>',
 						state
 					);
 					if (time)
@@ -79,16 +85,6 @@ XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface
 	);
 //]]></script>
 
-<style type="text/css">
-	#mwan_status_text > div {
-		display: inline-block;
-		margin: 1rem;
-		padding: 1rem;
-		width: 10rem;
-		float: left;
-		line-height: 125%;
-	}
-</style>
 
 <fieldset id="interface_field" class="cbi-section">
 	<legend><%:MWAN Interfaces%></legend>
