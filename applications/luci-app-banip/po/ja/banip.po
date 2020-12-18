@@ -1,22 +1,22 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-13 22:13+0000\n"
-"Last-Translator: Satoru Yoshida <ramat@ram.ne.jp>\n"
+"PO-Revision-Date: 2020-11-04 00:27+0000\n"
+"Last-Translator: RyotaGamer <21ryotagamer@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsbanip/ja/>\n"
 "Language: ja\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.3.2-dev\n"
 
 #: applications/luci-app-banip/luasrc/view/banip/ripeview.htm:89
 msgid "ASN Overview"
-msgstr ""
+msgstr "ASNの概要"
 
 #: applications/luci-app-banip/luasrc/view/banip/ripeview.htm:90
 msgid "ASN Prefixes"
-msgstr ""
+msgstr "ASNプレフィックス"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:74
 msgid "ASN/Country"
@@ -37,7 +37,7 @@ msgstr ""
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:94
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:138
 msgid "Backup Directory"
-msgstr ""
+msgstr "バックアップ先 ディレクトリ"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:115
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: applications/luci-app-banip/luasrc/view/banip/ripeview.htm:94
 msgid "DNS Chain"
-msgstr ""
+msgstr "DNSチェイン"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:177
 msgid "DST Target IPv4"
@@ -77,11 +77,11 @@ msgstr "説明"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:134
 msgid "Download Options"
-msgstr ""
+msgstr "ダウンロードオプション"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:126
 msgid "Download Utility"
-msgstr ""
+msgstr "ダウンロードユーティリティ"
 
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:126
 msgid "Download Utility, RT Monitor"
@@ -89,27 +89,28 @@ msgstr ""
 
 #: applications/luci-app-banip/luasrc/controller/banip.lua:22
 msgid "Edit Blacklist"
-msgstr ""
+msgstr "ブラックリストの編集"
 
 #: applications/luci-app-banip/luasrc/controller/banip.lua:24
 msgid "Edit Configuration"
-msgstr ""
+msgstr "構成を編集"
 
 #: applications/luci-app-banip/luasrc/controller/banip.lua:23
 msgid "Edit Whitelist"
-msgstr ""
+msgstr "ホワイトリストの編集"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:20
 msgid "Enable banIP"
-msgstr ""
+msgstr "banIPを有効化"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:84
 msgid "Enable verbose debug logging in case of any processing error."
 msgstr ""
+"処理中にエラーが発生した時のために、詳細なデバッグロギングを有効にします。"
 
 #: applications/luci-app-banip/luasrc/view/banip/ripeview.htm:82
 msgid "Enter IP/CIDR/ASN/ISO"
-msgstr ""
+msgstr "IP/CIDR/ASN/ISOを入力"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:80
 msgid "Extra Options"
@@ -120,6 +121,8 @@ msgid ""
 "For further information <a href=\"%s\" target=\"_blank\">check the online "
 "documentation</a>"
 msgstr ""
+"詳細については、<a href=\"%s\" target=\"_blank\">オンラインドキュメント</a>を"
+"参照してください"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:102
 msgid ""
@@ -133,7 +136,7 @@ msgstr ""
 
 #: applications/luci-app-banip/luasrc/view/banip/ripeview.htm:95
 msgid "IANA Information"
-msgstr ""
+msgstr "IANA 情報"
 
 #: applications/luci-app-banip/luasrc/view/banip/ripeview.htm:91
 msgid "IP/ASN Mapping"
@@ -141,7 +144,7 @@ msgstr ""
 
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:132
 msgid "IPSet Information"
-msgstr ""
+msgstr "IPSet 情報"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:56
 msgid "IPSet Sources"
@@ -189,7 +192,7 @@ msgstr "読み込み中"
 #: applications/luci-app-banip/luasrc/view/banip/ipsetview.htm:27
 #: applications/luci-app-banip/luasrc/view/banip/ripeview.htm:58
 msgid "Loading ..."
-msgstr ""
+msgstr "読み込み中..."
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:114
 msgid "Local Save Blacklist Addons"
@@ -201,7 +204,7 @@ msgstr ""
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:87
 msgid "Low Priority Service"
-msgstr ""
+msgstr "優先度が低いサービス"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:28
 msgid "Manual WAN Interface Selection"
@@ -245,16 +248,16 @@ msgstr ""
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:18
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:153
 msgid "Refresh"
-msgstr ""
+msgstr "リフレッシュ"
 
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:151
 msgid "Refresh IPSets"
-msgstr ""
+msgstr "IPSet をリフレッシュ"
 
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:21
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:160
 msgid "Reload"
-msgstr ""
+msgstr "リロード"
 
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:158
 msgid "Reload IPSet Sources"
@@ -278,7 +281,7 @@ msgstr ""
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:107
 msgid "SSH Daemon"
-msgstr ""
+msgstr "SSH デーモン"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:43
 msgid "SSH/LuCI RT Monitor"
@@ -430,7 +433,7 @@ msgstr "トリガ遅延"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:83
 msgid "Verbose Debug Logging"
-msgstr ""
+msgstr "詳細なデバッグ ログ"
 
 #: applications/luci-app-banip/luasrc/controller/banip.lua:20
 msgid "View Logfile"
@@ -461,7 +464,7 @@ msgstr ""
 
 #: applications/luci-app-banip/luasrc/view/banip/ripeview.htm:93
 msgid "Whois Information"
-msgstr ""
+msgstr "Whois 情報"
 
 #: applications/luci-app-banip/luasrc/controller/banip.lua:16
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:10
@@ -478,8 +481,8 @@ msgstr ""
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:59
 msgid "enable IPv4"
-msgstr ""
+msgstr "IPv4 を有効にする"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:62
 msgid "enable IPv6"
-msgstr ""
+msgstr "IPv6 を有効にする"

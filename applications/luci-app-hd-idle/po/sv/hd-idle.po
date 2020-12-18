@@ -1,57 +1,52 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-14 10:33+0200\n"
-"PO-Revision-Date: 2019-11-16 21:23-0300\n"
-"Last-Translator: José Vicente <josevteg@gmail.com>\n"
-"Language-Team: \n"
-"Language: es\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"PO-Revision-Date: 2020-11-22 15:35+0000\n"
+"Last-Translator: PontusÖsterlindh <pontus@osterlindh.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/openwrt/"
+"luciapplicationshd-idle/sv/>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:15
 msgid "Disk"
-msgstr "Disco"
+msgstr ""
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:13
 msgid "Enable"
-msgstr "Activar"
+msgstr "Aktivera"
 
 #: applications/luci-app-hd-idle/luasrc/controller/hd_idle.lua:13
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:6
 msgid "HDD Idle"
-msgstr "HDD Idle"
+msgstr ""
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:7
 msgid ""
 "HDD Idle is a utility program for spinning-down external disks after a "
 "period of idle time."
 msgstr ""
-"HDD Idle es un programa que gestiona el reposo de discos externos tras un "
-"tiempo de inactividad."
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:21
 msgid "Idle time"
-msgstr "Tiempo de inactividad"
+msgstr ""
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:23
 msgid "Idle time unit"
-msgstr "Unidad de tiempo"
+msgstr ""
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:10
 msgid "Settings"
-msgstr "Configuración"
+msgstr ""
 
-# Hours
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:26
 msgid "h"
-msgstr "Horas"
+msgstr ""
 
-# Minutes (not minimum)
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:25
 msgid "min"
-msgstr "Minutos"
+msgstr ""

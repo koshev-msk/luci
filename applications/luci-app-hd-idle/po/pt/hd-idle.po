@@ -3,24 +3,24 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-04-14 10:33+0200\n"
-"PO-Revision-Date: 2011-06-03 16:09+0200\n"
-"Last-Translator: Staszek <fistaszek@tlen.pl>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pl\n"
+"PO-Revision-Date: 2020-11-05 13:59+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/openwrt/"
+"luciapplicationshd-idle/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 2.0.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2-dev\n"
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:15
 msgid "Disk"
-msgstr "Dysk"
+msgstr "Disco"
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:13
 msgid "Enable"
-msgstr "Włącz"
+msgstr "Ativar"
 
 #: applications/luci-app-hd-idle/luasrc/controller/hd_idle.lua:13
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:6
@@ -32,25 +32,25 @@ msgid ""
 "HDD Idle is a utility program for spinning-down external disks after a "
 "period of idle time."
 msgstr ""
-"HDD Idle jest narzędziem do zwalniania obrotów zewnętrznych dysków po "
-"określonym czasie bezczynności."
+"HDD Idle é um programa utilitário para activar o modo \"economia de energia"
+"\" (spinning-down) de discos externos após um período de ociosidade."
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:21
 msgid "Idle time"
-msgstr "Czas bezczynności"
+msgstr "Tempo de ociosidade"
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:23
 msgid "Idle time unit"
-msgstr "Jednostka czasu bezczynności"
+msgstr "Unidade de tempo de ociosidade"
 
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:10
 msgid "Settings"
-msgstr "Ustawienia"
+msgstr "Configurações"
 
 # Hours
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:26
 msgid "h"
-msgstr "godz."
+msgstr "h"
 
 # Minutes (not minimum)
 #: applications/luci-app-hd-idle/luasrc/model/cbi/hd_idle.lua:25

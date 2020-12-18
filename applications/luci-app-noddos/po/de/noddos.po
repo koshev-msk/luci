@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-10-18 07:49+0000\n"
+"PO-Revision-Date: 2020-08-18 20:32+0000\n"
 "Last-Translator: Paul Spooren <mail@aparcar.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsnoddos/de/>\n"
@@ -8,11 +8,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: applications/luci-app-noddos/luasrc/view/noddos/clients.htm:48
 msgid "Class"
-msgstr ""
+msgstr "Klasse"
 
 #: applications/luci-app-noddos/luasrc/model/cbi/noddos.lua:5
 msgid "Client Firewall"

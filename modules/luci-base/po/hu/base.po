@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/openwrt/luci/issues\n"
 "POT-Creation-Date: 2020-01-05 23:41+0000\n"
-"PO-Revision-Date: 2020-03-31 21:33+0000\n"
+"PO-Revision-Date: 2020-08-10 12:32+0000\n"
 "Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/openwrt/luci/"
 "hu/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:913
 msgid "%.1f dB"
@@ -23,7 +23,7 @@ msgstr "%.1f dB"
 msgid "%d Bit"
 msgstr "%d bit"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3645
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3651
 msgid "%d invalid field(s)"
 msgstr "%d érvénytelen mező"
 
@@ -321,8 +321,8 @@ msgid "ATU-C System Vendor ID"
 msgstr "ATU-C rendszer gyártójának azonosítója"
 
 #: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:265
-#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:543
-#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:547
+#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:544
+#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:548
 msgid "Absent Interface"
 msgstr "Hiányzó csatoló"
 
@@ -668,16 +668,16 @@ msgstr "Bármely zóna"
 msgid "Apply backup?"
 msgstr "Alkalmazza a biztonsági mentést?"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4232
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4238
 msgid "Apply request failed with status <code>%h</code>"
 msgstr "A kérés alkalmazása meghiúsult <code>%h</code> állapotkóddal"
 
 #: modules/luci-base/htdocs/luci-static/resources/luci.js:2165
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4098
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4104
 msgid "Apply unchecked"
 msgstr "Kijelöletlenek alkalmazása"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4171
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4177
 msgid "Applying configuration changes… %ds"
 msgstr "A beállítások változtatásainak alkalmazása… %d mp"
 
@@ -906,7 +906,7 @@ msgid "Bring up on boot"
 msgstr "Felhozás rendszerindításkor"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2772
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3755
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3761
 msgid "Browse…"
 msgstr "Tallózás…"
 
@@ -939,7 +939,7 @@ msgid "Call failed"
 msgstr "Hívás sikertelen"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2865
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3764
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3770
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:14
 #: modules/luci-compat/luasrc/view/cbi/simpleform.htm:52
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:185
@@ -1013,11 +1013,11 @@ msgstr ""
 msgid "Chain"
 msgstr "Lánc"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3984
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3990
 msgid "Changes"
 msgstr "Változtatások"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4267
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4273
 msgid "Changes have been reverted."
 msgstr "A változtatások visszavonva."
 
@@ -1052,7 +1052,7 @@ msgstr "Archívum ellenőrzése…"
 msgid "Checking image…"
 msgstr "Lemezkép ellenőrzése…"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:389
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:396
 msgid "Choose mtdblock"
 msgstr "Az mtdblock kiválasztása"
 
@@ -1095,7 +1095,7 @@ msgstr ""
 "Kattintson az „Archívum előállítása” gombra a jelenlegi beállítófájlok tar-"
 "archívumként történő letöltéséhez."
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:386
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:393
 msgid ""
 "Click \"Save mtdblock\" to download specified mtdblock file. (NOTE: THIS "
 "FEATURE IS FOR PROFESSIONALS! )"
@@ -1175,16 +1175,16 @@ msgstr ""
 "a kulcsegyeztetés robusztusságának csökkentését okozhatja, különösen az erős "
 "forgalomterheléssel rendelkező környezetekben."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3984
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:418
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3990
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:423
 msgid "Configuration"
 msgstr "Beállítás"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4146
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4152
 msgid "Configuration changes applied."
 msgstr "A beállítás változtatásai alkalmazva."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4084
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4090
 msgid "Configuration changes have been rolled back!"
 msgstr "A beállítás változtatásai vissza lettek állítva!"
 
@@ -1231,7 +1231,7 @@ msgstr "A tartalom mentésre került."
 msgid "Continue"
 msgstr "Tovább"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4120
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4126
 msgid ""
 "Could not regain access to the device after applying the configuration "
 "changes. You might need to reconnect if you modified network related "
@@ -1271,8 +1271,8 @@ msgstr "Cron naplózási szint"
 msgid "Current power"
 msgstr "Jelenlegi teljesítmény"
 
-#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:568
-#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:570
+#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:569
+#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:571
 #: modules/luci-compat/luasrc/view/cbi/network_ifacelist.htm:51
 #: modules/luci-compat/luasrc/view/cbi/network_ifacelist.htm:53
 #: modules/luci-compat/luasrc/view/cbi/network_ifacelist.htm:82
@@ -1523,7 +1523,7 @@ msgstr "Az eszköz nem aktív"
 msgid "Device is restarting…"
 msgstr "Az eszköz újraindul…"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4119
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4125
 msgid "Device unreachable!"
 msgstr "Az eszköz elérhetetlen!"
 
@@ -1607,9 +1607,9 @@ msgstr "Leválasztási kísérlet sikertelen"
 
 #: modules/luci-base/htdocs/luci-static/resources/form.js:591
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2692
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3265
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4001
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4090
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3271
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4007
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4096
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1649
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:328
 msgid "Dismiss"
@@ -1694,7 +1694,7 @@ msgstr "Le"
 msgid "Download backup"
 msgstr "Biztonsági mentés letöltése"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:396
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:401
 msgid "Download mtdblock"
 msgstr "Az mtdblock letöltése"
 
@@ -2026,7 +2026,7 @@ msgstr "FT protokoll"
 msgid "Failed to change the system password."
 msgstr "Nem sikerült megváltoztatni a rendszer jelszavát."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4078
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4084
 msgid "Failed to confirm apply within %ds, waiting for rollback…"
 msgstr ""
 "Nem sikerült megerősíteni az alkalmazást %d másodpercen belül, várakozás a "
@@ -2115,7 +2115,7 @@ msgid "Fixed source port for outbound DNS queries"
 msgstr "Rögzített forrásport a kimenő DNS-lekérdezéseknél"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:281
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:413
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:418
 msgid "Flash image..."
 msgstr "Lemezkép beírása…"
 
@@ -2123,7 +2123,7 @@ msgstr "Lemezkép beírása…"
 msgid "Flash image?"
 msgstr "Beírja a lemezképet?"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:403
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:408
 msgid "Flash new firmware image"
 msgstr "Új firmware lemezkép beírása"
 
@@ -2665,7 +2665,7 @@ msgstr "Csatoló mellőzése"
 msgid "Ignore resolve file"
 msgstr "A feloldási fájl figyelmen kívül hagyása"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:411
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:416
 msgid "Image"
 msgstr "Kép"
 
@@ -3002,7 +3002,7 @@ msgstr "Automatikus felismeréshez hagyja üresen"
 msgid "Leave empty to use the current WAN address"
 msgstr "Hagyja üresen a jelenlegi WAN-cím használatához"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3986
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3992
 msgid "Legend:"
 msgstr "Jelmagyarázat:"
 
@@ -3539,7 +3539,7 @@ msgid "NTP server candidates"
 msgstr "NTP-kiszolgáló jelöltek"
 
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2373
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3741
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3747
 #: modules/luci-compat/luasrc/view/cbi/tblsection.htm:27
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:708
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/leds.js:50
@@ -3804,7 +3804,7 @@ msgstr "Egy vagy több érvénytelen/szükséges érték a lapon"
 msgid "One or more required fields have no value!"
 msgstr "Egy vagy több kötelező mezőnek nincs értéke!"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:435
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:440
 #: modules/luci-mod-system/luasrc/model/cbi/admin_system/backupfiles.lua:19
 msgid "Open list..."
 msgstr "Lista megnyitása…"
@@ -3827,11 +3827,11 @@ msgstr ""
 msgid "Option \"%s\" must not be empty."
 msgstr ""
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3993
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3999
 msgid "Option changed"
 msgstr "Beállítás megváltoztatva"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3995
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4001
 msgid "Option removed"
 msgstr "Beállítás eltávolítva"
 
@@ -4225,7 +4225,7 @@ msgstr "csom."
 msgid "Please enter your username and password."
 msgstr "Adja meg a felhasználónevét és a jelszavát."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3724
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3730
 msgid "Please select the file to upload."
 msgstr "Válassza ki a feltöltendő fájlt."
 
@@ -4695,19 +4695,19 @@ msgstr "Biztonsági mentés visszaállítása"
 msgid "Reveal/hide password"
 msgstr "Jelszó felfedése/elrejtése"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4009
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4015
 msgid "Revert"
 msgstr "Visszavonás"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4094
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4100
 msgid "Revert changes"
 msgstr "Változtatások visszavonása"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4276
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4282
 msgid "Revert request failed with status <code>%h</code>"
 msgstr "A kérés visszavonása meghiúsult <code>%h</code> állapotkóddal"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4256
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4262
 msgid "Reverting configuration…"
 msgstr "Beállítás visszaállítása…"
 
@@ -4817,13 +4817,13 @@ msgstr "SWAP"
 #: modules/luci-compat/luasrc/view/cbi/error.htm:17
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:26
 #: modules/luci-compat/luasrc/view/cbi/header.htm:17
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:426
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:431
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/startup.js:119
 msgid "Save"
 msgstr "Mentés"
 
 #: modules/luci-base/htdocs/luci-static/resources/luci.js:2164
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4005
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4011
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:22
 msgid "Save & Apply"
 msgstr "Mentés és alkalmazás"
@@ -4832,11 +4832,11 @@ msgstr "Mentés és alkalmazás"
 msgid "Save error"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:398
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:403
 msgid "Save mtdblock"
 msgstr "Az mtdblock mentése"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:386
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:393
 msgid "Save mtdblock contents"
 msgstr "Az mtdblock tartalmának mentése"
 
@@ -4849,11 +4849,11 @@ msgstr "Keresés"
 msgid "Scheduled Tasks"
 msgstr "Ütemezett feladatok"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3989
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3995
 msgid "Section added"
 msgstr "Szakasz hozzáadva"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3991
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3997
 msgid "Section removed"
 msgstr "Szakasz eltávolítva"
 
@@ -4957,7 +4957,7 @@ msgstr "Rövid GI"
 msgid "Short Preamble"
 msgstr "Rövid előszó"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:433
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:438
 #: modules/luci-mod-system/luasrc/model/cbi/admin_system/backupfiles.lua:18
 msgid "Show current backup file list"
 msgstr "Jelenlegi biztonsági mentés fájllista megjelenítése"
@@ -4993,7 +4993,7 @@ msgstr "Jel csillapítása (SATN)"
 msgid "Signal:"
 msgstr "Jel:"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3742
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3748
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:215
 msgid "Size"
 msgstr "Méret"
@@ -5036,7 +5036,7 @@ msgstr "Elnézést, a kért objektum nem található."
 msgid "Sorry, the server encountered an unexpected error."
 msgstr "Elnézést, a kiszolgáló váratlan hibát észlelt."
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:406
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:411
 msgid ""
 "Sorry, there is no sysupgrade support present; a new firmware image must be "
 "flashed manually. Please refer to the wiki for device specific install "
@@ -5124,7 +5124,7 @@ msgstr "Indítási prioritás"
 msgid "Start refresh"
 msgstr "Frissítés indítása"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4209
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4215
 msgid "Starting configuration apply…"
 msgstr "Beállítások alkalmazásának indítása…"
 
@@ -5366,7 +5366,7 @@ msgstr ""
 msgid "The configuration file could not be loaded due to the following error:"
 msgstr "A beállítófájlt nem sikerült betölteni a következő hiba miatt:"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4085
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4091
 msgid ""
 "The device could not be reached within %d seconds after applying the pending "
 "changes, which caused the configuration to be rolled back for safety "
@@ -5512,7 +5512,7 @@ msgid ""
 "settings."
 msgstr ""
 "A rendszer most települ.<br /> NE KAPCSOLJA KI AZ ESZKÖZT!<br /> Várjon "
-"néhány percet, mielőtt megpróbál újrakacsolódni. A beállításoktól függően "
+"néhány percet, mielőtt megpróbál újrakapcsolódni. A beállításoktól függően "
 "szükség lehet a számítógépe címének megújításához, hogy újra elérje az "
 "eszközt."
 
@@ -5567,7 +5567,7 @@ msgstr ""
 msgid "There are no active leases"
 msgstr "Nincsenek aktív bérletek"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4224
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4230
 msgid "There are no changes to apply"
 msgstr "Nincsenek alkalmazandó változtatások"
 
@@ -5577,10 +5577,10 @@ msgstr "Nincsenek alkalmazandó változtatások"
 #: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:282
 msgid ""
 "There is no password set on this router. Please configure a root password to "
-"protect the web interface and enable SSH."
+"protect the web interface."
 msgstr ""
 "Nincs jelszó beállítva ezen az útválasztón. Állítson be rendszergazda "
-"jelszót a webes felület védelméhez és az SSH engedélyezéséhez."
+"jelszót a webes felület védelméhez."
 
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/6rd.js:49
 msgid "This IPv4 address of the relay"
@@ -5604,7 +5604,7 @@ msgstr ""
 "vagy „server=1.2.3.4” a tartományra jellemző vagy teljesen külső <abbr title="
 "\"Domain Name System\">DNS</abbr>-kiszolgálókhoz."
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:418
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:423
 #: modules/luci-mod-system/luasrc/model/cbi/admin_system/backupfiles.lua:16
 msgid ""
 "This is a list of shell glob patterns for matching files and directories to "
@@ -5902,7 +5902,7 @@ msgstr "Leválasztás"
 msgid "Unnamed key"
 msgstr "Névtelen kulcs"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3929
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3935
 msgid "Unsaved Changes"
 msgstr "Mentetlen változtatások"
 
@@ -5928,11 +5928,11 @@ msgstr "Nem támogatott protokolltípus."
 msgid "Up"
 msgstr "Fel"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3816
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3822
 msgid "Upload"
 msgstr "Feltöltés"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:405
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:410
 msgid ""
 "Upload a sysupgrade-compatible image here to replace the running firmware."
 msgstr ""
@@ -5954,12 +5954,12 @@ msgid "Upload file…"
 msgstr "Fájl feltöltése…"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2700
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3804
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3810
 msgid "Upload request failed: %s"
 msgstr "Feltöltési kérés sikertelen: %s"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3723
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3777
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3729
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3783
 msgid "Uploading file…"
 msgstr "Fájl feltöltése…"
 
@@ -6403,7 +6403,7 @@ msgid "bridged"
 msgstr "áthidalt"
 
 #: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:146
-#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:401
+#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:402
 #: modules/luci-compat/luasrc/view/cbi/firewall_zonelist.htm:35
 #: modules/luci-compat/luasrc/view/cbi/firewall_zonelist.htm:99
 #: modules/luci-compat/luasrc/view/cbi/network_netlist.htm:31
@@ -6669,9 +6669,9 @@ msgstr "korlátlan"
 #: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:138
 #: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:369
 #: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:393
-#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:428
-#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:465
-#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:561
+#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:429
+#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:466
+#: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:562
 #: modules/luci-compat/luasrc/view/cbi/firewall_zonelist.htm:53
 #: modules/luci-compat/luasrc/view/cbi/network_netlist.htm:38
 msgid "unspecified"

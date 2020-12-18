@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-13 22:13+0000\n"
-"Last-Translator: Satoru Yoshida <ramat@ram.ne.jp>\n"
+"PO-Revision-Date: 2020-11-22 15:35+0000\n"
+"Last-Translator: RyotaGamer <21ryotagamer@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsshadowsocks-libev/ja/>\n"
 "Language: ja\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:176
 msgid "<hidden>"
@@ -24,7 +24,7 @@ msgstr "詳細設定"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/instance-details.lua:32
 msgid "Bind address"
-msgstr ""
+msgstr "バインドするIPアドレス"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:73
 msgid "Bypass ss-redir for packets with dst address in this list"
@@ -118,7 +118,7 @@ msgstr "有効"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:54
 msgid "Extra arguments"
-msgstr ""
+msgstr "追加の引数"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:80
 msgid ""
@@ -190,7 +190,7 @@ msgstr ""
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:75
 msgid "Local port"
-msgstr ""
+msgstr "ローカル・ポート"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:46
 msgid "Local-out default"
@@ -238,8 +238,8 @@ msgstr ""
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:55
 msgid "Passes additional arguments to iptables. Use with care!"
 msgstr ""
-"iptablesにパススルーする追加の引数を設定してください。ただし、注意して設定し"
-"てください！"
+"iptablesにパススルーする追加の引数を設定してください。注意して設定してくださ"
+"い！"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:101
 msgid "Password"
@@ -277,7 +277,7 @@ msgstr ""
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/instances.lua:81
 msgid "Running"
-msgstr ""
+msgstr "実行中"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:91
 msgid "Server"
@@ -285,7 +285,7 @@ msgstr "サーバー"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:94
 msgid "Server port"
-msgstr ""
+msgstr "サーバーのポート"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/controller/shadowsocks-libev.lua:9
 msgid "Shadowsocks-libev"

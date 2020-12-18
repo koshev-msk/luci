@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-15 17:03+0000\n"
-"Last-Translator: Paul Spooren <mail@aparcar.org>\n"
+"PO-Revision-Date: 2020-11-21 12:21+0000\n"
+"Last-Translator: Andreas Götz <agoetz@tdt.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsadblock/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1\n"
+"X-Generator: Weblate 4.4-dev\n"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:256
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:257
 msgid "Action"
 msgstr "Aktion"
 
@@ -43,7 +43,7 @@ msgstr "Füge diese (Sub-)Domain zur lokalen Blacklist."
 msgid "Add this (sub-)domain to your local whitelist."
 msgstr "Füge diese (Sub-)Domain zur lokalen Whiteklist."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:412
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:414
 msgid "Additional Jail Blocklist"
 msgstr "Zusätzliche Jail-Sperrliste"
 
@@ -69,19 +69,19 @@ msgstr "Fortgeschrittene E-Mail Einstellungen"
 msgid "Advanced Report Settings"
 msgstr "Fortgeschrittene Berichtseinstellungen"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:255
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:256
 msgid "Answer"
 msgstr "Antwort"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:360
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:362
 msgid "Backup Directory"
 msgstr "Backupverzeichnis"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:351
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:353
 msgid "Base Temp Directory"
 msgstr "Basis-Temp-Verzeichnis"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:351
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:353
 msgid ""
 "Base Temp Directory for all adblock related runtime operations, e.g. "
 "downloading, sorting, merging etc."
@@ -98,11 +98,15 @@ msgstr ""
 "Änderung der Blackliste gespeichert. Aktualisiere deine Adblock-Liste, um "
 "die Änderungen zu übernehmen."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:280
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:281
 msgid "Blacklist..."
 msgstr "Blacklist..."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:209
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:309
+msgid "Blocked DNS Requests"
+msgstr ""
+
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:210
 msgid "Blocked Domain"
 msgstr "Blockierte Domain"
 
@@ -110,7 +114,7 @@ msgstr "Blockierte Domain"
 msgid "Blocked Domains"
 msgstr "Geblockte Domains"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:356
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:358
 msgid "Blocklist Backup"
 msgstr "Sperrliste Backup"
 
@@ -118,7 +122,7 @@ msgstr "Sperrliste Backup"
 msgid "Blocklist Query"
 msgstr "Sperrlistenabfrage"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:316
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:317
 msgid "Blocklist Query..."
 msgstr "Sperrlisten abfragen..."
 
@@ -126,7 +130,7 @@ msgstr "Sperrlisten abfragen..."
 msgid "Blocklist Sources"
 msgstr "Blockierlisten-Quellen"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:412
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:414
 msgid ""
 "Builds an additional DNS blocklist to block access to all domains except "
 "those listed in the whitelist. Please note: You can use this restrictive "
@@ -138,8 +142,8 @@ msgstr ""
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:21
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:56
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:107
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:161
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:108
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:162
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:57
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -149,8 +153,10 @@ msgid ""
 "Changes on this tab needs a full adblock service restart to take effect.<br /"
 "><p>&#xa0;</p>"
 msgstr ""
+"Änderungen in diesem Tab benötigen einen kompletten Neustart des Adblock "
+"Dienstes, um wirksam zu werden.<br /><p>&#xa0;</p>"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:253
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:254
 msgid "Client"
 msgstr "Client"
 
@@ -166,13 +172,13 @@ msgstr ""
 "github.com/openwrt/packages/blob/master/net/adblock/files/README.md\" target="
 "\"_blank\" rel=\"noreferrer noopener\" >Dokumentation</a>"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:204
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:206
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:208
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:205
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:207
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:209
 msgid "Count"
 msgstr "Anzahl"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:356
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:358
 msgid ""
 "Create compressed blocklist backups, they will be used in case of download "
 "errors or during startup."
@@ -181,15 +187,15 @@ msgstr ""
 "sofort ab dem Booten oder im Fall von Downloadfehlern zur Verfügung zu haben."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:217
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:379
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:381
 msgid "DNS Backend"
 msgstr "DNS-Backend"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:388
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:390
 msgid "DNS Directory"
 msgstr "DNS-Verzeichnis"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:402
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:404
 msgid "DNS File Reset"
 msgstr "DNS-Datei zurücksetzen"
 
@@ -199,31 +205,23 @@ msgstr "DNS-Datei zurücksetzen"
 msgid "DNS Report"
 msgstr "DNS-Report"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:308
-msgid "DNS Requests (blocked)"
-msgstr "DNS Anforderungen (blockiert)"
-
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:305
-msgid "DNS Requests (total)"
-msgstr "DNS-Abfragen (gesamt)"
-
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:392
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:394
 msgid "DNS Restart Timeout"
 msgstr "DNS-Restart-Timeout"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:251
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:252
 msgid "Date"
 msgstr "Datum"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:409
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:411
 msgid "Disable DNS Allow"
 msgstr "Deaktiviere DNS-Zulassen"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:421
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:423
 msgid "Disable DNS Restarts"
 msgstr "Deaktiviere DNS-Restarts"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:421
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:423
 msgid ""
 "Disable adblock triggered restarts for dns backends with autoload/inotify "
 "functions."
@@ -231,16 +229,16 @@ msgstr ""
 "Deaktiviere das Triggern von Neustarts des DNS-Backends durch Adblock per "
 "Autoload/inotify-Funktionsaufrufe."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:409
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:411
 msgid "Disable selective DNS whitelisting (RPZ pass through)."
 msgstr "Deaktiviere selektives DNS-Whitelisting (RPZ-Passthrough)."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:207
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:254
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:208
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:255
 msgid "Domain"
 msgstr "Domäne"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:373
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:375
 msgid "Download Parameters"
 msgstr "Downloadparameter"
 
@@ -248,7 +246,7 @@ msgstr "Downloadparameter"
 msgid "Download Queue"
 msgstr "Download-Warteschlange"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:366
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:368
 msgid "Download Utility"
 msgstr "Download-Werkzeug"
 
@@ -256,25 +254,25 @@ msgstr "Download-Werkzeug"
 msgid "E-Mail Notification"
 msgstr "E-Mail-Benachrichtigung"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:467
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:469
 msgid "E-Mail Notification Count"
 msgstr "Email-Benachrichtigszähler"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:463
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:465
 msgid "E-Mail Profile"
-msgstr "Email-Profil"
+msgstr "E-Mail-Profil"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:323
 msgid "E-Mail Receiver Address"
-msgstr "E-Mail-Empfängeradresse"
+msgstr "E-Mail-Empfänger"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:455
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:457
 msgid "E-Mail Sender Address"
-msgstr "Email-Absenderadresse"
+msgstr "E-Mail-Absender"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:459
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:461
 msgid "E-Mail Topic"
-msgstr "Email-Betreff"
+msgstr "E-Mail-Thema"
 
 #: applications/luci-app-adblock/luasrc/controller/adblock.lua:9
 #: applications/luci-app-adblock/root/usr/share/luci/menu.d/luci-app-adblock.json:34
@@ -300,15 +298,17 @@ msgstr "Aktiviere den Adblock-Dienst."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:331
 msgid "Enable verbose debug logging in case of any processing errors."
-msgstr "Aktiviere ausführliche Debug-Logs im Fehlerfall."
+msgstr ""
+"Aktivieren Sie die ausführliche Debug-Protokollierung bei "
+"Verarbeitungsfehlern."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:282
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:302
-msgid "End Date"
-msgstr "Enddatum"
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:303
+msgid "End Timestamp"
+msgstr ""
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:299
 msgid ""
@@ -320,11 +320,11 @@ msgstr "Erzwinge SafeSearch für Google, Bing, DuckDuckGo, Yandex und Pixabay."
 msgid "Existing job(s)"
 msgstr "Bestehende Job(s)"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:397
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:399
 msgid "External DNS Lookup Domain"
 msgstr "Externe DNS-Abfragedomain"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:397
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:399
 msgid ""
 "External domain to check for a successful DNS backend restart. Please note: "
 "To disable this check set this option to 'false'."
@@ -332,15 +332,15 @@ msgstr ""
 "Externe Beispiel-Domain um einen erfolgreichen Neustart des DNS-Backend zu "
 "prüfen. Auf \"false\" setzen, um dies zu deaktivieren."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:155
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:156
 msgid "Filter criteria like date, domain or client (optional)"
 msgstr "Filterkriterien wie z.B. Datum, Domain oder Client (optional)"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:406
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:408
 msgid "Flush DNS Cache"
 msgstr "DNS-Cache leeren"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:406
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:408
 msgid "Flush the DNS Cache before adblock processing as well."
 msgstr "DNS-Cache leeren, bevor mit Adblock-Verarbeitung fortgefahren wird."
 
@@ -366,7 +366,7 @@ msgstr "Allgemeine Einstellungen"
 msgid "Information"
 msgstr "Informationen"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:416
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:418
 msgid "Jail Directory"
 msgstr "Jail-Verzeichnis"
 
@@ -374,19 +374,19 @@ msgstr "Jail-Verzeichnis"
 msgid "Last Run"
 msgstr "Letzter Lauf"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:335
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:336
 msgid "Latest DNS Requests"
 msgstr "Letzte DNS-Abfragen"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:302
 msgid "Limit SafeSearch"
-msgstr ""
+msgstr "SafeSearch einschränken"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:302
 msgid "Limit SafeSearch to certain providers."
-msgstr ""
+msgstr "SafeSearch auf bestimmte Anbieter einschränken."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:428
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:430
 msgid "List of available network devices used by tcpdump."
 msgstr ""
 "Liste an verfügbaren Netzwerkschnittstellen die von tcpdump verwendet werden "
@@ -401,7 +401,7 @@ msgstr ""
 "triggern. Wähle \"unspecified\", um einen herkömmlichen Start-Timeout-"
 "Mechanismuss anstatt eines Netzwerk-Triggers zu verwenden."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:379
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:381
 msgid ""
 "List of supported DNS backends with their default list directory. To "
 "overwrite the default path use the 'DNS Directory' option."
@@ -430,7 +430,7 @@ msgstr ""
 "mehr RAM und zusätzlich eine Multicore-CPU, z.B entpsrechende x86- oder "
 "RaspberryPi-Geräte.<br /> <p>&#xa0;</p>"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:366
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:368
 msgid "List of supported and fully pre-configured download utilities."
 msgstr ""
 "Liste der unterstützten und vollständig vorkonfigurierten Download-"
@@ -443,17 +443,17 @@ msgstr "Lokale DNS-Ports"
 #: applications/luci-app-adblock/luasrc/controller/adblock.lua:11
 #: applications/luci-app-adblock/root/usr/share/luci/menu.d/luci-app-adblock.json:50
 msgid "Log View"
-msgstr "Log-Ansicht"
+msgstr "Protokollansicht"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:334
 msgid "Low Priority Service"
 msgstr "Dienst mit niedriger Priorität"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:205
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:206
 msgid "Name / IP Address"
 msgstr "Name / IP-Adresse"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:122
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:123
 msgid "No Query results!"
 msgstr "Keine Abfrageergebnisse!"
 
@@ -466,12 +466,12 @@ msgstr "Aktuell noch keine Adblock-Logs vorhanden!"
 msgid "Overview"
 msgstr "Übersicht"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:463
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:465
 msgid "Profile used by 'msmtp' for adblock notification E-Mails."
 msgstr ""
 "\"msmtp\"-Profil, das für Adblock-Benachrichtigunsmails verwendet wird."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:130
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:131
 msgid "Query"
 msgstr "Abfrage"
 
@@ -479,7 +479,7 @@ msgstr "Abfrage"
 msgid "Query active blocklists and backups for a specific domain."
 msgstr "Frage aktive Sperrlisten und Backups über eine spezifische Domain ab."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:467
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:469
 msgid ""
 "Raise the notification count, to get E-Mails if the overall blocklist count "
 "is less or equal to the given limit."
@@ -509,12 +509,12 @@ msgstr ""
 "des Systems zu verringern. Hinweis: Diese Änderung benötigt einen Neustart "
 "des Adblock-Dienstes um in Kraft zu treten."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:182
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:183
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:255
 msgid "Refresh"
 msgstr "Aktualisieren"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:137
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:138
 msgid "Refresh DNS Report"
 msgstr "Aktualisiere DNS-Report"
 
@@ -526,43 +526,43 @@ msgstr "Aktualisiere Timer"
 msgid "Refresh Timer..."
 msgstr "Aktualisiere Timer..."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:323
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:324
 msgid "Refresh..."
 msgstr "Aktualisiere..."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:311
 msgid "Relax SafeSearch"
-msgstr ""
+msgstr "SafeSearch abschwächen"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:438
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:440
 msgid "Report Chunk Count"
 msgstr "Berichte Datenblock-Anzahl"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:443
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:445
 msgid "Report Chunk Size"
 msgstr "Berichte Datenblock-Größe"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:433
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:435
 msgid "Report Directory"
 msgstr "Verzeichnis für Berichte"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:428
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:430
 msgid "Report Interface"
 msgstr "Berichte-Schnittstelle"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:448
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:450
 msgid "Report Ports"
 msgstr "Berichte Ports"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:438
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:440
 msgid "Report chunk count used by tcpdump."
 msgstr "Berichte Datenblock-Nutzung durch tcpdump."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:443
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:445
 msgid "Report chunk size used by tcpdump in MByte."
 msgstr "Berichte von tcpdump verwendete Datenblockgröße in MByte."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:402
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:404
 msgid ""
 "Resets the final DNS blocklist 'adb_list.overall' after DNS backend loading. "
 "Please note: This option starts a small ubus/adblock monitor in the "
@@ -572,7 +572,7 @@ msgstr ""
 "geladen hat zurück. Hinweis: Diese Option startet einen kleinen ubus/adblock-"
 "Monitor im Hintergrund."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:94
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:95
 msgid "Result"
 msgstr "Ergebnis"
 
@@ -582,7 +582,7 @@ msgstr "Run-Verzeichnisse"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:229
 msgid "Run Flags"
-msgstr "Run-Flags"
+msgstr "Flags ausführen"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:223
 msgid "Run Interfaces"
@@ -606,7 +606,7 @@ msgstr ""
 "Sende relevante Adblock-Benachrichtigungen per Email. Hinweis: Hierzu muss "
 "das \"msmtp\"-Zusatzpaket installiert sein."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:455
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:457
 msgid "Sender address for adblock notification E-Mails."
 msgstr "Absenderadresse für Adblock-Benachrichtigungsmails."
 
@@ -626,7 +626,7 @@ msgstr ""
 "Größe der Download-Warteschlange für laufende Downloads (inkl. Platzbedarf "
 "für Sortieren, Zusammenführen)."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:475
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:477
 msgid "Sources (Size, Focus)"
 msgstr "Quellen (Größe, Fokus)"
 
@@ -638,18 +638,18 @@ msgstr ""
 "Leerzeichengetrennte Liste von DNS-relevanten Firewall-Ports, die zwingend "
 "lokal sein müssen."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:448
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:450
 msgid "Space separated list of ports used by tcpdump."
 msgstr "Leerzeichengetrennte Liste an Ports die von tcpdump genutzt werden."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:373
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:375
 msgid "Special config options for the selected download utility."
 msgstr ""
 "Spezielle Konfigurationseinstellungen für das gewählte Download-Programm."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:299
-msgid "Start Date"
-msgstr "Startdatum"
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:300
+msgid "Start Timestamp"
+msgstr ""
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:285
 msgid "Startup Trigger Interface"
@@ -663,7 +663,7 @@ msgstr "Status / Version"
 msgid "Suspend"
 msgstr "Anhalten"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:433
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:435
 msgid ""
 "Target directory for DNS related report files. Default is '/tmp', please use "
 "preferably an usb stick or another local disk."
@@ -672,7 +672,7 @@ msgstr ""
 "\" gesetzt, hier sollte besser ein USB-Stick oder anderer lokaler Speicher "
 "verwendet werden."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:360
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:362
 msgid ""
 "Target directory for blocklist backups. Default is '/tmp', please use "
 "preferably an usb stick or another local disk."
@@ -681,11 +681,11 @@ msgstr ""
 "hier sollte besser ein USB-Stick oder anderer lokaler Speicher verwendet "
 "werden."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:388
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:390
 msgid "Target directory for the generated blocklist 'adb_list.overall'."
 msgstr "Zielverzeichnis für die erzeugte Sperrliste 'adb_list.overall'."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:416
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:418
 msgid "Target directory for the generated jail blocklist 'adb_list.jail'."
 msgstr "Zielverzeichnis für die erzeugte Jail-Sperrliste \"adb_list.jail\"."
 
@@ -735,7 +735,7 @@ msgstr ""
 "Kommentare mit # am Anfang ebenfalls, nicht jedoch IP-Adressen, Wildcards "
 "und Regex-Ausdrücke."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:296
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:297
 msgid ""
 "This shows the last generated DNS Report, press the refresh button to get a "
 "current one."
@@ -743,11 +743,11 @@ msgstr ""
 "Hier wird der zuletzt erzeugte DNS-Report angezeigt, um einen aktuelleren "
 "anzuzeigen, den Erneuern-Knopf drücken."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:252
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:253
 msgid "Time"
 msgstr "Zeit"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:392
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:394
 msgid "Timeout to wait for a successful DNS backend restart."
 msgstr "Timeout für erfolgreichen DNS-Backend-Startvorgang."
 
@@ -759,17 +759,21 @@ msgstr ""
 "Um die Adblock-Liste aktuell zu halten, sollte dafür ein automatischer "
 "Update-Job eingerichtet werden."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:328
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:329
 msgid "Top 10 Statistics"
 msgstr "Top-10 Statistiken"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:459
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:461
 msgid "Topic for adblock notification E-Mails."
 msgstr "Betreff für Adblock-Benachrichtigungsmails."
 
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:306
+msgid "Total DNS Requests"
+msgstr ""
+
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:339
 msgid "Trigger Delay"
-msgstr "Verzögerung Trigger-Bedingung"
+msgstr "Verzögerung der Trigger-Bedingung"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/blacklist.js:16
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/whitelist.js:16
@@ -789,30 +793,30 @@ msgstr ""
 "Whitelist-Änderungen wurden gespeichert. Aktualisiere die Adblock-Listen um "
 "die Änderung anzuwenden."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:272
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:273
 msgid "Whitelist..."
 msgstr "Whiteliste..."
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:381
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:383
 msgid "dnsmasq (/tmp/dnsmasq.d)"
 msgstr "dnsmasq (/tmp/dnsmasq.d)"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:384
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:386
 msgid "kresd (/etc/kresd)"
 msgstr "kresd (/etc/kresd)"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:148
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:149
 msgid "max. result set size"
 msgstr "Max. Größe des Result-Sets"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:383
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:385
 msgid "named (/var/lib/bind)"
 msgstr "named (/var/lib/bind)"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:385
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:387
 msgid "raw (/tmp)"
 msgstr "raw (/tmp)"
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:382
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:384
 msgid "unbound (/var/lib/unbound)"
 msgstr "unbound (/var/lib/unbound)"

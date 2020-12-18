@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2020-03-09 14:34+0000\n"
-"Last-Translator: Trevor <wowpapa3232@gmail.com>\n"
+"PO-Revision-Date: 2020-08-16 19:29+0000\n"
+"Last-Translator: Hulen <shift0106@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "openwrt/luciapplicationsopkg/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: applications/luci-app-opkg/luasrc/view/opkg.htm:112
 msgid "Actions"
@@ -39,7 +39,7 @@ msgstr ""
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:644
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:673
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:733
-#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:809
+#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:812
 msgid "Cancel"
 msgstr "取消"
 
@@ -59,15 +59,15 @@ msgstr "依賴項目"
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:713
 #: applications/luci-app-opkg/luasrc/view/opkg.htm:140
 msgid "Description"
-msgstr "說明"
+msgstr "描述"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:583
 msgid "Details for package <em>%h</em>"
 msgstr "套件包 <em>%h</em> 的詳細資訊"
 
-#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:786
+#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:789
 msgid "Dismiss"
-msgstr "取消"
+msgstr "關閉"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:237
 msgid "Displaying %d-%d of %d"
@@ -95,7 +95,7 @@ msgstr "剩餘空間"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:606
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:622
-#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:819
+#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:822
 msgid "Install"
 msgstr "安裝"
 
@@ -106,7 +106,7 @@ msgid "Installed"
 msgstr "已安裝"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:628
-#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:796
+#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:799
 msgid ""
 "Installing packages from untrusted sources is a potential security risk! "
 "Really attempt to install <em>%h</em>?"
@@ -120,16 +120,16 @@ msgstr "安裝…"
 msgid "Loading configuration data…"
 msgstr "載入設定資訊…"
 
-#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:828
+#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:831
 msgid "Loading package information…"
 msgstr "正在讀取套件資訊…"
 
-#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:799
+#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:802
 msgid "MD5"
 msgstr "MD5"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:638
-#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:795
+#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:798
 msgid "Manually install package"
 msgstr "手動安裝套件包"
 
@@ -225,7 +225,7 @@ msgstr "需要更新至 %h %h"
 msgid "Reset"
 msgstr "重置"
 
-#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:800
+#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:803
 msgid "SHA256"
 msgstr "SHA256"
 
@@ -239,7 +239,7 @@ msgstr "正在儲存設定值…"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:586
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:721
-#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:798
+#: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:801
 msgid "Size"
 msgstr "大小"
 

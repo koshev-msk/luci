@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-02 13:16+0000\n"
-"Last-Translator: CE4 <chregger@gmail.com>\n"
+"PO-Revision-Date: 2020-11-21 12:21+0000\n"
+"Last-Translator: Andreas Götz <agoetz@tdt.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsbanip/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: applications/luci-app-banip/luasrc/view/banip/ripeview.htm:89
 msgid "ASN Overview"
@@ -25,7 +25,7 @@ msgstr "ASN/Land"
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:139
 msgid "Additional trigger delay in seconds before banIP processing begins."
 msgstr ""
-"Zusätzliche Triggerverzögerung in Sekunden bevor die BanIP-Verarbeitung "
+"Zusätzliche Auslöseverzögerung in Sekunden, bevor die BanIP-Verarbeitung "
 "beginnt."
 
 #: applications/luci-app-banip/luasrc/controller/banip.lua:21
@@ -154,7 +154,7 @@ msgstr "IP/ASN-Mapping"
 
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:132
 msgid "IPSet Information"
-msgstr "IPSet Information"
+msgstr "IPSet-Information"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:56
 msgid "IPSet Sources"
@@ -485,7 +485,7 @@ msgstr ""
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:138
 msgid "Trigger Delay"
-msgstr "Verzögerung Trigger-Bedingung"
+msgstr "Verzögerung der Trigger-Bedingung"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:83
 msgid "Verbose Debug Logging"
@@ -532,11 +532,11 @@ msgstr "banIP"
 
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:114
 msgid "banIP Status"
-msgstr "banIP Status"
+msgstr "banIP-Status"
 
 #: applications/luci-app-banip/luasrc/view/banip/runtime.htm:120
 msgid "banIP Version"
-msgstr "banIP Version"
+msgstr "banIP-Version"
 
 #: applications/luci-app-banip/luasrc/model/cbi/banip/overview_tab.lua:59
 msgid "enable IPv4"
