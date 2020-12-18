@@ -84,6 +84,15 @@ return network.registerProtocol('qmi', {
 		o.depends('auth', 'chap');
 		o.depends('auth', 'both');
 		o.password = true;
+		
+		o=s.taboption('general',form.ListValue,'modes',_('Network Mode'));
+		o.value('lte','4G only');
+		o.value('lte,umts','4G/3G');
+		o.value('lte,umts,gsm','4G/3G/2G');
+		o.value('umts','3G only');
+		o.value('umts,gsm','3G/2G');
+		o.value('gsm','2G only');
+		o.default='lte,umts,gsm'
 
 		if (L.hasSystemFeature('ipv6')) {
 			o = s.taboption('advanced', form.Flag, 'ipv6', _('Enable IPv6 negotiation'));
