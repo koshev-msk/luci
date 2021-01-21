@@ -85,7 +85,7 @@ return network.registerProtocol('qmi', {
 		o.depends('auth', 'both');
 		o.password = true;
 		
-		o=s.taboption('general',form.ListValue,'modes',_('Network Mode'));
+		o=s.taboption('general',form.ListValue,'modes', _('Network Mode'));
 		o.value('lte','4G only');
 		o.value('lte,umts','4G/3G');
 		o.value('lte,umts,gsm','4G/3G/2G');
