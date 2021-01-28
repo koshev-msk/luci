@@ -3947,6 +3947,10 @@ msgstr "Назначить MAC-адрес"
 msgid "Override MTU"
 msgstr "Назначить MTU"
 
+#: protocols/luci-proto-qmi/htdocs/luci-static/resources/protocol/qmi.js:88
+msgid "Network Mode"
+msgstr "Режим сети"
+
 #: protocols/luci-proto-ipip/htdocs/luci-static/resources/protocol/ipip.js:63
 msgid "Override TOS"
 msgstr "Отвергать TOS"
