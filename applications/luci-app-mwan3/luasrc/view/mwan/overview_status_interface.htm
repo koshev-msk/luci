@@ -37,23 +37,23 @@ XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface
 					switch (status.interfaces[iface].status)
 					{
 						case 'online':
-							state = '<strong><p style="color:green"><b><%:Online%></b></p></strong>';
+							state = '<div class="td left"><strong><p style="color:green"><b><%:Online%></b></p></strong></div>';
 							time = String.format(
-								'<div class="td">%s</div>',
+								'<div class="td left">%s</div>',
 								secondsToString(status.interfaces[iface].online)
 							);
 							css = 'success';
 							break;
 						case 'offline':
-							state = '<strong><p style="color:red"><b><%:Offline%></b></p></strong>';
+							state = '<div class="td left"><strong><p style="color:red"><b><%:Offline%></b></p></strong></div>';
 							time = String.format(
-								'<div class="td">%s</div>',
+								'<div class="td left" >%s</div>',
 								secondsToString(status.interfaces[iface].offline)
 							);
 							css = 'danger';
 							break;
 						default:
-							state = '<strong><p style="color:black"><b><%:Disabled%></b></p></strong>';
+							state = '<div class="td left"><strong><p style="color:black"><b><%:Disabled%></b></p></strong></div>';
 							css = 'warning';
 							break;
 					}
@@ -62,16 +62,18 @@ XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface
 						row_style
 					);
 					statusview += String.format(
-						'<div class="td"><span class="ifacebadge">%s</span></div>',
+						'<div class="td left"><span class="ifacebadge">%s</span></div>',
 						iface
 					);
 					statusview += String.format(
-						'<div class="td">%s</div>',
+						'<div>%s</div>',
 						state
 					);
 					if (time)
 					{
-						statusview += time;
+						statusview += time
+					} else {
+						statusview += '<div class="td left">&nbsp;</div>'
 					}
 					statusview += '</div>'
 				}
