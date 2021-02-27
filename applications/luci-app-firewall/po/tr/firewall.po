@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2020-11-28 20:18+0000\n"
-"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"PO-Revision-Date: 2021-02-22 18:50+0000\n"
+"Last-Translator: Mete <selimmeteozdogan@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsfirewall/tr/>\n"
 "Language: tr\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.5\n"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:48
 msgid ""
@@ -29,22 +29,25 @@ msgid ""
 "val}</var>}}"
 msgstr ""
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:433
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:448
 msgid "-- add IP --"
-msgstr ""
+msgstr "IP ekle"
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:481
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:496
 msgid "-- add MAC --"
-msgstr ""
+msgstr "MAC ekle"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:118
 msgid ""
 "<var data-tooltip=\"ACCEPT\">Accept</var> %{src?%{dest?forward:input}:output}"
 msgstr ""
+"<var data-tooltip=\"ACCEPT\">KABUL ET</var> %{src?%{dest?forward:input}:"
+"output}"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:87
 msgid "<var data-tooltip=\"ACCEPT\">Prevent source rewrite</var>"
 msgstr ""
+"<var data-tooltip=\"ACCEPT\">Kaynağın yeniden yazılmasını engelle</var>"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:81
 msgid ""
@@ -56,12 +59,15 @@ msgstr ""
 msgid ""
 "<var data-tooltip=\"DROP\">Drop</var> %{src?%{dest?forward:input}:output}"
 msgstr ""
+"<var data-tooltip=\"DROP\">Düşür</var> %{src?%{dest?forward:input}:output}"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:133
 msgid ""
 "<var data-tooltip=\"DSCP\">Assign DSCP</var> classification <var>%{set_dscp}"
 "</var>"
 msgstr ""
+"<var data-tooltip=\"DSCP\">DSCP tanımla</var> classification <var>%{set_dscp}"
+"</var>"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:127
 msgid ""
@@ -89,6 +95,7 @@ msgstr ""
 msgid ""
 "<var data-tooltip=\"REJECT\">Reject</var> %{src?%{dest?forward:input}:output}"
 msgstr ""
+"<var data-tooltip=\"REJECT\">REDDET</var> %{src?%{dest?forward:input}:output}"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:81
 msgid ""
@@ -98,11 +105,12 @@ msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:225
 msgid "A rewrite IP must be specified!"
-msgstr ""
+msgstr "Yeniden yazmak için bir IP belirtilmek zorunda!"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:213
+#, fuzzy
 msgid "ACCEPT - Disable address rewriting"
-msgstr ""
+msgstr "KABUL ET - Adres yeniden yazmayı devre dışı bırak"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:173
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:229
@@ -144,7 +152,7 @@ msgstr ""
 msgid "Allow forward to <em>destination zones</em>:"
 msgstr ""
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:508
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:523
 msgid "Any"
 msgstr ""
 
@@ -191,7 +199,7 @@ msgstr ""
 msgid "Contents have been saved."
 msgstr ""
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:655
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:670
 msgid "Continue"
 msgstr ""
 
@@ -338,7 +346,7 @@ msgstr ""
 msgid "Firewall - Zone Settings"
 msgstr ""
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:648
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:663
 msgid "Firewall configuration migration"
 msgstr ""
 
@@ -803,7 +811,7 @@ msgstr ""
 msgid "Sunday"
 msgstr "Pazar"
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:649
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:664
 msgid ""
 "The existing firewall configuration needs to be changed for LuCI to function "
 "properly."
@@ -848,7 +856,7 @@ msgstr ""
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:470
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:297
 msgid "Time in UTC"
-msgstr ""
+msgstr "UTC Zamanı"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:77
 msgid ""
@@ -909,27 +917,27 @@ msgstr ""
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:140
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:144
 msgid "Unnamed NAT"
-msgstr ""
+msgstr "İsimsiz NAT"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:145
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:159
 msgid "Unnamed forward"
-msgstr ""
+msgstr "İsimsiz yönlendirme"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:190
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:215
 msgid "Unnamed rule"
-msgstr ""
+msgstr "İsimsiz kural"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:122
 msgid "Unnamed zone"
-msgstr ""
+msgstr "İsimsiz bölge"
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:553
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:568
 msgid "Unrecognized protocol"
-msgstr ""
+msgstr "Bilinmeyen protokol"
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:650
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:665
 msgid ""
 "Upon pressing \"Continue\", \"redirect\" sections with target \"SNAT\" will "
 "be converted to \"nat\" sections and the firewall will be restarted to apply "
@@ -938,11 +946,11 @@ msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:257
 msgid "Use external IP address"
-msgstr ""
+msgstr "Harici bir IP adresi kullan"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:256
 msgid "Use internal IP address"
-msgstr ""
+msgstr "Dahili bir IP adresi kullan"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:208
 msgid ""
@@ -968,7 +976,7 @@ msgstr "Çarşamba"
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:427
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:254
 msgid "Week Days"
-msgstr ""
+msgstr "Hafta içi"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:374
 msgid "XOR firewall mark"
@@ -976,25 +984,25 @@ msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:315
 msgid "XOR mark"
-msgstr ""
+msgstr "XOR işareti"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:135
 msgid "Zone ⇒ Forwardings"
-msgstr ""
+msgstr "Bölge ⇒ Yönlendirmeler"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:94
 msgid "Zones"
-msgstr ""
+msgstr "Bölgeler"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:369
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:69
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:151
 msgid "accept"
-msgstr ""
+msgstr "kabul et"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:267
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:433
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:455
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:448
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:470
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:211
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:243
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:264
@@ -1006,7 +1014,7 @@ msgstr ""
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:190
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:203
 msgid "any"
-msgstr "herhangi biri"
+msgstr "herhangi"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:49
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:82
@@ -1015,7 +1023,7 @@ msgstr "herhangi biri"
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:40
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:50
 msgid "any zone"
-msgstr ""
+msgstr "herhangi bir bölge"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:373
 msgid "apply firewall mark"
@@ -1029,11 +1037,11 @@ msgstr ""
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:89
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:61
 msgid "day"
-msgstr ""
+msgstr "gün"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:234
 msgid "do not rewrite"
-msgstr ""
+msgstr "yeniden yazma"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:371
 msgid "don't track"
@@ -1043,31 +1051,31 @@ msgstr ""
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:68
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:150
 msgid "drop"
-msgstr ""
+msgstr "düşür"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:68
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:89
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:61
 msgid "hour"
-msgstr ""
+msgstr "saat"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:68
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:89
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:61
 msgid "minute"
-msgstr ""
+msgstr "dakika"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:370
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:67
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:149
 msgid "reject"
-msgstr ""
+msgstr "reddet"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:68
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:89
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:61
 msgid "second"
-msgstr ""
+msgstr "ikinci"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:49
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:58
@@ -1076,13 +1084,13 @@ msgstr ""
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:78
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:50
 msgid "this device"
-msgstr ""
+msgstr "bu cihaz"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:116
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:203
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:292
 msgid "this new zone"
-msgstr ""
+msgstr "bu yeni bölge"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:353
 msgid "unlimited"

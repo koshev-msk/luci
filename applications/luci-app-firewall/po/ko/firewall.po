@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-30 17:00+0200\n"
-"PO-Revision-Date: 2020-08-08 06:14+0000\n"
-"Last-Translator: Youngbin Han <sukso96100@gmail.com>\n"
+"PO-Revision-Date: 2021-01-17 20:54+0000\n"
+"Last-Translator: ANTEGRAL <antegral@antegral.net>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsfirewall/ko/>\n"
 "Language: ko\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:48
 msgid ""
@@ -31,11 +31,11 @@ msgid ""
 "val}</var>}}"
 msgstr ""
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:433
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:448
 msgid "-- add IP --"
 msgstr ""
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:481
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:496
 msgid "-- add MAC --"
 msgstr ""
 
@@ -146,7 +146,7 @@ msgstr "<em>Source zone</em> 로부터의 forward 허용:"
 msgid "Allow forward to <em>destination zones</em>:"
 msgstr "<em>Destination zone</em> 으로 forward 허용:"
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:508
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:523
 msgid "Any"
 msgstr ""
 
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Contents have been saved."
 msgstr ""
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:655
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:670
 msgid "Continue"
 msgstr ""
 
@@ -343,7 +343,7 @@ msgstr "방화벽 - Traffic Rules"
 msgid "Firewall - Zone Settings"
 msgstr "방화벽 - Zone 설정"
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:648
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:663
 msgid "Firewall configuration migration"
 msgstr ""
 
@@ -404,7 +404,7 @@ msgstr ""
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:105
 #: applications/luci-app-firewall/luasrc/controller/firewall.lua:9
 msgid "General Settings"
-msgstr ""
+msgstr "기본 설정"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:87
 msgid "Hardware flow offloading"
@@ -810,7 +810,7 @@ msgstr ""
 msgid "Sunday"
 msgstr "일요일"
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:649
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:664
 msgid ""
 "The existing firewall configuration needs to be changed for LuCI to function "
 "properly."
@@ -949,11 +949,11 @@ msgstr ""
 msgid "Unnamed zone"
 msgstr ""
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:553
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:568
 msgid "Unrecognized protocol"
 msgstr ""
 
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:650
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:665
 msgid ""
 "Upon pressing \"Continue\", \"redirect\" sections with target \"SNAT\" will "
 "be converted to \"nat\" sections and the firewall will be restarted to apply "
@@ -1017,8 +1017,8 @@ msgid "accept"
 msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:267
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:433
-#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:455
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:448
+#: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:470
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:211
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:243
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:264
@@ -1110,11 +1110,11 @@ msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:353
 msgid "unlimited"
-msgstr ""
+msgstr "무제한"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:243
 msgid "unspecified"
-msgstr ""
+msgstr "명시되지 않음"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:338
 msgid "valid firewall mark"
