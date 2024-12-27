@@ -242,6 +242,22 @@ function radio_restart(id, ev) {
 	dom.content(dsc, E('em', _('Device is restarting…')));
 }
 
+// Used for make it less problem while generating QR Code
+function escape_string (string) {
+	var to_escape = ['\\', ';', ',', ':', '"'];
+	var hex_only = /^[0-9a-f]+$/i;
+	var output = "";
+	for (var i=0; i<string.length; i++) {
+		if(to_escape.includes(string[i], to_escape) != -1) {
+			output += '\\'+string[i];
+		} else {
+			output += string[i];
+		}
+	}
+
+	return output;
+};
+
 function network_updown(id, map, ev) {
 	var radio = uci.get('wireless', id, 'device'),
 	    disabled = (uci.get('wireless', id, 'disabled') == '1') ||
