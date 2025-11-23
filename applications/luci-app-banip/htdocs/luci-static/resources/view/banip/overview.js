@@ -14,11 +14,11 @@
 function handleAction(ev) {
 	if (ev === 'restart' || ev === 'reload') {
 		let map = document.querySelector('.cbi-map');
-		dom.callClassMethod(map, 'save')
+		return dom.callClassMethod(map, 'save')
 			.then(L.bind(ui.changes.apply, ui.changes))
 			.then(function () {
 				return fs.exec_direct('/etc/init.d/banip', [ev]);
-			});
+			})
 	} else {
 		return fs.exec_direct('/etc/init.d/banip', [ev]);
 	}
@@ -43,7 +43,7 @@ return view.extend({
 		/*
 			poll runtime information
 		*/
-		let buttons, rtRes, infStat, infVer, infElements, infFeeds, infDevices, infUplink, infSystem, nftInfos, runInfos, infFlags, last_run
+		let buttons, rtRes, infStat, infVer, infElements, infFeeds, infDevices, infUplink, infSys, infNft, infRun, infFlags, infLast
 
 		pollData: poll.add(function () {
 			return L.resolveDefault(fs.stat('/var/run/banip.lock')).then(function (stat) {
@@ -90,7 +90,7 @@ return view.extend({
 								} else if (rtRes[i].match(/^\s+\+\slast_run\s+\:\s+(.*)$/)) {
 									rtRes.lastRun = rtRes[i].match(/^\s+\+\slast_run\s+\:\s+(.*)$/)[1];
 								} else if (rtRes[i].match(/^\s+\+\ssystem_info\s+\:\s+(.*)$/)) {
-									rtRes.systemInfo = rtRes[i].match(/^\s+\+\ssystem_info\s+\:\s+(.*)$/)[1];
+									rtRes.sysInfo = rtRes[i].match(/^\s+\+\ssystem_info\s+\:\s+(.*)$/)[1];
 								}
 							}
 						}
@@ -119,21 +119,25 @@ return view.extend({
 							if (infUplink) {
 								infUplink.textContent = rtRes.activeUplink || '-';
 							}
-							nftInfos = document.getElementById('nft');
-							if (nftInfos) {
-								nftInfos.textContent = rtRes.nftInfo || '-';
+							infNft = document.getElementById('nft');
+							if (infNft) {
+								infNft.textContent = rtRes.nftInfo || '-';
 							}
-							runInfos = document.getElementById('run');
-							if (runInfos) {
-								runInfos.textContent = rtRes.runInfo || '-';
+							infRun = document.getElementById('run');
+							if (infRun) {
+								infRun.textContent = rtRes.runInfo || '-';
 							}
 							infFlags = document.getElementById('flags');
 							if (infFlags) {
 								infFlags.textContent = rtRes.runFlags || '-';
 							}
-							last_run = document.getElementById('last');
-							if (last_run) {
-								last_run.textContent = rtRes.lastRun || '-';
+							infLast = document.getElementById('last');
+							if (infLast) {
+								infLast.textContent = rtRes.lastRun || '-';
+							}
+							infSys = document.getElementById('sys');
+							if (infSys) {
+								infSys.textContent = rtRes.sysInfo || '-';
 							}
 						}
 					} else {
@@ -197,35 +201,9 @@ return view.extend({
 					E('label', { 'class': 'cbi-value-title', 'style': 'margin-bottom:-5px;padding-top:0rem;' }, _('Last Run')),
 					E('div', { 'class': 'cbi-value-field', 'id': 'last', 'style': 'margin-bottom:-5px;color:#37c;' }, '-')
 				]),
-				E('div', { class: 'right' }, [
-					E('button', {
-						'class': 'btn cbi-button cbi-button-action',
-						'click': ui.createHandlerFn(this, function () {
-							return handleAction('lookup');
-						})
-					}, [_('Domain Lookup')]),
-					'\xa0',
-					E('button', {
-						'class': 'btn cbi-button cbi-button-negative',
-						'click': ui.createHandlerFn(this, function () {
-							return handleAction('stop');
-						})
-					}, [_('Stop')]),
-					'\xa0',
-					E('button', {
-						'class': 'btn cbi-button cbi-button-positive',
-						'click': ui.createHandlerFn(this, function () {
-							return handleAction('reload');
-						})
-					}, [_('Reload')]),
-					'\xa0',
-					E('button', {
-						'class': 'btn cbi-button cbi-button-positive',
-						'click': ui.createHandlerFn(this, function () {
-							return handleAction('restart');
-						})
-					}, [_('Restart')]),
-					'\xa0'
+				E('div', { 'class': 'cbi-value' }, [
+					E('label', { 'class': 'cbi-value-title', 'style': 'margin-bottom:-5px;padding-top:0rem;' }, _('System Info')),
+					E('div', { 'class': 'cbi-value-field', 'id': 'sys', 'style': 'margin-bottom:-5px;color:#37c;' }, '-')
 				])
 			]);
 		}, o, this);
@@ -297,7 +275,6 @@ return view.extend({
 		o.value('uclient-fetch');
 		o.value('wget');
 		o.value('curl');
-		o.value('aria2c');
 		o.optional = true;
 		o.retain = true;
 
@@ -306,12 +283,12 @@ return view.extend({
 		o.optional = true;
 		o.retain = true;
 
-		o = s.taboption('general', widgets.NetworkSelect, 'ban_trigger', _('Reload Trigger Interface'), _('List of available reload trigger interface(s).'));
+		o = s.taboption('general', widgets.NetworkSelect, 'ban_trigger', _('Startup Trigger Interface'), _('List of available network interfaces to trigger the banIP start.'));
 		o.multiple = true;
 		o.nocreate = true;
 		o.rmempty = true;
 
-		o = s.taboption('general', form.Value, 'ban_triggerdelay', _('Trigger Delay'), _('Additional trigger delay in seconds during interface reload and boot.'));
+		o = s.taboption('general', form.Value, 'ban_triggerdelay', _('Trigger Delay'), _('Additional trigger delay in seconds before banIP processing begins.'));
 		o.placeholder = '10';
 		o.datatype = 'range(1,300)';
 		o.rmempty = true;
@@ -362,22 +339,24 @@ return view.extend({
 		o.optional = true;
 		o.rmempty = true;
 
-		o = s.taboption('advanced', form.ListValue, 'ban_cores', _('CPU Cores'), _('Limit the cpu cores used by banIP to save RAM.'));
+		o = s.taboption('advanced', form.ListValue, 'ban_cores', _('CPU Cores'), _('Limit the cpu cores used by banIP to save RAM, autodetected by default.'));
 		o.value('1');
 		o.value('2');
 		o.value('4');
 		o.value('8');
 		o.value('16');
+		o.placeholder = _('-- default --');
 		o.optional = true;
 		o.rmempty = true;
 
-		o = s.taboption('advanced', form.ListValue, 'ban_splitsize', _('Set Split Size'), _('Split external Set loading after every n members to save RAM.'));
+		o = s.taboption('advanced', form.ListValue, 'ban_splitsize', _('Set Split Size'), _('Split external Set loading after every n members to save RAM, disabled by default.'));
 		o.value('512');
 		o.value('1024');
 		o.value('2048');
 		o.value('4096');
 		o.value('8192');
 		o.value('16384');
+		o.placeholder = _('-- default --');
 		o.optional = true;
 		o.rmempty = true;
 
@@ -438,13 +417,13 @@ return view.extend({
 
 		o = s.taboption('adv_chain', form.ListValue, 'ban_icmplimit', _('ICMP-Threshold'), _('ICMP-Threshold in packets per second to prevent WAN-DoS attacks. To disable this safeguard set it to \'0\'.'));
 		o.value('0');
-		o.value('10');
+		o.value('25');
 		o.value('50');
 		o.value('100');
 		o.value('250');
 		o.value('500');
 		o.value('1000');
-		o.default = '10';
+		o.default = '25';
 		o.placeholder = _('-- default --');
 		o.create = true;
 		o.optional = true;
@@ -509,6 +488,11 @@ return view.extend({
 		o = s.taboption('adv_set', form.Flag, 'ban_nftcount', _('Set Element Counter'), _('Enable nft counter for every Set element.'));
 		o.rmempty = true;
 
+		o = s.taboption('adv_set', form.Flag, 'ban_map', _('Enable GeoIP Map'), _('Enable a GeoIP Map with suspicious Set elements. This requires external requests to get the map tiles and geolocation data.'));
+		o.depends('ban_nftcount', '1');
+		o.optional = true;
+		o.rmempty = true;
+
 		o = s.taboption('adv_set', form.ListValue, 'ban_blockpolicy', _('Inbound Block Policy'), _('Drop packets silently or actively reject Inbound traffic.'));
 		o.value('drop', _('drop'));
 		o.value('reject', _('reject'));
@@ -543,6 +527,7 @@ return view.extend({
 				feed = Object.keys(feeds)[i].trim();
 				o.value(feed);
 			}
+			o.placeholder = _('-- default --');
 			o.optional = true;
 			o.rmempty = true;
 
@@ -553,6 +538,7 @@ return view.extend({
 				feed = Object.keys(feeds)[i].trim();
 				o.value(feed);
 			}
+			o.placeholder = _('-- default --');
 			o.optional = true;
 			o.rmempty = true;
 
@@ -563,6 +549,7 @@ return view.extend({
 				feed = Object.keys(feeds)[i].trim();
 				o.value(feed);
 			}
+			o.placeholder = _('-- default --');
 			o.optional = true;
 			o.rmempty = true;
 
@@ -573,16 +560,18 @@ return view.extend({
 				feed = Object.keys(feeds)[i].trim();
 				o.value(feed);
 			}
+			o.placeholder = _('-- default --');
 			o.optional = true;
 			o.rmempty = true;
 
-			o = s.taboption('adv_set', form.MultiValue, 'ban_feedcomplete', _('Feed Complete'), _('Opt out the feed from the deduplication process.'));
+			o = s.taboption('adv_set', form.MultiValue, 'ban_feedcomplete', _('Feed Complete'), _('Opt out specific feeds from the deduplication process.'));
 			o.value('allowlist', _('local allowlist'));
 			o.value('blocklist', _('local blocklist'));
 			for (let i = 0; i < Object.keys(feeds).length; i++) {
 				feed = Object.keys(feeds)[i].trim();
 				o.value(feed);
 			}
+			o.placeholder = _('-- default --');
 			o.optional = true;
 			o.rmempty = true;
 		}
@@ -645,11 +634,12 @@ return view.extend({
 		o.value('Exit before auth from', _('dropbear failed login'));
 		o.value('luci: failed login', _('LuCI failed login'));
 		o.value('error: maximum authentication attempts exceeded', _('sshd failed login'));
-		o.value('sshd.*Connection closed by.*\[preauth\]', _('sshd closed connection'));
-		o.value('SecurityEvent=\"InvalidAccountID\".*RemoteAddress=', _('asterisk invalid account'));
-		o.value('received a suspicious remote IP \'.*\'', _('nginx suspicious IP'));
-		o.value('TLS Error: could not determine wrapping from \[AF_INET\]', _('openvpn TLS error'));
-		o.value('AdGuardHome.*\[error\].*/control/login: from ip', _('AdGuardHome login error'));
+		o.value('sshd.*Connection closed by.*\\[preauth\\]', _('sshd closed connection'));
+		o.value('SecurityEvent=\\"InvalidAccountID\\".*RemoteAddress=', _('asterisk invalid account'));
+		o.value('received a suspicious remote IP .*', _('nginx suspicious IP'));
+		o.value('TLS Error: could not determine wrapping from \\[AF_INET\\]', _('openvpn TLS error'));
+		o.value('AdGuardHome.*\\[error\\].*/control/login: from ip', _('AdGuardHome login error'));
+		o.placeholder = _('-- Please choose (optional) --');
 		o.optional = true;
 		o.rmempty = true;
 
@@ -713,11 +703,12 @@ return view.extend({
 		if (feeds && Object.keys(feeds).length) {
 			o = s.taboption('feeds', form.MultiValue, 'ban_feed', _('Blocklist Feed'));
 			for (let i = 0; i < Object.keys(feeds).length; i++) {
-				feed = Object.keys(feeds)[i].trim();
-				chain = feeds[feed].chain.trim() || 'in';
-				descr = feeds[feed].descr.trim() || '-';
+				feed=(Object.keys(feeds)[i] || '').trim();
+				chain=(feeds[feed]?.chain ||'in').trim();
+				descr=(feeds[feed]?.descr || '-').trim();
 				o.value(feed, feed + ' (' + chain + ', ' + descr + ')');
 			}
+			o.placeholder = _('-- Please choose (optional) --');
 			o.optional = true;
 			o.rmempty = true;
 		}
@@ -745,17 +736,19 @@ return view.extend({
 						err = e;
 					}
 				}
+				o.placeholder = _('-- Please choose (optional) --');
 				o.optional = true;
 				o.rmempty = true;
 			}
 		}
 
-		o = s.taboption('feeds', form.MultiValue, 'ban_region', _('Regional Internet Registry'));
+		o = s.taboption('feeds', form.MultiValue, 'ban_region', _('Regional Internet Registry'), _('Summary of countries based on the Regional Internet Registry (RIR).'));
 		o.value('AFRINIC', _('AFRINIC - serving Africa and the Indian Ocean region'));
 		o.value('APNIC', _('APNIC - serving the Asia Pacific region'));
 		o.value('ARIN', _('ARIN - serving Canada and the United States'));
 		o.value('LACNIC', _('LACNIC - serving the Latin American and Caribbean region'));
 		o.value('RIPE', _('RIPE - serving Europe, Middle East and Central Asia'));
+		o.placeholder = _('-- Please choose (optional) --');
 		o.optional = true;
 		o.rmempty = true;
 
@@ -766,7 +759,7 @@ return view.extend({
 		o.rawhtml = true;
 		o.default = '<hr style="width: 200px; height: 1px;" /><em style="color:#37c;font-weight:bold;">' + _('ASN Selection') + '</em>';
 
-		o = s.taboption('feeds', form.DynamicList, 'ban_asn', _('ASNs'));
+		o = s.taboption('feeds', form.DynamicList, 'ban_asn', _('ASNs'), _('Collection of IP addresses based on Autonomous System Numbers.'));
 		o.datatype = 'uinteger';
 		o.optional = true;
 		o.rmempty = true;
@@ -791,6 +784,7 @@ return view.extend({
 					countries[i] = "";
 				}
 			}
+			o.placeholder = _('-- Please choose (optional) --');
 			o.optional = true;
 			o.rmempty = true;
 			o.validate = function (section_id, value) {
@@ -839,12 +833,39 @@ return view.extend({
 		o.value('1h');
 		o.value('2h');
 		o.value('1d');
+		o.placeholder = _('-- default --');
 		o.optional = true;
 		o.rmempty = true;
 
 		o = s.taboption('feeds', form.Flag, 'ban_allowlistonly', _('Allowlist Only'), _('Restrict the internet access from/to a small number of secure IPs.'));
 		o.rmempty = false;
 
+		s = m.section(form.NamedSection, 'global');
+		s.render = L.bind(function () {
+			return E('div', { 'class': 'cbi-page-actions' }, [
+				E('button', {
+					'class': 'btn cbi-button cbi-button-negative important',
+					'style': 'float:none;margin-right:.4em;',
+					'click': ui.createHandlerFn(this, function () {
+						return handleAction('stop');
+					})
+				}, [_('Stop')]),
+				E('button', {
+					'class': 'btn cbi-button cbi-button-positive important',
+					'style': 'float:none;margin-right:.4em;',
+					'click': ui.createHandlerFn(this, function () {
+						return handleAction('reload');
+					})
+				}, [_('Save & Reload')]),
+				E('button', {
+					'class': 'btn cbi-button cbi-button-positive important',
+					'style': 'float:none',
+					'click': ui.createHandlerFn(this, function () {
+						return handleAction('restart');
+					})
+				}, [_('Save & Restart')])
+			])
+		});
 		return m.render();
 	},
 	handleSaveApply: null,

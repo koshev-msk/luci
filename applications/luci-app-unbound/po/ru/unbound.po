@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-16 19:05+0000\n"
-"Last-Translator: Lorekin <lorekine@outlook.com>\n"
+"PO-Revision-Date: 2025-11-01 22:03+0000\n"
+"Last-Translator: SnIPeRSnIPeR "
+"<snipersniper@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsunbound/ru/>\n"
 "Language: ru\n"
@@ -9,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.8-rc\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:161
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:53
@@ -91,7 +92,7 @@ msgstr "DHCP"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:159
 msgid "DHCP Link"
-msgstr "Сервер DHCP"
+msgstr "DHCP-интеграция в DNS"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:167
 msgid "DHCPv4 to SLAAC"
@@ -226,7 +227,7 @@ msgstr "Включить управление этой зоной"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:29
 msgid "Enabled"
-msgstr "Включен"
+msgstr "Включено"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:298
 msgid "Extended Statistics"
@@ -270,7 +271,7 @@ msgstr "Фильтр Private Rebind"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zones.lua:71
 msgid "Forward"
-msgstr "Перенаправление"
+msgstr "Переадресация"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:40
 msgid "Forward (simple handoff)"
@@ -308,12 +309,12 @@ msgstr "Хост/MX/SRV/CNAME RR"
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:195
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:207
 msgid "Hostname, All Addresses"
-msgstr "Имя узла, Все адреса"
+msgstr "Имя хоста, Все адреса"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:194
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:206
 msgid "Hostname, Primary Address"
-msgstr "Имя узла, Один адрес"
+msgstr "Имя хоста, Один адрес"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:191
 msgid "How to enter the LAN or local network router in DNS"
@@ -464,13 +465,13 @@ msgstr "Нет фильтров"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:231
 msgid "No Remote Control"
-msgstr "Нет удаленного управления"
+msgstr "Нет удалённого управления"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zones.lua:45
 msgid ""
 "Note: SSL/TLS library is missing an API. Please review syslog. >> logread ..."
 msgstr ""
-"Примечание: В библиотеке SSL/TLS отсутствует API. Пожалуйста, просмотрите "
+"Примечание: в библиотеке SSL/TLS отсутствует API. Пожалуйста, просмотрите "
 "syslog. >> logread ..."
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:36
@@ -636,7 +637,7 @@ msgstr "Заглушка (принудительная рекурсия)"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:80
 msgid "TLS Name Index"
-msgstr "Индекс имен TLS"
+msgstr "Индекс имён TLS"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:286
 msgid "TTL Minimum"
@@ -709,7 +710,7 @@ msgid ""
 "a>."
 msgstr ""
 "Unbound (<a href=\"%s\" target=\"_blank\">NLnet Labs</a>) — это проверяющий "
-"рекурсивный кеширующий резолвер DNS (<a href=\"%s\" "
+"рекурсивный кэширующий резолвер DNS (<a href=\"%s\" "
 "target=\"_blank\">справка</a>)."
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:228
@@ -722,7 +723,7 @@ msgstr "Кэш Unbound слишком большой, чтобы его пока
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zones.lua:81
 msgid "Undefined"
-msgstr "Неопределенный"
+msgstr "Неопределённый"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:60
 msgid "Use 'resolv.conf.auto'"
@@ -731,7 +732,7 @@ msgstr "Использовать 'resolv.conf.auto'"
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:168
 msgid "Use DHCPv4 MAC to discover IP6 hosts SLAAC (EUI64)"
 msgstr ""
-"Использовать DHCPv4 MAC для того, чтобы определить IP6 SLAAC узла (EUI64)"
+"Использовать DHCPv4 MAC для того, чтобы определить IP6 SLAAC хоста (EUI64)"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:205
 msgid "Use Upstream"
@@ -755,7 +756,7 @@ msgstr "Внешние сети"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:44
 msgid "Zone (Domain) names included in this zone combination"
-msgstr "Имена зон (доменные имена), включенные в эту запись"
+msgstr "Имена зон (доменные имена), включённые в эту запись"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:85
 msgid "Zone Download URL"
@@ -806,11 +807,11 @@ msgstr "неизвестное действие для"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zones.lua:206
 msgid "use <var>%s</var> nameservers"
-msgstr "использует <var>%s</var> сервера имен"
+msgstr "использует <var>%s</var> сервера имён"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zones.lua:156
 msgid "use nameservers"
-msgstr "использует сервера имен"
+msgstr "использует сервера имён"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zones.lua:165
 msgid "with default certificate for <var>%s</var>"

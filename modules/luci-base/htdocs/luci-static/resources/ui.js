@@ -368,7 +368,7 @@ const UITextfield = UIElement.extend(/** @lends LuCI.ui.Textfield.prototype */ {
 			'id': this.options.id ? `widget.${this.options.id}` : null,
 			'name': this.options.name,
 			'type': 'text',
-			'class': this.options.password ? 'cbi-input-password' : 'cbi-input-text',
+			'class': `password-input ${this.options.password ? 'cbi-input-password' : 'cbi-input-text'}`,
 			'readonly': this.options.readonly ? '' : null,
 			'disabled': this.options.disabled ? '' : null,
 			'maxlength': this.options.maxlength,
@@ -384,8 +384,15 @@ const UITextfield = UIElement.extend(/** @lends LuCI.ui.Textfield.prototype */ {
 					'title': _('Reveal/hide password'),
 					'aria-label': _('Reveal/hide password'),
 					'click': function(ev) {
-						const e = this.previousElementSibling;
-						e.type = (e.type === 'password') ? 'text' : 'password';
+						// DOM manipulation (e.g. by password managers) may have inserted other
+						// elements between the reveal button and the input. This searches for
+						// the first <input> inside the parent of the <button> to use for toggle.
+						const e = this.parentElement.querySelector('input.password-input')
+						if (e) {
+							e.type = (e.type === 'password') ? 'text' : 'password';
+						} else {
+							console.error('unable to find input corresponding to reveal/hide button');
+						}
 						ev.preventDefault();
 					}
 				}, '∗')
@@ -1083,7 +1090,9 @@ const UIDropdown = UIElement.extend(/** @lends LuCI.ui.Dropdown.prototype */ {
 				'class': 'create-item-input',
 				'readonly': this.options.readonly ? '' : null,
 				'maxlength': this.options.maxlength,
-				'placeholder': this.options.custom_placeholder ?? this.options.placeholder
+				'placeholder': this.options.custom_placeholder ?? this.options.placeholder,
+				'inputmode': 'text',
+				'enterkeyhint': 'done'
 			});
 
 			if (this.options.datatype || this.options.validate)
@@ -2636,6 +2645,123 @@ const UIDynamicList = UIElement.extend(/** @lends LuCI.ui.DynamicList.prototype 
 });
 
 /**
+ * Instantiate a range slider widget.
+ *
+ * @constructor Slider
+ * @memberof LuCI.ui
+ * @augments LuCI.ui.AbstractElement
+ *
+ * @classdesc
+ *
+ * The `RangeSlider` class implements a widget which allows the user to set a 
+ * value from a predefined range.
+ *
+ * UI widget instances are usually not supposed to be created by view code
+ * directly. Instead they're implicitly created by `LuCI.form` when
+ * instantiating CBI forms.
+ *
+ * This class is automatically instantiated as part of `LuCI.ui`. To use it
+ * in views, use `'require ui'` and refer to `ui.Slider`. To import it in
+ * external JavaScript, use `L.require("ui").then(...)` and access the
+ * `Slider` property of the class instance value.
+ *
+ * @param {string|string[]} [value=null]
+ * ...
+ *
+ */
+const UIRangeSlider = UIElement.extend({
+	__init__(value, options) {
+		this.value = value;
+		this.options = Object.assign({
+			optional: true,
+			min: 0,
+			max: 100,
+			step: 1,
+			calculate: null,
+			calcunits: null,
+			usecalc: false,
+			disabled: false,
+		}, options);
+	},
+
+	/** @override */
+	render() {
+		this.sliderEl = E('input', {
+			'type': 'range',
+			'id': this.options.id,
+			'min': this.options.min,
+			'max': this.options.max,
+			'step': this.options.step || 'any',
+			'value': this.value,
+			'disabled': this.options.disabled ? '' : null
+		});
+
+		this.calculatedvalue = (typeof this.options.calculate === 'function')
+			? this.options.calculate(this.value)
+			: null;
+
+		this.calcEl = E('output', { 'class': 'cbi-range-slider-calc' }, this.calculatedvalue);
+
+		this.calcunitsEl = E('span', { 'class': 'cbi-range-slider-calc-units' }, 
+			this.options.calcunits 
+			? '&nbsp;' + this.options.calcunits 
+			: ''
+		);
+
+		const container = E('div', { 'class': 'cbi-range-slider' }, [
+			this.sliderEl,
+			this.valueEl = E('output', { 'for': this.options.id, 'class': 'cbi-range-slider-value' }, this.value),
+			this.calculatedvalue ? E('br') : null,
+			this.calculatedvalue ? this.calcEl : null,
+			this.calculatedvalue ? this.calcunitsEl : null,
+		].filter(Boolean));
+
+		this.node = container;
+
+		this.setUpdateEvents(this.sliderEl, 'input', 'blur');
+		this.setChangeEvents(this.sliderEl, 'change');
+
+		this.sliderEl.addEventListener('input', () => {
+			const val = this.sliderEl.value;
+			this.valueEl.textContent = val;
+			
+			if (typeof this.options.calculate === 'function') {
+				// update the stored calculated value, and the displayed values
+				this.calculatedvalue = this.options.calculate(val);
+				this.calcEl.textContent = this.calculatedvalue;
+			}
+
+			this.node.setAttribute('data-changed', true);
+		});
+
+		dom.bindClassInstance(container, this);
+
+		return container;
+	},
+
+	/** @override */
+	getValue() {
+		return this.sliderEl.value;
+	},
+
+	/** @private */
+	getCalculatedValue() {
+		return this.calculatedvalue;
+	},
+
+	/** @override */
+	setValue(value) {
+		this.sliderEl.value = value;
+		this.valueEl.textContent = value;
+
+		if (typeof this.options.calculate === 'function') {
+			this.calculatedvalue = this.options.calculate(value);
+			this.calcEl.textContent = this.calculatedvalue;
+		}
+	}
+});
+
+/**
  * Instantiate a hidden input field widget.
  *
  * @constructor Hiddenfield
@@ -2876,10 +3002,10 @@ const UIFileUpload = UIElement.extend(/** @lends LuCI.ui.FileUpload.prototype */
 
 	/** @private */
 	canonicalizePath(path) {
-		return path.replace(/\/{2,}/, '/')
-			.replace(/\/\.(\/|$)/g, '/')
-			.replace(/[^\/]+\/\.\.(\/|$)/g, '/')
-			.replace(/\/$/, '');
+	return path.replace(/\/{2,}/g, '/')                // Collapse multiple slashes
+				.replace(/\/\.(\/|$)/g, '/')           // Remove `/.`
+				.replace(/[^\/]+\/\.\.(\/|$)/g, '/')   // Resolve `/..`
+				.replace(/\/$/g, (m, o, s) => s.length > 1 ? '' : '/'); // Remove trailing `/` only if not root
 	},
 
 	/** @private */
@@ -2890,10 +3016,7 @@ const UIFileUpload = UIElement.extend(/** @lends LuCI.ui.FileUpload.prototype */
 		if (cpath.length <= croot.length)
 			return [ croot ];
 
-		if (cpath.charAt(croot.length) != '/')
-			return [ croot ];
-
-		const parts = cpath.substring(croot.length + 1).split(/\//);
+		const parts = cpath.substring(croot.length).split(/\//);
 
 		parts.unshift(croot);
 
@@ -3078,13 +3201,13 @@ const UIFileUpload = UIElement.extend(/** @lends LuCI.ui.FileUpload.prototype */
 		let cur = '';
 
 		for (let i = 0; i < dirs.length; i++) {
-			cur = cur ? `${cur}/${dirs[i]}` : dirs[i];
+			cur += dirs[i];
 			dom.append(breadcrumb, [
 				i ? ' » ' : '',
 				E('a', {
 					'href': '#',
 					'click': UI.prototype.createHandlerFn(this, 'handleSelect', cur ?? '/', null)
-				}, dirs[i] != '' ? '%h'.format(dirs[i]) : E('em', '(root)')),
+				}, dirs[i] !== '/' ? '%h'.format(dirs[i]) : E('em', '(root)')),
 			]);
 		}
 
@@ -3847,11 +3970,6 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 	 * to the `dom.content()` function - refer to its documentation for
 	 * applicable values.
 	 *	 
-	 * @param {int} [timeout]
-	 * A millisecond value after which the notification will disappear
-	 * automatically. If omitted, the notification will remain until it receives
-	 * the click event.
-	 *
 	 * @param {...string} [classes]
 	 * A number of extra CSS class names which are set on the notification
 	 * banner element.
@@ -3859,7 +3977,7 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 	 * @returns {Node}
 	 * Returns a DOM Node representing the notification banner element.
 	 */
-	addNotification(title, children, timeout, ...classes) {
+	addNotification(title, children, ...classes) {
 		const mc = document.querySelector('#maincontent') ?? document.body;
 		const msg = E('div', {
 			'class': 'alert-message fade-in',
@@ -3876,7 +3994,7 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 					'class': 'btn',
 					'style': 'margin-left:auto; margin-top:auto',
 					'click': function(ev) {
-						fadeOutNotification(ev.target);
+						dom.parent(ev.target, '.alert-message').classList.add('fade-out');
 					},
 
 				}, [ _('Dismiss') ])
@@ -3892,25 +4010,62 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 
 		mc.insertBefore(msg, mc.firstElementChild);
 
+		return msg;
+	},
+
+	/**
+	 * Add a time-limited notification banner at the top of the current view.
+	 *
+	 * A notification banner is an alert message usually displayed at the
+	 * top of the current view, spanning the entire available width.
+	 * Notification banners will stay in place until dismissed by the user, or
+	 * it has expired.
+	 * Multiple banners may be shown at the same time.
+	 *
+	 * Additional CSS class names may be passed to influence the appearance of
+	 * the banner. Valid values for the classes depend on the underlying theme.
+	 *
+	 * @see LuCI.dom.content
+	 *
+	 * @param {string} [title]
+	 * The title of the notification banner. If `null`, no title element
+	 * will be rendered.
+	 *
+	 * @param {*} children
+	 * The contents to add to the notification banner. This should be a DOM
+	 * node or a document fragment in most cases. The value is passed as-is
+	 * to the `dom.content()` function - refer to its documentation for
+	 * applicable values.
+	 * 
+	 * @param {int} [timeout]
+	 * A millisecond value after which the notification will disappear
+	 * automatically. If omitted, the notification will remain until it receives
+	 * the click event.
+	 *
+	 * @param {...string} [classes]
+	 * A number of extra CSS class names which are set on the notification
+	 * banner element.
+	 *
+	 * @returns {Node}
+	 * Returns a DOM Node representing the notification banner element.
+	 */
+	addTimeLimitedNotification(title, children, timeout, ...classes) {
+		const msg = this.addNotification(title, children, ...classes);
+
 		function fadeOutNotification(element) {
-			const notification = dom.parent(element, '.alert-message');
-			if (notification) {
-				notification.classList.add('fade-out');
-				notification.classList.remove('fade-in');
+			if (element) {
+				element.classList.add('fade-out');
+				element.classList.remove('fade-in');
 				setTimeout(() => {
-					if (notification.parentNode) {
-						notification.parentNode.removeChild(notification);
+					if (element.parentNode) {
+						element.parentNode.removeChild(element);
 					}
 				});
 			}
 		}
 
 		if (typeof timeout === 'number' && timeout > 0) {
-			setTimeout(() => {
-				if (msg && msg.parentNode) {
-					fadeOutNotification(msg);
-				}
-			}, timeout);
+			setTimeout(() => fadeOutNotification(msg), timeout);
 		}
 
 		return msg;
@@ -4483,7 +4638,7 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 	 * or rejecting with `null` when the connectivity check timed out.
 	 */
 	pingDevice(proto, ipaddr) {
-		const target = '%s://%s%s?%s'.format(proto ?? 'http', ipaddr ?? window.location.host, L.resource('icons/loading.gif'), Math.random());
+		const target = '%s://%s%s?%s'.format(proto ?? 'http', ipaddr ?? window.location.host, L.resource('icons/loading.svg'), Math.random());
 
 		return new Promise((resolveFn, rejectFn) => {
 			const img = new Image();
@@ -4638,7 +4793,7 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 					E('div', { 'class': 'uci-change-legend-label' }, [
 						E('var', {}, E('del', '&#160;')), ' ', _('Option removed') ])]),
 				E('br'), list,
-				E('div', { 'class': 'right' }, [ //button-row?
+				E('div', { 'class': 'button-row' }, [
 					E('button', {
 						'class': 'btn cbi-button',
 						'click': UI.prototype.hideModal
@@ -4754,7 +4909,7 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 						UI.prototype.changes.displayStatus('warning', [
 							E('h4', _('Configuration changes have been rolled back!')),
 							E('p', _('The device could not be reached within %d seconds after applying the pending changes, which caused the configuration to be rolled back for safety reasons. If you believe that the configuration changes are correct nonetheless, perform an unchecked configuration apply. Alternatively, you can dismiss this warning and edit changes before attempting to apply again, or revert all pending changes to keep the currently working configuration state.').format(L.env.apply_rollback)),
-							E('div', { 'class': 'right' }, [
+							E('div', { 'class': 'button-row' }, [
 								E('button', {
 									'class': 'btn',
 									'click': L.bind(UI.prototype.changes.displayStatus, UI.prototype.changes, false)
@@ -5137,6 +5292,7 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 	Select: UISelect,
 	Dropdown: UIDropdown,
 	DynamicList: UIDynamicList,
+	RangeSlider: UIRangeSlider,
 	Combobox: UICombobox,
 	ComboButton: UIComboButton,
 	Hiddenfield: UIHiddenfield,

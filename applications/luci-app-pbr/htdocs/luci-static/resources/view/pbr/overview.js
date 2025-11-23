@@ -141,7 +141,11 @@ return view.extend({
 			_("Supported Interfaces"),
 			_(
 				"Allows to specify the list of interface names (in lower case) to be explicitly supported by the service. " +
-					"Can be useful if your OpenVPN tunnels have dev option other than tun* or tap*."
+					"Can be useful if your OpenVPN tunnels have dev option other than tun* or tap* or specific use cases " +
+					"of WireGuard servers. See the %sREADME%s for details."
+			).format(
+				'<a href="' + pkg.URL + '#WireGuardServerUseCases" target="_blank">',
+				"</a>"
 			)
 		);
 		o.optional = false;
@@ -152,8 +156,13 @@ return view.extend({
 			"ignored_interface",
 			_("Ignored Interfaces"),
 			_(
-				"Allows to specify the list of interface names (in lower case) to be ignored by the service. " +
-					"Can be useful if running both VPN server and VPN client on the router."
+				"Allows to specify the list of interface names (lower case) to be ignored by the service. " +
+					"Can be useful for an OpenVPN server running on OpenWrt device. WireGuard servers, which " +
+					"have a listen_port defined, are handled automatically, do not add those here." +
+					"See the %sREADME%s for details."
+			).format(
+				'<a href="' + pkg.URL + '#WireGuardServerUseCases" target="_blank">',
+				"</a>"
 			)
 		);
 		o.optional = false;
@@ -187,10 +196,10 @@ return view.extend({
 		o = s.taboption(
 			"tab_advanced",
 			form.Value,
-			"wan_mark",
-			_("WAN Table FW Mark"),
+			"uplink_mark",
+			_("Uplink Interface Table FW Mark"),
 			_(
-				"Starting (WAN) FW Mark for marks used by the service. High starting mark is " +
+				"Starting (Uplink Interface) FW Mark for marks used by the service. High starting mark is " +
 					"used to avoid conflict with SQM/QoS. Change with caution together with"
 			) +
 				" " +
@@ -363,6 +372,12 @@ return view.extend({
 		reply.interfaces.forEach((element) => {
 			element === "ignore" || o.value(element);
 		});
+
+		o = s.option(form.Value, "dest_dns_port", _("Remote DNS Port"));
+		o.optional = true;
+		o.rmempty = true;
+		o.datatype = "port";
+		o.default = "53";
 
 		s = m.section(
 			form.NamedSection,

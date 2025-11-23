@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2025-01-17 13:40+0000\n"
-"Last-Translator: Piotr Kołtun <pkoltungm@gmail.com>\n"
+"PO-Revision-Date: 2025-09-07 21:06+0000\n"
+"Last-Translator: Matthaiks <kitynska@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsstatistics/pl/>\n"
 "Language: pl\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/mqtt.js:47
 msgid "0 - At most once"
@@ -1518,8 +1518,9 @@ msgid ""
 msgstr ""
 "Wtyczka email tworzy gniazdo uniksowe, którego można użyć do przesyłania "
 "statystyk e-maili do działającego demona collectd. Ta wtyczka jest "
-"przeznaczona głównie do użytku w połączeniu z Mail::SpamAssasin::Plugin::"
-"Collectd, ale może być również używana na inne sposoby."
+"przeznaczona głównie do użytku w połączeniu z "
+"Mail::SpamAssasin::Plugin::Collectd, ale może być również używana na inne "
+"sposoby."
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/entropy.js:7
 msgid "The entropy plugin collects statistics about the available entropy."
@@ -1569,8 +1570,8 @@ msgid ""
 "The iwinfo plugin collects statistics about wireless signal strength, noise "
 "and quality."
 msgstr ""
-"Wtyczka iwinfo zbiera statystyki dotyczące siły sygnału bezprzewodowego, "
-"szumów i jakości."
+"Wtyczka iwinfo zbiera statystyki dotyczące poziomu sygnału, szumów i jakości "
+"Wi-Fi."
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/load.js:7
 msgid "The load plugin collects statistics about the general system load."
@@ -1868,11 +1869,11 @@ msgstr "Po ustawieniu true, żądamy wartości procentowych"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/iwinfo.js:7
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/iwinfo.json:2
 msgid "Wireless"
-msgstr "Sieć bezprzewodowa"
+msgstr "Wi-Fi"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/iwinfo.js:7
 msgid "Wireless iwinfo Plugin Configuration"
-msgstr "Konfiguracja bezprzewodowego pluginu iwinfo"
+msgstr "Konfiguracja wtyczki iwinfo"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:102
 msgid "Writing *.rrd files to %s"
@@ -1909,7 +1910,7 @@ msgstr "bez podsumowania"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/collectd.js:139
 msgid "none"
-msgstr "Brak"
+msgstr "brak"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/df.js:107
 msgid "one device"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-04-12 14:21+0000\n"
-"Last-Translator: Sergey Ponomarev <stokito@gmail.com>\n"
+"PO-Revision-Date: 2025-10-10 05:14+0000\n"
+"Last-Translator: CRISTIAN ANDREI <cristianvdr@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationscommands/ro/>\n"
 "Language: ro\n"
@@ -11,19 +11,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: applications/luci-app-commands/htdocs/luci-static/resources/view/commands.js:19
 msgid "A short textual description of the configured command"
-msgstr "O scurta descriere textuala a comenzii configurate"
+msgstr "O scurtă descriere textuală a comenzii configurate"
 
 #: applications/luci-app-commands/htdocs/luci-static/resources/view/commands.js:30
 msgid ""
 "Allow executing the command and downloading its output without prior "
 "authentication"
 msgstr ""
-"Permite executarea comenzii si descarcarea rezultatului fara o autentificare "
-"anterioara"
+"Permiteți executarea comenzii și descărcarea acesteia fără autentificare "
+"prealabilă"
 
 #: applications/luci-app-commands/htdocs/luci-static/resources/view/commands.js:27
 msgid "Allow the user to provide additional command line arguments"
@@ -59,7 +59,7 @@ msgstr "Comanda:"
 
 #: applications/luci-app-commands/root/usr/share/luci/menu.d/luci-app-commands.json:23
 msgid "Configure"
-msgstr "Configureaza"
+msgstr "Configurați"
 
 #: applications/luci-app-commands/htdocs/luci-static/resources/view/commands.js:10
 #: applications/luci-app-commands/root/usr/share/luci/menu.d/luci-app-commands.json:3
@@ -81,7 +81,7 @@ msgstr "Descriere"
 
 #: applications/luci-app-commands/ucode/template/commands.ut:149
 msgid "Download"
-msgstr "Descarcă"
+msgstr "Descărcare"
 
 #: applications/luci-app-commands/root/usr/share/rpcd/acl.d/luci-app-commands.json:3
 msgid "Grant UCI access for luci-app-commands"

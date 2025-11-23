@@ -35,11 +35,11 @@ function render_iface(dev, alias) {
 	    up   = dev ? dev.isUp() : false;
 
 	return E('span', { class: 'cbi-tooltip-container' }, [
-		E('img', { 'class' : 'middle', 'src': L.resource('icons/%s%s.png').format(
+		E('img', { 'class' : 'middle', 'src': L.resource('icons/%s%s.svg').format(
 			alias ? 'alias' : type,
 			up ? '' : '_disabled') }),
 		E('span', { 'class': 'cbi-tooltip ifacebadge large' }, [
-			E('img', { 'src': L.resource('icons/%s%s.png').format(
+			E('img', { 'src': L.resource('icons/%s%s.svg').format(
 				type, up ? '' : '_disabled') }),
 			L.itemlist(E('span', { 'class': 'left' }), [
 				_('Type'),      dev ? dev.getTypeI18n() : null,
@@ -103,7 +103,7 @@ function render_modal_status(node, ifc) {
 
 	dom.content(node, [
 		E('img', {
-			'src': L.resource('icons/%s%s.png').format(dev ? dev.getType() : 'ethernet', (dev && dev.isUp()) ? '' : '_disabled'),
+			'src': L.resource('icons/%s%s.svg').format(dev ? dev.getType() : 'ethernet', ifc.isUp() ? '' : '_disabled'),
 			'title': dev ? dev.getTypeI18n() : _('Not present')
 		}),
 		ifc ? render_status(E('span'), ifc, true) : E('em', _('Interface not present or not connected yet.'))
@@ -297,7 +297,7 @@ return view.extend({
 				var dev = ifc.getDevice();
 				dom.content(stat, [
 					E('img', {
-						'src': L.resource('icons/%s%s.png').format(dev ? dev.getType() : 'ethernet', (dev && dev.isUp()) ? '' : '_disabled'),
+						'src': L.resource('icons/%s%s.svg').format(dev ? dev.getType() : 'ethernet', ifc.isUp() ? '' : '_disabled'),
 						'title': dev ? dev.getTypeI18n() : _('Not present')
 					}),
 					render_status(E('span'), ifc, true)
@@ -847,7 +847,8 @@ return view.extend({
 						}
 					};
 
-					so = ss.taboption('ipv6-ra', form.Value, 'ra_pref64', _('NAT64 prefix'), _('Announce NAT64 prefix in <abbr title="Router Advertisement">RA</abbr> messages.'));
+					so = ss.taboption('ipv6-ra', form.Value, 'ra_pref64', _('NAT64 prefix'), _('Announce NAT64 prefix in <abbr title="Router Advertisement">RA</abbr> messages.') +  ' ' + 
+						_('See %s and %s.'.format('<a href="%s" target="_blank">RFC6146</a>', '<a href="%s" target="_blank">RFC8781</a>').format('https://www.rfc-editor.org/rfc/rfc6146', 'https://www.rfc-editor.org/rfc/rfc8781')));
 					so.optional = true;
 					so.datatype = 'cidr6';
 					so.placeholder = '64:ff9b::/96';
@@ -868,10 +869,28 @@ return view.extend({
 					so.depends('ra', 'server');
 					so.depends({ ra: 'hybrid', master: '0' });
 
+					so = ss.taboption('ipv6-ra', form.Value, 'ra_reachabletime', _('<abbr title="Router Advertisement">RA</abbr> Reachability Timer'), 
+						_('Units: milliseconds. 0 means unspecified.') + ' ' +
+						_('Dictates how long a node assumes a neighbor is reachable after a reachability confirmation; published in <abbr title="Router Advertisement">RA</abbr> messages.'));
+					so.optional = true;
+					so.datatype = 'range(0, 3600000)'; // RFC4861 and odhcpd caps to 3,600,000 msec
+					so.placeholder = '0';
+					so.depends('ra', 'server');
+					so.depends({ ra: 'hybrid', master: '0' });
+
+					so = ss.taboption('ipv6-ra', form.Value, 'ra_retranstime', _('<abbr title="Router Advertisement">RA</abbr> Retransmission Timer'), 
+						_('Units: milliseconds. 0 means unspecified.') + ' ' +
+						_('Controls retransmitted Neighbor Solicitation messages; published in <abbr title="Router Advertisement">RA</abbr> messages.'));
+					so.optional = true;
+					so.placeholder = '0';
+					so.datatype = 'range(0, 60000)'; // odhcpd caps to 60,000 msec
+					so.depends('ra', 'server');
+					so.depends({ ra: 'hybrid', master: '0' });
+
 					so = ss.taboption('ipv6-ra', form.Value, 'ra_lifetime', _('<abbr title="Router Advertisement">RA</abbr> Lifetime'), _('Router Lifetime published  in <abbr title="Router Advertisement, ICMPv6 Type 134">RA</abbr> messages.  Maximum is 9000 seconds.'));
 					so.optional = true;
 					so.datatype = 'range(0, 9000)';
-					so.placeholder = '1800';
+					so.placeholder = '2700';
 					so.depends('ra', 'server');
 					so.depends({ ra: 'hybrid', master: '0' });
 
@@ -913,6 +932,27 @@ return view.extend({
 						}, this));
 					};
 
+					so = ss.taboption('ipv6-ra', form.Value, 'max_preferred_lifetime', _('IPv6 Preferred Prefix Lifetime'), _('Maximum preferred lifetime for a prefix.'));
+					so.optional = true;
+					so.placeholder = '45m';
+					so.value('5m', _('5m (5 minutes)'));
+					so.value('45m', _('45m (45 minutes - default)'));
+					so.value('3h', _('3h (3 hours)'));
+					so.value('12h', _('12h (12 hours)'));
+					so.value('7d', _('7d (7 days)'));
+					so.depends('ra', 'server');
+					so.depends({ ra: 'hybrid', master: '0' });
+
+					so = ss.taboption('ipv6-ra', form.Value, 'max_valid_lifetime', _('IPv6 Valid Prefix Lifetime'), _('Maximum valid lifetime for a prefix.'));
+					so.optional = true;
+					so.placeholder = '90m';
+					so.value('5m', _('5m (5 minutes)'));
+					so.value('90m', _('90m (90 minutes - default)'));
+					so.value('3h', _('3h (3 hours)'));
+					so.value('12h', _('12h (12 hours)'));
+					so.value('7d', _('7d (7 days)'));
+					so.depends('ra', 'server');
+					so.depends({ ra: 'hybrid', master: '0' });
 
 					so = ss.taboption('ipv6', form.RichListValue, 'dhcpv6', _('DHCPv6-Service'),
 						_('Configures the operation mode of the DHCPv6 service on this interface.'));
@@ -933,6 +973,20 @@ return view.extend({
 					so = ss.taboption('ipv6', form.DynamicList, 'dns', _('Announced IPv6 DNS servers'),
 						_('Specifies a fixed list of IPv6 DNS server addresses to announce via DHCPv6. If left unspecified, the device will announce itself as IPv6 DNS server unless the <em>Local IPv6 DNS server</em> option is disabled.'));
 					so.datatype = 'ip6addr("nomask")'; /* restrict to IPv6 only for now since dnsmasq (DHCPv4) does not honour this option */
+					so.depends('ra', 'server');
+					so.depends({ ra: 'hybrid', master: '0' });
+					so.depends('dhcpv6', 'server');
+					so.depends({ dhcpv6: 'hybrid', master: '0' });
+
+					so = ss.taboption('ipv6', form.DynamicList, 'dnr', _('Announce encrypted DNS servers'),
+						_('Specifies a fixed list of encrypted DNS server addresses to announce via DHCPv6/<abbr title="Router Advertisement">RA</abbr> (see %s).')
+						 .format('<a href="%s" target="_blank">RFC9463</a>').format('https://www.rfc-editor.org/rfc/rfc9463') + '<br/>' +
+						_('IPv4 addresses are only supported if <code>odhcpd</code> also handles DHCPv4.') + '<br/>' +
+						_('Syntax: <code>&lt;numeric priority&gt; &lt;domain-name&gt; [IP,...] [SVC parameter ...]</code>') + '<br/>' +
+						_('Example: <code>100 dns.example.com 2001:db8::53,192.168.1.53 alpn=doq port=853</code>') + '<br/>' +
+						_('Note: the <code>_lifetime=&lt;seconds&gt;</code> SVC parameter sets the lifetime of the announced server (use <code>0</code> to indicate a server which should no longer be used).')
+					);
+					so.datatype = 'string';
 					so.depends('ra', 'server');
 					so.depends({ ra: 'hybrid', master: '0' });
 					so.depends('dhcpv6', 'server');
@@ -998,18 +1052,6 @@ return view.extend({
 					so = ss.taboption('ipv6', form.Flag, 'ndproxy_slave', _('NDP-Proxy slave'), _('Set interface as NDP-Proxy external slave. Default is off.'));
 					so.depends({ ndp: 'relay', master: '0' });
 					so.depends({ ndp: 'hybrid', master: '0' });
-
-					so = ss.taboption('ipv6', form.Value, 'preferred_lifetime', _('IPv6 Prefix Lifetime'), _('Preferred lifetime for a prefix.'));
-					so.optional = true;
-					so.placeholder = '12h';
-					so.value('5m', _('5m (5 minutes)'));
-					so.value('3h', _('3h (3 hours)'));
-					so.value('12h', _('12h (12 hours - default)'));
-					so.value('7d', _('7d (7 days)'));
-
-					//This is a ra_* setting, but its placement is more logical/findable under IPv6 settings.
-					so = ss.taboption('ipv6', form.Flag, 'ra_useleasetime', _('Follow IPv4 Lifetime'), _('DHCPv4 <code>leasetime</code> is used as limit and preferred lifetime of the IPv6 prefix.'));
-					so.optional = true;
 				}
 
 				ifc.renderFormOptions(s);
@@ -1292,7 +1334,7 @@ return view.extend({
 					'data-network': section_id
 				}, [
 					E('img', {
-						'src': L.resource('icons/ethernet_disabled.png'),
+						'src': L.resource('icons/ethernet_disabled.svg'),
 						'style': 'width:16px; height:16px'
 					}),
 					E('br'), E('small', '?')
@@ -1402,7 +1444,7 @@ return view.extend({
 			var isNew = (uci.get('network', s.section, 'name') == null),
 			    dev = getDevice(s.section);
 
-			nettools.addDeviceOptions(s, dev, isNew);
+			nettools.addDeviceOptions(s, dev, isNew, rtTables);
 		};
 
 		s.handleModalCancel = function(map /*, ... */) {
@@ -1475,6 +1517,9 @@ return view.extend({
 			case 'veth':
 				return 'veth';
 
+			case 'vrf':
+				return 'vrf';
+
 			case 'wifi':
 			case 'alias':
 			case 'switch':
@@ -1509,6 +1554,9 @@ return view.extend({
 
 			case 'veth':
 				return _('Virtual Ethernet');
+
+			case 'vrf':
+				return _('Virtual Routing and Forwarding (VRF)');
 
 			default:
 				return _('Network device');
@@ -1570,6 +1618,17 @@ return view.extend({
 			_('ULA for IPv6 is analogous to IPv4 private network addressing.') + ' ' +
 			_('This prefix is randomly generated at first install.'));
 		o.datatype = 'cidr6';
+
+		const l3mdevhelp1 = _('%s services running on this device in the default VRF context (ie., not bound to any VRF device) shall work across all VRF domains.');
+		const l3mdevhelp2 = _('Off means VRF traffic will be handled exclusively by sockets bound to VRFs.');
+
+		o = s.option(form.Flag, 'tcp_l3mdev', _('TCP Layer 3 Master Device (tcp_l3mdev) accept'),
+			l3mdevhelp1.format('TCP') + '<br/>' +
+			l3mdevhelp2);
+
+		o = s.option(form.Flag, 'udp_l3mdev', _('UDP Layer 3 Master Device (udp_l3mdev) accept'),
+			l3mdevhelp1.format('UDP') + '<br/>' +
+			l3mdevhelp2);
 
 		o = s.option(form.ListValue, 'packet_steering', _('Packet Steering'), _('Enable packet steering across CPUs. May help or hinder network speed.'));
 		o.value('0', _('Disabled'));

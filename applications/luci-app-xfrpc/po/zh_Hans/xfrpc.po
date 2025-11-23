@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-04-10 09:38+0000\n"
-"Last-Translator: MkQtS <MkQtS@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"openwrt/luciapplicationsxfrpc/zh_Hans/>\n"
+"PO-Revision-Date: 2025-11-05 00:02+0000\n"
+"Last-Translator: nKsyn <e.nksyn@gmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/openwrt/luciapplicationsxfrpc/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 
 #: applications/luci-app-xfrpc/htdocs/luci-static/resources/view/xfrpc.js:104
 msgid "Alert"
@@ -116,8 +116,8 @@ msgid ""
 "\"Info\", \"Notice\", \"Warning\", \"Error\", \"Critical\", \"Alert\" and "
 "\"Emergency\"."
 msgstr ""
-"LogLevel 指定最小日志等级。有效值为 \"调试”、“信息“、”注意“、”警告“、错"
-"误”、“严重”、“警报”和“紧急”。"
+"LogLevel 指定最小日志等级。有效值为 \"调试”、“信息“、”注意“、”警告“、错误”、"
+"“严重”、“警报”和“紧急”。"
 
 #: applications/luci-app-xfrpc/htdocs/luci-static/resources/view/xfrpc.js:32
 msgid "NOT RUNNING"
@@ -129,7 +129,7 @@ msgstr "名称不能为\"common\""
 
 #: applications/luci-app-xfrpc/htdocs/luci-static/resources/view/xfrpc.js:100
 msgid "Notice"
-msgstr "注意"
+msgstr "通知"
 
 #: applications/luci-app-xfrpc/htdocs/luci-static/resources/view/xfrpc.js:107
 msgid "Proxy Settings"

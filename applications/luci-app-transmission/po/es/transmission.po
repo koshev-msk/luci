@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-21 22:06+0200\n"
-"PO-Revision-Date: 2024-10-16 19:05+0000\n"
+"PO-Revision-Date: 2025-09-08 07:50+0000\n"
 "Last-Translator: brodrigueznu <brodrigueznu@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationstransmission/es/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-rc\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:65
 msgid "Alternative download speed"
@@ -88,7 +88,7 @@ msgstr "Activar DHT"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:151
 msgid "Debug"
-msgstr "Depuración"
+msgstr "Depurar"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:97
 msgid "Download directory"
@@ -112,7 +112,7 @@ msgstr "Activado"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:136
 msgid "Encryption"
-msgstr "Encriptación"
+msgstr "Cifrado"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:149
 msgid "Error"
@@ -218,7 +218,7 @@ msgstr "Límite por torrent"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:193
 msgid "Peer port"
-msgstr "Puerto"
+msgstr "Puerto de pares"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:198
 msgid "Peer port random high"
@@ -250,11 +250,11 @@ msgstr "Preasignación"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:138
 msgid "Prefer encrypted"
-msgstr "Preferir encriptación"
+msgstr "Preferir cifrado"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:137
 msgid "Prefer unencrypted"
-msgstr "Preferir sin encriptación"
+msgstr "Preferir sin cifrar"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:156
 msgid "Prefetch enabled"
@@ -338,7 +338,7 @@ msgstr "Renombrar archivos parciales"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:139
 msgid "Require encrypted"
-msgstr "Requiere encriptación"
+msgstr "Requiere cifrado"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:52
 msgid "Run daemon as group"
@@ -400,7 +400,7 @@ msgstr ""
 
 #: applications/luci-app-transmission/root/usr/share/luci/menu.d/luci-app-transmission.json:3
 msgid "Transmission"
-msgstr "Transmisión"
+msgstr "Transmission"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:42
 msgid ""
