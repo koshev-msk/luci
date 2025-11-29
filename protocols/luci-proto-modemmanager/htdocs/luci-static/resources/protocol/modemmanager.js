@@ -141,8 +141,10 @@ return network.registerProtocol('modemmanager', {
 		o.value('ipv6', _('IPv6 only'));
 		o.default = 'ipv4v6';
 
-		o = s.taboption('general', form.Flag, 'allow_roaming', _('Deny Roaming'), _('Deny connect to roaming Networks'));
-		o.enabled = '0';
+		o = s.taboption('general', form.Flag, 'allow_roaming', _('Allow Roaming'), _('Allow connect to roaming Networks'));
+		o.enabled = '';
+		o.disabled = '0';
+		o.default = '';
 
 		o = s.taboption('advanced', form.Value, 'mtu', _('Override MTU'));
 		o.placeholder = dev ? (dev.getMTU() || '1500') : '1500';
