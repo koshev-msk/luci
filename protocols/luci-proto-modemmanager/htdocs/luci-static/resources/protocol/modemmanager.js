@@ -84,7 +84,7 @@ return network.registerProtocol('modemmanager', {
 		o.value('eap', 'EAP');
 		o.value('', _('None'));
 		o.default = 'none';
-
+		/*
 		o = s.taboption('general', form.ListValue, 'allowedmode', _('Allowed network technology'),
 			_('Setting the allowed network technology.'));
 		o.value('2g');
@@ -123,7 +123,7 @@ return network.registerProtocol('modemmanager', {
 		o.depends('allowedmode','5g|4g|2g');
 		o.depends('allowedmode','5g|4g|3g');
 		o.depends('allowedmode','5g|4g|3g|2g');
-
+		*/
 		o = s.taboption('general', form.Value, 'username', _('PAP/CHAP username'));
 		o.depends('auth', 'pap');
 		o.depends('auth', 'chap');
