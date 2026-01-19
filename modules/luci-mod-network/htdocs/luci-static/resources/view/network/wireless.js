@@ -239,7 +239,7 @@ function radio_restart(id, ev) {
 	dom.content(dsc, E('em', _('Device is restarting…')));
 }
 
-// Used for make it less problem while generating QR Code
+// Used for make it less problem while generating QR Codes
 function escape_string (string) {
 	var to_escape = ['\\', ';', ',', ':', '"'];
 	var hex_only = /^[0-9a-f]+$/i;
