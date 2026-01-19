@@ -84,6 +84,7 @@ return network.registerProtocol('modemmanager', {
 		o.value('eap', 'EAP');
 		o.value('', _('None'));
 		o.default = 'none';
+		// Disabled. 
 		/*
 		o = s.taboption('general', form.ListValue, 'allowedmode', _('Allowed network technology'),
 			_('Setting the allowed network technology.'));
