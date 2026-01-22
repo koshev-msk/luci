@@ -240,20 +240,10 @@ function radio_restart(id, ev) {
 }
 
 // Used for make it less problem while generating QR Codes
-function escape_string (string) {
-	var to_escape = ['\\', ';', ',', ':', '"'];
-	var hex_only = /^[0-9a-f]+$/i;
-	var output = "";
-	for (var i=0; i<string.length; i++) {
-		if(to_escape.includes(string[i], to_escape) != -1) {
-			output += '\\'+string[i];
-		} else {
-			output += string[i];
-		}
-	}
-
-	return output;
-};
+function escape_string(string) {
+	if (!string) return '';
+	return String(string).replace(/[\\;]/g, '\\$&');
+}
 
 function network_updown(id, map, ev) {
 	const radio = uci.get('wireless', id, 'device');
@@ -983,57 +973,64 @@ return view.extend({
 
 		s.handleShareCode = function (id, ev) {
 			if(uci.get('wireless', id, 'mode') !== 'ap')
-				return null;
+			return null;
 
-			var ssid = uci.get('wireless', id, 'ssid');
+		var ssid = uci.get('wireless', id, 'ssid');
+		var encryption = uci.get('wireless', id, 'encryption');
+		var haveKey = true;
 
-			var encryption = uci.get('wireless', id, 'encryption');
-			var haveKey = true;
+		if(encryption == 'none' || encryption == 'owe') {
+			encryption = 'nopass';
+			haveKey = false;
+		}
+		else if(encryption == 'psk') { 
+			encryption = 'WEP'; 
+		 }
+		else if(encryption == 'psk2' || encryption == 'psk2+ccmp' || encryption == 'psk2+tkip' || encryption == 'psk2+tkip+ccmp' || encryption == 'sae' || encryption == 'sae-mixed' ||
+        encryption == 'wpa3' || encryption == 'wpa3-mixed') { 
+			encryption = 'WPA'; 
+		}
 
-			if(encryption == 'none' || encryption == 'owe')
-			{
-				encryption = 'nopass';
-				haveKey = false;
-			}
-			else if(encryption == 'psk') { encryption = 'wep' }
-			else if(encryption == 'psk2' || encryption == 'psk2+ccmp' || encryption == 'psk2+tkip' || encryption == 'psk2+tkip+ccmp')
-			{ encryption = 'wpa' }
+		var qrstring = 'WIFI:S:' + escape_string(ssid) + ';T:' + encryption + ';';
+    
+		if(haveKey)
+			qrstring = qrstring + 'P:' + escape_string(uci.get('wireless', id, 'key')) + ';';
 
-			var qrstring = 'WIFI:S:'+ escape_string(ssid) +';T:' + encryption + ';'
-			if(haveKey)
-				qrstring = qrstring + 'P:' + escape_string(uci.get('wireless', id, 'key')) + ';';
+		if(uci.get('wireless', id, 'hidden') == '1')
+			qrstring = qrstring + 'H:true;';
+		else
+		qrstring = qrstring + 'H:false;';
 
-			if(uci.get('wireless', id, 'hidden') == '1')
-				qrstring = qrstring + 'H:true;'
+		qrstring = qrstring + ';';
 
-			const options = {
-				pixelSize: 4,
-				whiteColor: 'white',
-				blackColor: 'black'
-			};
-			const svg = uqr.renderSVG(qrstring, options);
+		const options = {
+			pixelSize: 6,
+			whiteColor: 'white',
+			blackColor: 'black'
+		};
+		const svg = uqr.renderSVG(qrstring, options);
 
-			var md = ui.showModal(_('QR Code'), [
-				E('div', { 'class': 'center' }, [
-					E('div', {}, [
-						E('span', {}, _('SSID')),
-						': ',
-						E('span', {}, ssid)]
-					),
-					toElem(svg)
-				]),
-				E('div', { 'class': 'center' }, [
-					E('button', {
-						'class': 'btn',
-						'click': L.bind(this.handleShareCodeDismiss, this)
-					}, _('Dismiss'))
-				])
-			]);
+		var md = ui.showModal(_('QR Code'), [
+		E('div', { 'class': 'center' }, [
+			E('div', {}, [
+			E('span', {}, _('SSID')),
+			': ',
+			E('span', {}, ssid)]
+			),
+			toElem(svg)
+		]),
+		E('div', { 'class': 'center' }, [
+				E('button', {
+					'class': 'btn',
+					'click': L.bind(this.handleShareCodeDismiss, this)
+				}, _('Dismiss'))
+			])
+		]);
 
-			md.style.maxWidth = '20%';
-			md.style.maxHeight = 'none';
+		md.style.maxWidth = '20%';
+		md.style.maxHeight = 'none';
 
-			return E(svg);
+		return E(svg);
 		}
 
 		s.handleShareCodeDismiss = function(ev) {
