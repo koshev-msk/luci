@@ -47,15 +47,15 @@ function buildSVGQRCode(data, code, options, dummy=false) {
 }
 
 function render_signal_badge(signalPercent, signalValue, noiseValue, wrap, mode) {
-	let icon = L.resource('icons/signal-075-100.svg'), title, value;
-
-	switch(true) {
-	case(signalPercent  < 0): icon = L.resource('icons/signal-none.svg'); 	break;
-	case(signalPercent == 0): icon = L.resource('icons/signal-000-000.svg');		break;
-	case(signalPercent < 25): icon = L.resource('icons/signal-000-025.svg'); 	break;
-	case(signalPercent < 50): icon = L.resource('icons/signal-025-050.svg');	break;
-	case(signalPercent < 75): icon = L.resource('icons/signal-050-075.svg');	break;
-	}
+	
+	let icon = L.resource(
+  		signalPercent < 0 ? 'icons/signal-none.svg' :
+  		signalPercent == 0 ? 'icons/signal-000-000.svg' :
+  		signalPercent < 25 ? 'icons/signal-000-025.svg' :
+  		signalPercent < 50 ? 'icons/signal-025-050.svg' :
+  		signalPercent < 75 ? 'icons/signal-050-075.svg' :
+  		'icons/signal-075-100.svg'
+	);
 
 	if (signalValue) {
 		if (noiseValue) {
