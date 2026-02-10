@@ -12,6 +12,7 @@
 'require firewall';
 'require tools.widgets as widgets';
 
+
 const isReadonlyView = !L.hasViewPermission();
 
 function count_changes(section_id) {
