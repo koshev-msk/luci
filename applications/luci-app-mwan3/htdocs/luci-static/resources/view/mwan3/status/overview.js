@@ -10,68 +10,70 @@ const callMwan3Status = rpc.declare({
 	expect: {  },
 });
 
-document.querySelector('head').appendChild(E('link', {
-	'rel': 'stylesheet',
-	'type': 'text/css',
-	'href': L.resource('view/mwan3/mwan3.css')
-}));
+function getStatusBackgroundClass(status) {
+	switch (status) {
+		case 'online':
+			return 'label success';
+		case 'offline':
+			return 'label error';
+		case 'notracking':
+			return 'label warning';
+		default:
+			return 'label';
+	}
+}
 
 function renderMwan3Status(status) {
 	if (!status.interfaces)
 		return '<strong>%h</strong>'.format(_('No MWAN interfaces found'));
 
-	var statusview = '';
-	for ( var iface in status.interfaces) {
+	var tableHtml = '<table class="table cbi-section-table" style="width: 100%;">';
+	tableHtml += '<thead><tr class="tr cbi-section-table-titles">';
+	tableHtml += '<th class="th left">' + _('Interface') + '</th>';
+	tableHtml += '<th class="th left">' + _('Status') + '</th>';
+	tableHtml += '<th class="th left">' + _('Uptime') + '</th>';
+	tableHtml += '</tr></thead><tbody>';
+
+	for (var iface in status.interfaces) {
 		var state = '';
-		var css = '';
 		var time = '';
-		var tname = '';
-		switch (status.interfaces[iface].status) {
+		var statusType = status.interfaces[iface].status;
+		
+		switch (statusType) {
 			case 'online':
 				state = _('Online');
-				css = 'success';
 				time = '%t'.format(status.interfaces[iface].online);
-				tname = _('Uptime');
-				css = 'success';
 				break;
 			case 'offline':
 				state = _('Offline');
-				css = 'danger';
 				time = '%t'.format(status.interfaces[iface].offline);
-				tname = _('Downtime');
 				break;
 			case 'notracking':
 				state = _('No Tracking');
 				if ((status.interfaces[iface].uptime) > 0) {
-					css = 'success';
 					time = '%t'.format(status.interfaces[iface].uptime);
-					tname = _('Uptime');
-				}
-				else {
-					css = 'warning';
+				} else {
 					time = '';
-					tname = '';
 				}
 				break;
 			default:
 				state = _('Disabled');
-				css = 'warning';
 				time = '';
-				tname = '';
 				break;
 		}
-
-		statusview += '<div class="alert-message %h">'.format(css);
-		statusview += '<div><strong>%h:&#160;</strong>%h</div>'.format(_('Interface'), iface);
-		statusview += '<div><strong>%h:&#160;</strong>%h</div>'.format(_('Status'), state);
-
-		if (time)
-			statusview += '<div><strong>%h:&#160;</strong>%h</div>'.format(tname, time);
-
-		statusview += '</div>';
+		
+		var statusClass = getStatusBackgroundClass(statusType);
+		
+		tableHtml += '<tr class="tr cbi-section-table-row">';
+		tableHtml += '<td class="td left"><strong>' + iface + '</strong></td>';
+		tableHtml += '<td class="td left"><span class="' + statusClass + '">' + state + '</span></td>';
+		tableHtml += '<td class="td left">' + (time || '') + '</td>';
+		tableHtml += '</tr>';
 	}
-
-	return statusview;
+	
+	tableHtml += '</tbody></table>';
+	
+	return tableHtml;
 }
 
 return view.extend({
@@ -102,4 +104,4 @@ return view.extend({
 	handleSaveApply: null,
 	handleSave: null,
 	handleReset: null
-})
+});
