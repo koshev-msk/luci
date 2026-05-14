@@ -9,11 +9,18 @@ const callMwan3Status = rpc.declare({
 	expect: {  },
 });
 
-document.querySelector('head').appendChild(E('link', {
-	'rel': 'stylesheet',
-	'type': 'text/css',
-	'href': L.resource('view/mwan3/mwan3.css')
-}));
+function getStatusBackgroundClass(status) {
+	switch (status) {
+		case 'online':
+			return 'label success';
+		case 'offline':
+			return 'label error';
+		case 'notracking':
+			return 'label warning';
+		default:
+			return 'label';
+	}
+}
 
 return baseclass.extend({
 	title: _('MultiWAN Manager'),
@@ -25,93 +32,74 @@ return baseclass.extend({
 	},
 
 	render: function (result) {
-		if (!result[0].interfaces)
+		if (!result[0]?.interfaces || Object.keys(result[0].interfaces).length === 0)
 			return null;
 
-		var container = E('div', { 'id': 'mwan3-service-status' });
-		var iface;
-		for ( iface in result[0].interfaces) {
+		// Основной контейнер
+		var container = E('div', { 'class': 'cbi-section' });
+
+		// Таблица с системными классами LuCI
+		var table = E('table', { 'class': 'table cbi-section-table' });
+
+		// Заголовок
+		var thead = E('tr', { 'class': 'tr cbi-section-table-titles' });
+		thead.appendChild(E('th', { 'class': 'th left' }, [ _('Interface') ]));
+		thead.appendChild(E('th', { 'class': 'th left' }, [ _('Status') ]));
+		thead.appendChild(E('th', { 'class': 'th left' }, [ _('Uptime') ]));
+		table.appendChild(thead);
+
+		// Тело таблицы
+		var tbody = E('tbody');
+
+		for (var iface in result[0].interfaces) {
 			var state = '';
-			var css = '';
 			var time = '';
-			var tname = '';
-			switch (result[0].interfaces[iface].status) {
+			var statusType = result[0].interfaces[iface].status;
+
+			switch (statusType) {
 				case 'online':
 					state = _('Online');
-					css = 'alert-message success';
 					time = '%t'.format(result[0].interfaces[iface].online);
-					tname = _('Uptime');
 					break;
 				case 'offline':
 					state = _('Offline');
-					css = 'alert-message danger';
 					time = '%t'.format(result[0].interfaces[iface].offline);
-					tname = _('Downtime');
 					break;
 				case 'notracking':
 					state = _('No Tracking');
 					if ((result[0].interfaces[iface].uptime) > 0) {
-						css = 'alert-message success';
 						time = '%t'.format(result[0].interfaces[iface].uptime);
-						tname = _('Uptime');
-					}
-					else {
-						css = 'alert-message warning';
+					} else {
 						time = '';
-						tname = '';
 					}
 					break;
 				default:
-					css = 'alert-message warning';
 					state = _('Disabled');
 					time = '';
-					tname = '';
 					break;
 			}
 
-			if (time !== '' ) {
-				container.appendChild(
-					E('div', { 'class': css }, [
-						E('div', {}, [
-							E('strong', {}, [
-								_('Interface'), ':', ' '
-							]),
-							iface
-						]),
-						E('div', {}, [
-							E('strong', {}, [
-								_('Status'), ':', ' '
-							]),
-							state
-						]),
-						E('div', {}, [
-							E('strong', {}, [
-								tname, ':', ' '
-							]),
-							time
-						])
-					])
-				);
-			}
-			else {
-				container.appendChild(
-					E('div', { 'class': css }, [
-						E('div', {}, [
-							E('strong', {}, [
-								_('Interface'), ':', ' '
-							]),
-							iface
-						]),
-						E('div', {}, [
-							E('strong', {}, [
-								_('Status'), ':', ' '
-							]),
-							state
-						])
-					])
-				);
-			}
+			var tr = E('tr', { 'class': 'tr cbi-section-table-row' });
+
+			// Ячейка интерфейса
+			tr.appendChild(E('td', { 'class': 'td left' }, [
+				E('strong', {}, [ iface ])
+			]));
+
+			// Ячейка статуса с цветным фоном через системные классы label
+			var statusClass = getStatusBackgroundClass(statusType);
+			tr.appendChild(E('td', { 'class': 'td left' }, [
+				E('span', { 'class': statusClass }, [ state ])
+			]));
+
+			// Ячейка времени
+			tr.appendChild(E('td', { 'class': 'td left' }, [ time || '' ]));
+
+			tbody.appendChild(tr);
 		}
+
+		table.appendChild(tbody);
+		container.appendChild(table);
 
 		return container;
 	}
