@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-07 07:28+0000\n"
-"Last-Translator: brodrigueznu <brodrigueznu@hotmail.com>\n"
+"PO-Revision-Date: 2026-04-04 03:09+0000\n"
+"Last-Translator: Franco Castillo <castillofrancodamian@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsusteer/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:79
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:234
@@ -32,7 +32,7 @@ msgstr ""
 
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:279
 msgid "Also be sure to enable rrm reports, 80211kv, etc."
-msgstr "Asegúrese también de habilitar los informes rrm, 80211kv, etc."
+msgstr "Asegúrese también de activar los informes rrm, 80211kv, etc."
 
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:373
 msgid "An incorrect parameter can cause usteer to fail to start up."
@@ -138,7 +138,7 @@ msgstr "Si esta opción está desactivada, en su lugar se expulsará al cliente"
 
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:421
 msgid "Info"
-msgstr "Info"
+msgstr "Informe"
 
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:558
 msgid "Initial connect delay"
@@ -307,7 +307,7 @@ msgid ""
 "band_steering_interval to be steered to a higher frequency band."
 msgstr ""
 "SNR mínimo o señal absoluta que un dispositivo tiene que mantener sobre "
-"\"Intervalo para conducción entre bandas\" para ser dirigido a una banda de "
+"«Intervalo para conducción entre bandas» para ser dirigido a una banda de "
 "frecuencia superior."
 
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:571
@@ -457,7 +457,7 @@ msgstr "Intervalo de actualización del remoto"
 msgid ""
 "Retry scanning when roam_scan_tries is exceeded after this timeout (in ms)."
 msgstr ""
-"Reintentar escanear cuando se exceda \"Intentos de escaneo de itinerancia\" "
+"Reintentar escanear cuando se exceda «Intentos de escaneo de itinerancia» "
 "después de este tiempo límite (en ms)."
 
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:548
@@ -597,7 +597,7 @@ msgstr ""
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:500
 msgid "Timeout after which a station with SNR < min_SNR will be kicked"
 msgstr ""
-"Tiempo después del cual una estación con SNR < \"SNR mínimo\" será expulsada"
+"Tiempo después del cual una estación con SNR < a «SNR mínimo« será expulsada"
 
 #: applications/luci-app-usteer/htdocs/luci-static/resources/view/usteer/usteer.js:374
 msgid "To start it running try %s"

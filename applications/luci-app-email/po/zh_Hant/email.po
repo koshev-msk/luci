@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2026-02-07 16:09+0000\n"
-"Last-Translator: EESF-2 <eesf-2@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2026-04-16 14:10+0000\n"
+"Last-Translator: ZW <roc_fe@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/openwrt/luciapplicationsemail/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:248
 msgid ""
@@ -47,7 +47,7 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:262
 msgid "Address verifier"
-msgstr ""
+msgstr "位址驗證器"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:25
 msgid "Advanced Settings"
@@ -55,11 +55,11 @@ msgstr "進階設定"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:50
 msgid "Allow connections from the public internet."
-msgstr ""
+msgstr "允許來自公用網際網路的連線。"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:49
 msgid "Allow remote clients"
-msgstr ""
+msgstr "允許遠端用戶端"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:59
 msgid "Anonymous"
@@ -67,7 +67,7 @@ msgstr "匿名"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:78
 msgid "Auth file"
-msgstr ""
+msgstr "認證檔案"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:69
 msgid "By default, the local hostname is used."
@@ -80,7 +80,7 @@ msgstr "CA 憑證"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:157
 msgid "Client authorization file"
-msgstr ""
+msgstr "用戶端授權檔案"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:92
 msgid "Configure <a %s>acme.sh to issue a TLS cert</a>."
@@ -138,11 +138,11 @@ msgstr "額外命令列選項"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:272
 msgid "Filter"
-msgstr "過濾"
+msgstr "篩選"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:12
 msgid "For further information <a %s>check the documentation</a>"
-msgstr "進一步資訊，請<a %s>查閱此文件</a>"
+msgstr "進一步資訊，請<a %s>檢查此文件</a>"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:252
 msgid ""
@@ -156,7 +156,7 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:42
 msgid "Incoming mail by default received on <em>25</em> port."
-msgstr ""
+msgstr "傳入郵件預設從連接埠 <em>25</em> 接收。"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:16
 msgid "Instance config"
@@ -164,7 +164,7 @@ msgstr "實例配置"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:140
 msgid "Instead, use a mounted disk with enough of space."
-msgstr "作為替代，使用一個具足夠空間的已掛載硬碟。"
+msgstr "作為替代，使用一個有足夠空間的已掛載磁碟。"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:137
 msgid "Mail storage directory"
@@ -192,7 +192,7 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:225
 msgid "POP Auth file"
-msgstr ""
+msgstr "POP 認證檔案"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:236
 msgid "POP by name"
@@ -299,11 +299,11 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:79
 msgid "Server/proxy authorization file."
-msgstr ""
+msgstr "伺服器/代理授權檔案。"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:34
 msgid "Server: receive incoming mail"
-msgstr ""
+msgstr "伺服器: 接收傳入郵件"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:149
 msgid "Smarthost"
@@ -352,11 +352,11 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:91
 msgid "Use TLS encryption for SMTP and POP connections."
-msgstr ""
+msgstr "為 SMTP 和 POP 連線使用 TLS 加密。"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:171
 msgid "Use TLS encryption for SMTP proxy client."
-msgstr ""
+msgstr "為 SMTP 代理用戶端使用 TLS 加密。"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:125
 msgid ""

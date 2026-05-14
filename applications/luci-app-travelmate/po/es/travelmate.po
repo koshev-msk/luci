@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-01-10 04:39+0000\n"
-"Last-Translator: Juan Benites <benitesjn@gmail.com>\n"
+"PO-Revision-Date: 2026-04-04 03:09+0000\n"
+"Last-Translator: Franco Castillo <castillofrancodamian@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationstravelmate/es/>\n"
 "Language: es\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: applications/luci-app-travelmate/htdocs/luci-static/resources/view/travelmate/overview.js:77
 msgid "-- AP Selection --"
@@ -23,7 +23,7 @@ msgstr "-- Selección de AP --"
 #: applications/luci-app-travelmate/htdocs/luci-static/resources/view/travelmate/overview.js:440
 #: applications/luci-app-travelmate/htdocs/luci-static/resources/view/travelmate/overview.js:450
 msgid "-- default --"
-msgstr "-- por defecto --"
+msgstr "-- predeterminado --"
 
 #: applications/luci-app-travelmate/htdocs/luci-static/resources/view/travelmate/overview.js:276
 msgid "AP QR-Codes..."
@@ -274,7 +274,7 @@ msgstr ""
 
 #: applications/luci-app-travelmate/htdocs/luci-static/resources/view/travelmate/stations.js:286
 msgid "Enable/Disable this network"
-msgstr "Habilitar/Deshabilitar esta red"
+msgstr "Activar/Desactivar esta red"
 
 #: applications/luci-app-travelmate/htdocs/luci-static/resources/view/travelmate/overview.js:308
 #: applications/luci-app-travelmate/htdocs/luci-static/resources/view/travelmate/stations.js:298
@@ -518,7 +518,7 @@ msgid ""
 "VPN uplink connection is emphasized in <span style=\"color:rgb(68, 170, "
 "68);font-weight:bold\">green</span>."
 msgstr ""
-"Vista general de todos los enlaces ascendentes configurados para Travelmate. "
+"Vista general de todos los enlaces ascendentes configurados para travelmate. "
 "Puede editar, eliminar o priorizar los enlaces ascendentes existentes "
 "arrastrando y soltando y escaneando los nuevos. <br />La conexión de enlace "
 "ascendente utilizada actualmente se enfatiza en <span style=\"color:rgb(51, "

@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-05 09:48+0000\n"
-"Last-Translator: Maksim <m4ksp86@ya.ru>\n"
+"PO-Revision-Date: 2026-04-25 12:14+0000\n"
+"Last-Translator: SnIPeRSnIPeR "
+"<snipersniper@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsocserv/ru/>\n"
 "Language: ru\n"
@@ -9,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/main.lua:124
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/user-config.lua:80
@@ -45,7 +46,7 @@ msgstr "Сертификат CA"
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/users.lua:72
 #: applications/luci-app-ocserv/luasrc/view/ocserv_status.htm:57
 msgid "Cipher"
-msgstr "Алгоритм шифрования"
+msgstr "Шифр"
 
 #: applications/luci-app-ocserv/luasrc/view/ocserv_status.htm:62
 msgid "Collecting data..."
@@ -122,7 +123,7 @@ msgstr "Основные настройки"
 
 #: applications/luci-app-ocserv/root/usr/share/rpcd/acl.d/luci-app-ocserv.json:3
 msgid "Grant UCI access for luci-app-ocserv"
-msgstr "Предоставить UCI доступ для luci-app-ocserv"
+msgstr "Предоставить доступ к UCI для luci-app-ocserv"
 
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/users.lua:23
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/users.lua:67
@@ -158,7 +159,7 @@ msgstr "Максимальное количество одинаковых кл�
 
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/users.lua:22
 msgid "Name"
-msgstr "Имя"
+msgstr "Название"
 
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/main.lua:151
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/user-config.lua:131
@@ -174,7 +175,7 @@ msgstr "VPN OpenConnect"
 
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/users.lua:24
 msgid "Password"
-msgstr "Парoль"
+msgstr "Пароль"
 
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/main.lua:56
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/user-config.lua:50

@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-01-20 07:02+0000\n"
-"Last-Translator: Nicolas Aigner <nicolas.aigner@gmail.com>\n"
+"PO-Revision-Date: 2026-04-22 19:35+0000\n"
+"Last-Translator: Janderson Vieira Santos <jandersonvs79@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "openwrt/luciapplicationsdockerman/pt_BR/>\n"
 "Language: pt_BR\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/newcontainer.lua:604
 msgid "A list of kernel capabilities to add to the container"
@@ -159,7 +159,7 @@ msgstr "Erro da linha de comando"
 
 #: applications/luci-app-dockerman/luasrc/controller/dockerman.lua:16
 msgid "Configuration"
-msgstr "Configurações"
+msgstr "Configuração"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/configuration.lua:42
 msgid "Configure the default bridge network"
@@ -389,7 +389,7 @@ msgstr "Impor a Remoção"
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/networks.lua:85
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/newnetwork.lua:96
 msgid "Gateway"
-msgstr "Roteador"
+msgstr "Gateway"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/configuration.lua:10
 msgid "Global settings"
@@ -666,7 +666,7 @@ msgstr "Rede de sobreposição"
 
 #: applications/luci-app-dockerman/luasrc/controller/dockerman.lua:36
 msgid "Overview"
-msgstr "Visão geral"
+msgstr "Visão Geral"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/networks.lua:81
 msgid "Parent Interface"
@@ -817,7 +817,7 @@ msgstr ""
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/container.lua:218
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/containers.lua:193
 msgid "Start"
-msgstr "Início"
+msgstr "Iniciar"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/container.lua:311
 msgid "Start Time"
@@ -968,7 +968,7 @@ msgstr "Visão geral dos volumes"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/configuration.lua:58
 msgid "Warning"
-msgstr "Alerta"
+msgstr "Aviso"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/images.lua:125
 msgid ""

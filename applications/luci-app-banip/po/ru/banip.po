@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-05 09:48+0000\n"
-"Last-Translator: Maksim <m4ksp86@ya.ru>\n"
+"PO-Revision-Date: 2026-05-02 12:02+0000\n"
+"Last-Translator: SnIPeRSnIPeR "
+"<snipersniper@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsbanip/ru/>\n"
 "Language: ru\n"
@@ -9,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:642
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:711
@@ -261,7 +262,7 @@ msgstr ""
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:342
 msgid "CPU Cores"
-msgstr "Ядра ЦП"
+msgstr "Ядра CPU"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:40
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:123
@@ -295,7 +296,7 @@ msgstr ""
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/feeds.js:329
 msgid "Clear"
-msgstr "Очистить"
+msgstr "Сбросить"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:762
 msgid "Collection of IP addresses based on Autonomous System Numbers."
@@ -367,7 +368,7 @@ msgstr ""
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/feeds.js:302
 msgid "Download"
-msgstr "Отдача"
+msgstr "Скачать"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:308
 msgid "Download Insecure"
@@ -438,7 +439,7 @@ msgstr "Поле не может быть пустым"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:491
 msgid "Enable GeoIP Map"
-msgstr "Включить карту GeoIP"
+msgstr "Включить карту <abbr title=\"Geographic IP\">GeoIP</abbr>"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:646
 msgid "Enable Remote Logging"
@@ -539,7 +540,7 @@ msgstr "Основные настройки"
 
 #: applications/luci-app-banip/root/usr/share/rpcd/acl.d/luci-app-banip.json:3
 msgid "Grant access to LuCI app banIP"
-msgstr "Предоставить доступ LuCI к приложению banIP"
+msgstr "Предоставить доступ к LuCI-приложению banIP"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:321
 msgid "High Priority"
@@ -690,7 +691,7 @@ msgstr "Логировать входящие"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:615
 msgid "Log Limit"
-msgstr "Ограничение журнала"
+msgstr "Лимит журнала"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:608
 msgid "Log Outbound"
@@ -1082,7 +1083,7 @@ msgstr "Статус"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:852
 msgid "Stop"
-msgstr "Стоп"
+msgstr "Остановить"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:812
 msgid "Subnet"
@@ -1103,7 +1104,7 @@ msgstr "Настройки таблиц/цепочек"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:375
 msgid "Target directory for banIP-related error files."
-msgstr "Целевая директория для файлов ошибок banIP."
+msgstr "Целевой каталог для файлов ошибок banIP."
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:371
 msgid "Target directory for banIP-related report files."
@@ -1282,11 +1283,11 @@ msgstr "asterisk: недействительный аккаунт"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:277
 msgid "auto-added IPs to allowlist"
-msgstr "автоматическое добавление IP-адресов в список разрешений"
+msgstr "автоматически добавлено в список разрешений"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:281
 msgid "auto-added IPs to blocklist"
-msgstr "автоматическое добавление IP-адресов в список блокировок"
+msgstr "автоматически добавлено в список блокировок"
 
 #: applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json:3
 msgid "banIP"
@@ -1294,23 +1295,23 @@ msgstr "banIP"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:264
 msgid "blocked icmp-flood packets"
-msgstr "заблокированные пакеты icmp-flood"
+msgstr "заблокировано ICMP-флуд пакетов"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:268
 msgid "blocked invalid ct packets"
-msgstr "блокировка недопустимых пакетов ct"
+msgstr "заблокировано ct-пакетов"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:272
 msgid "blocked invalid tcp packets"
-msgstr "блокировка недопустимых пакетов tcp"
+msgstr "заблокировано недопустимых TCP-пакетов"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:256
 msgid "blocked syn-flood packets"
-msgstr "заблокированные пакеты syn-флуда"
+msgstr "заблокировано SYN-флуд пакетов"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:260
 msgid "blocked udp-flood packets"
-msgstr "заблокированные пакеты udp-флуда"
+msgstr "заблокировано UDP-флуд пакетов"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:590
 msgid "crit"
@@ -1338,7 +1339,7 @@ msgstr "ошибка"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:594
 msgid "info"
-msgstr "инфо"
+msgstr "информация"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:524
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:535

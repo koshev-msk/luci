@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-06 03:13+0000\n"
-"Last-Translator: EESF-2 <eesf-2@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2026-04-16 07:27+0000\n"
+"Last-Translator: ZW <roc_fe@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/openwrt/luciapplicationsacme/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:28
 #: applications/luci-app-acme/root/usr/share/luci/menu.d/luci-app-acme.json:3
@@ -37,11 +37,11 @@ msgstr "私鑰的Base64內容。不使用YC_SA_Key_File_Path"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:36
 msgid "Cert files are stored in"
-msgstr "憑證儲存位置"
+msgstr "憑證檔案儲存在"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:52
 msgid "Certificate config"
-msgstr "憑證設定"
+msgstr "憑證配置"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:625
 msgid "Certificates"
@@ -69,7 +69,7 @@ msgstr "DNS API 憑證"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:59
 msgid "DNS Challenge Validation"
-msgstr "DNS Challenge 驗證"
+msgstr "DNS Challenge 認證"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:518
 msgid "Days until renewal"
@@ -113,15 +113,12 @@ msgid "ECC 384 bits"
 msgstr "ECC 384 位元"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:43
-#, fuzzy
 msgid "Email address to associate with account key."
-msgstr ""
-"與「ACME 帳號金鑰」關聯的電子郵件位址；其用於接收 ACME CA 寄送的憑證過期通知"
-"電子郵件。"
+msgstr "與帳號金鑰關聯的電子郵件位址。"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:49
 msgid "Enable debug logging"
-msgstr "啟用除錯日誌"
+msgstr "啟用除錯紀錄"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:62
 msgid "Enabled"
@@ -135,7 +132,7 @@ msgstr "一般設定"
 msgid ""
 "Get certificate from the Letsencrypt staging server (use for testing; the "
 "certificate won't be valid)."
-msgstr "從 Let's Encrypt 臨時伺服器取得憑證 (僅供測試用途，憑證無效) 。"
+msgstr "從 Let's Encrypt 臨時伺服器取得憑證 (僅供測試用途，憑證不會有效)。"
 
 #: applications/luci-app-acme/root/usr/share/rpcd/acl.d/luci-app-acme.json:3
 msgid "Grant UCI access for luci-app-acme"
@@ -145,7 +142,7 @@ msgstr "授予 luci-app-acme 存取UCI的權限"
 msgid ""
 "If a certificate wasn't renewed in time then you'll receive a notice at 20 "
 "days before expiry."
-msgstr "如果憑證未及時續訂，您將在到期前 20 天收到通知。"
+msgstr "若憑證未及時續訂，您將在過期前 20 天收到通知。"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:607
 msgid "Issued on"
@@ -153,7 +150,7 @@ msgstr "簽發於"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:480
 msgid "Key size (and type) for the generated certificate."
-msgstr "產生憑證的金鑰大小和類別。"
+msgstr "產生憑證的金鑰大小和類型。"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:479
 msgid "Key type"
@@ -161,7 +158,7 @@ msgstr "金鑰類型"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:604
 msgid "Main Domain"
-msgstr "主要域名"
+msgstr "主要網域"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:372
 msgid "OCID of tenancy that contains the target DNS zone"
@@ -182,7 +179,7 @@ msgstr "PEM格式的私有API簽章金鑰檔案的路徑"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:605
 msgid "Private Key"
-msgstr "私有金鑰"
+msgstr "私鑰"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:606
 msgid "Public Certificate"
@@ -292,7 +289,7 @@ msgstr ""
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:512
 msgid "Use a custom CA instead of Let's Encrypt."
-msgstr "使用自訂 CA 憑證代替 Let's Encrypt。"
+msgstr "使用自訂 CA 代替 Let's Encrypt。"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:470
 msgid "Use staging server"
@@ -300,7 +297,7 @@ msgstr "使用臨時伺服器"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:71
 msgid "Validation method"
-msgstr "驗證方法"
+msgstr "認證方法"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:76
 msgid "Webroot"
@@ -308,7 +305,7 @@ msgstr "Webroot"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:58
 msgid "Webroot Challenge Validation"
-msgstr "Webroot Challenge 驗證"
+msgstr "Webroot Challenge 認證"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:80
 msgid "Webroot directory"

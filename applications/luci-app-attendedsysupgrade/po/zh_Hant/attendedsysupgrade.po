@@ -1,20 +1,20 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-06 03:13+0000\n"
-"Last-Translator: EESF-2 <eesf-2@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2026-04-16 07:27+0000\n"
+"Last-Translator: ZW <roc_fe@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/openwrt/luciapplicationsattendedsysupgrade/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:290
 msgid ""
 ". If you don't find a solution there, then report all of the information "
 "below."
-msgstr "如果你找不到解決方案，請報告以下所有資訊。"
+msgstr "若您找不到解決方案，請報告以下所有資訊。"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/status/include/11_upgrades.js:42
 msgid "A new %s version of OpenWrt is available:"
@@ -49,7 +49,7 @@ msgstr "可用"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:617
 msgid "Board Name / Profile"
-msgstr "主機板名稱 / 設定檔"
+msgstr "主機板名稱/設定檔"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:190
 msgid "Build Date"
@@ -57,7 +57,7 @@ msgstr "建置日期"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:264
 msgid "Building Firmware..."
-msgstr "正在建置韌體…"
+msgstr "建置韌體中..."
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:93
 msgid "Calculating package hash"
@@ -86,7 +86,7 @@ msgstr "關閉"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:96
 msgid "Completed generating firmware image"
-msgstr "已生成韌體映像檔"
+msgstr "已產生韌體映像檔"
 
 #: applications/luci-app-attendedsysupgrade/root/usr/share/luci/menu.d/luci-app-attendedsysupgrade.json:24
 msgid "Configuration"
@@ -98,7 +98,7 @@ msgstr "複製錯誤資料到剪貼簿..."
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:531
 msgid "Could not reach API at \"%s\". Please try again later."
-msgstr "無法存取位於 「%s」 的 API。請稍後再試。"
+msgstr "無法存取位於「%s」的 API。請稍後再試。"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/status/include/11_upgrades.js:28
 msgid "Current"
@@ -123,7 +123,7 @@ msgstr "下載韌體映像檔"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:100
 msgid "Downloading ImageBuilder archive"
-msgstr "正在下載 ImageBuilder 存檔"
+msgstr "下載 ImageBuilder 存檔中"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:444
 msgid "Downloading firmware from server to browser"
@@ -131,7 +131,7 @@ msgstr "正從伺服器下載韌體到瀏覽器"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:440
 msgid "Downloading..."
-msgstr "正在下載…"
+msgstr "下載中..."
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:349
 msgid "Error building the firmware image"
@@ -147,7 +147,7 @@ msgstr "韌體下載發生錯誤。請再試一次"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:97
 msgid "Failed to generate firmware image"
-msgstr "韌體生成失敗"
+msgstr "韌體產生失敗"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:192
 msgid "Filename"
@@ -163,11 +163,11 @@ msgstr "韌體版本"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:288
 msgid "First, check"
-msgstr ""
+msgstr "首先，檢查"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:94
 msgid "Generating firmware image"
-msgstr "正在產生韌體映像檔"
+msgstr "產生韌體映像檔中"
 
 #: applications/luci-app-attendedsysupgrade/root/usr/share/rpcd/acl.d/luci-app-attendedsysupgrade.json:3
 msgid "Grant UCI access to LuCI app attendedsysupgrade"
@@ -179,15 +179,15 @@ msgstr "安裝韌體映像檔"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:485
 msgid "Installing the sysupgrade image..."
-msgstr ""
+msgstr "安裝 sysupgrade 映像檔中..."
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:483
 msgid "Installing..."
-msgstr "正在安裝…"
+msgstr "安裝中..."
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:226
 msgid "Keep settings and retain the current configuration"
-msgstr "保留目前設定"
+msgstr "保留當前設定"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/status/include/11_upgrades.js:20
 msgid "Kernel Version"
@@ -211,14 +211,14 @@ msgstr "無升級可用"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:487
 msgid "Once the image is written, the system will reboot."
-msgstr ""
+msgstr "映像檔寫入完成後，系統將會重新啟動。"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/configuration.js:30
 msgid ""
 "Other ASU server instances that rebuild a requested image. Allows to compare "
 "checksums and verify that the results are the same."
 msgstr ""
-"用來產生請求映像檔的其他 ASU 伺服器實例。允許比對校驗和以檢查結果是否相同。"
+"用來產生請求映像檔的其他 ASU 伺服器實例。允許比對校驗碼以檢查結果是否相同。"
 
 #: applications/luci-app-attendedsysupgrade/root/usr/share/luci/menu.d/luci-app-attendedsysupgrade.json:15
 msgid "Overview"
@@ -270,7 +270,7 @@ msgstr "建置佇列位置 %s 中的請求"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/status/include/11_upgrades.js:19
 msgid "Revision"
-msgstr ""
+msgstr "修訂"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:180
 msgid "SHA256"
@@ -278,7 +278,7 @@ msgstr "SHA256"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:751
 msgid "Search for firmware upgrade"
-msgstr "搜尋韌體升級"
+msgstr "搜尋韌體更新"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/configuration.js:42
 msgid "Search for new sysupgrades on opening the tab"
@@ -290,11 +290,11 @@ msgstr "開啟時進行搜尋"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:518
 msgid "Searching for an available sysupgrade of %s - %s"
-msgstr "正在搜尋 %s - %s 可用的系統升級"
+msgstr "搜尋 %s - %s 可用的系統升級中"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:514
 msgid "Searching..."
-msgstr "正在搜尋…"
+msgstr "搜尋中..."
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/configuration.js:15
 msgid "Server"
@@ -326,13 +326,13 @@ msgstr "成功建立韌體映像檔"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:188
 msgid "Target"
-msgstr "目標"
+msgstr "目的"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:729
 msgid ""
 "The attended sysupgrade service allows to upgrade vanilla and custom "
 "firmware images easily."
-msgstr "值守式系統升級服務讓你輕鬆升級原始和第三方韌體映像檔。"
+msgstr "值守式系統升級服務讓您輕鬆升級原始和第三方韌體映像檔。"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:674
 msgid "The device runs the latest firmware version %s - %s"
@@ -354,15 +354,15 @@ msgstr "正將韌體從瀏覽器上傳到裝置"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:462
 msgid "Uploading..."
-msgstr "上傳中…"
+msgstr "上傳中..."
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:92
 msgid "Validating package selection"
-msgstr ""
+msgstr "驗證套件選擇中"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:91
 msgid "Validating revision"
-msgstr ""
+msgstr "驗證修訂中"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:178
 msgid "Version"
@@ -370,11 +370,11 @@ msgstr "版本"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:491
 msgid "While you are waiting, do not unpower device!"
-msgstr ""
+msgstr "當您等待的同時，請不要切斷裝置電源！"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:478
 msgid "Wrong checksum"
-msgstr "錯誤的校驗和"
+msgstr "錯誤校驗碼"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:602
 msgid "[installed] %s"
