@@ -2,6 +2,8 @@
 'require baseclass';
 'require rpc';
 
+/* modfified by koshev-msk. replace containers to table */
+
 const callMwan3Status = rpc.declare({
 	object: 'mwan3',
 	method: 'status',
