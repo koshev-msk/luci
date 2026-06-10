@@ -60,7 +60,7 @@ msgstr ""
 "%s añade las subredes /24 y /96 del solicitante para solicitantes de IPv4 y "
 "IPv6, respectivamente."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:311
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:314
 msgid ""
 "%s is an independent project that aims to reduce latency of a connection "
 "over Yggdrasil network transparently, utilizing NAT traversal to bypass "
@@ -594,6 +594,10 @@ msgstr "ADSL2+ (G.992.5) Anexo M"
 msgid "ANSI T1.413"
 msgstr "ANSI T1.413"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:66
+msgid "AP Isolation"
+msgstr ""
+
 #: protocols/luci-proto-3g/htdocs/luci-static/resources/protocol/3g.js:95
 #: protocols/luci-proto-mbim/htdocs/luci-static/resources/protocol/mbim.js:65
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:65
@@ -869,7 +873,7 @@ msgstr ""
 "Añade el sufijo de dominio local a los nombres servidos desde el archivo de "
 "hosts."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:283
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:285
 msgid "Add multicast rule"
 msgstr "Añadir regla multicast"
 
@@ -934,7 +938,7 @@ msgstr "Agregar una IPv6 a un conjunto IPv4 y viceversa falla silenciosamente."
 msgid "Additional Peers"
 msgstr ""
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:376
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:379
 msgid "Additional configuration settings (in TOML format)."
 msgstr "Ajustes de configuración adicionales (en formato TOML)."
 
@@ -1076,7 +1080,7 @@ msgstr ""
 msgid "Allocate IPs sequentially"
 msgstr "Asignar IPs secuencialmente"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:355
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:358
 msgid "Allocate listen addresses"
 msgstr "Asignar direcciones de escucha"
 
@@ -1091,7 +1095,7 @@ msgid "Allow AP mode to disconnect STAs based on low ACK condition"
 msgstr ""
 "Permite que el modo AP desconecte las estaciones en una condición de ACK bajo"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:356
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:359
 msgid ""
 "Allow Yggdrasil Jumper to configure Yggdrasil with proper listen address and "
 "random port automatically."
@@ -1409,7 +1413,7 @@ msgstr "Autorizado"
 msgid "Authorization Required"
 msgstr "Autorización requerida"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:365
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:368
 msgid "Autofill listen addresses"
 msgstr "Autocompletar direcciones de escucha"
 
@@ -1568,6 +1572,10 @@ msgstr "Dispositivo Batman"
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_hardif.js:10
 msgid "Batman Interface"
 msgstr "Interfaz Batman"
+
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:11
+msgid "Batman VLAN Interface"
+msgstr ""
 
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:81
 msgid ""
@@ -2592,7 +2600,7 @@ msgstr "Datos Transmitidos"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:186
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:199
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:159
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:346
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:349
 msgid "Debug"
 msgstr "Depurar"
 
@@ -2766,6 +2774,7 @@ msgstr "Zona de destino"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:281
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:355
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:391
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:48
 #: protocols/luci-proto-external/htdocs/luci-static/resources/protocol/external.js:29
 msgid "Device"
 msgstr "Dispositivo"
@@ -2812,7 +2821,7 @@ msgid "Device unreachable! Still waiting for device..."
 msgstr "¡Dispositivo inalcanzable! Todavía esperando al dispositivo..."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1378
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:287
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:289
 msgid "Devices"
 msgstr "Dispositivos"
 
@@ -3402,6 +3411,16 @@ msgstr "Activar <abbr title=\"Spanning Tree Protocol\">STP</abbr>"
 msgid "Enable <abbr title=\"Stateless Address Auto Config\">SLAAC</abbr>"
 msgstr "Activar <abbr title=\"Stateless Address Auto Config\">SLAAC</abbr>"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:67
+msgid ""
+"Enable AP Isolation to isolate wireless clients connected to this Batman "
+"VLAN on this AP from wireless clients connected to this Batman VLAN on "
+"different APs. To isolate all wireless clients connected to this Batman VLAN "
+"on all APs from each other, be sure to enable this option on all APs, and be "
+"sure to enable additional wireless client isolation options ('isolate' and "
+"'bridge_isolate') for all associated wireless interfaces on all APs."
+msgstr ""
+
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:190
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:412
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:418
@@ -3478,7 +3497,7 @@ msgstr "Activar funcionalidad VLAN"
 msgid "Enable WPS pushbutton, requires WPA(2)-PSK/WPA3-SAE"
 msgstr "Activar botón WPS, requiere WPA(2)-PSK/WPA3-SAE"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:319
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:322
 msgid "Enable Yggdrasil Jumper"
 msgstr "Activar Yggdrasil Jumper"
 
@@ -3723,7 +3742,7 @@ msgstr "Borrando..."
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/syslog.js:48
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:190
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:156
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:343
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:346
 msgid "Error"
 msgstr "Error"
 
@@ -3890,7 +3909,7 @@ msgstr "Registro DHCP adicional"
 msgid "Extra SSH command options"
 msgstr "Opciones de comando SSH adicionales"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:375
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:378
 msgid "Extra config"
 msgstr "Configuración extra"
 
@@ -5202,6 +5221,12 @@ msgstr ""
 "(predeterminado). Esto no afecta los emparejamientos salientes ni los pares "
 "de enlace local descubiertos mediante multidifusión."
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:49
+msgid ""
+"If not listed, please open the drop-down list and type in the name of the "
+"Batman VLAN device in the 'custom' field."
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1128
 msgid ""
 "If set, downstream subnets are only allocated from the given IPv6 prefix "
@@ -5418,7 +5443,7 @@ msgstr ""
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/syslog.js:51
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:187
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:158
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:345
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:348
 msgid "Info"
 msgstr "Info"
 
@@ -5765,7 +5790,7 @@ msgstr ""
 "Parece que está intentando instalar una imagen que no cabe en la memoria "
 "interna, ¡por favor, verifique el archivo de imagen!"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:312
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:315
 msgid ""
 "It periodically probes for active sessions and automatically establishes "
 "direct peerings over internet with remote nodes running Yggdrasil Jumper "
@@ -5797,7 +5822,7 @@ msgstr "Conectarse a: %q"
 msgid "Jump to rule"
 msgstr "Saltar a la regla"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:303
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:306
 msgid "Jumper"
 msgstr "Jumper"
 
@@ -6179,7 +6204,7 @@ msgstr ""
 "Escucha solo en las interfaces especificadas y realiza un bucle invertido si "
 "no se excluye explícitamente."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:292
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:295
 msgid "Listen to multicast beacons"
 msgstr "Escuchar a balizas multicast"
 
@@ -6390,7 +6415,7 @@ msgstr "Iniciar sesión"
 msgid "Log in…"
 msgstr "Iniciar sesión…"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:340
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:343
 msgid "Log level"
 msgstr "Nivel de registro"
 
@@ -6995,7 +7020,7 @@ msgstr "Modo de multidifusión"
 msgid "Multicast routing"
 msgstr "Enrutamiento de multidifusión"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:281
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:283
 msgid "Multicast rules"
 msgstr "Reglas de multidifusión"
 
@@ -7586,7 +7611,7 @@ msgstr "Obtener dirección IPv6"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/none.js:19
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:87
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:342
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:345
 msgid "Off"
 msgstr "Apagado"
 
@@ -8232,7 +8257,7 @@ msgstr "Traspasar (Duplicar dispositivo físico a una sola MAC VLAN)"
 #: protocols/luci-proto-openconnect/htdocs/luci-static/resources/protocol/openconnect.js:146
 #: protocols/luci-proto-openfortivpn/htdocs/luci-static/resources/protocol/openfortivpn.js:103
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:58
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:298
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:301
 #: themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/sysauth.ut:19
 msgid "Password"
 msgstr "Contraseña"
@@ -8376,7 +8401,7 @@ msgstr "Direcciones del par"
 msgid "Peer device name"
 msgstr "Nombre del dispositivo del par"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:279
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:280
 msgid "Peer interface"
 msgstr "Interfaz del par"
 
@@ -8451,6 +8476,12 @@ msgstr "Paq."
 msgid "Please enter your username and password."
 msgstr "Por favor, introduzca su nombre de usuario y contraseña."
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:63
+msgid ""
+"Please open the drop-down list and select or type in the name of the Batman "
+"VLAN device."
+msgstr ""
+
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4632
 msgid "Please select the file to upload."
 msgstr "Por favor, seleccione el archivo que desea cargar."
@@ -8468,7 +8499,7 @@ msgstr "Política: <strong>%h</strong> (%h)"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/dropbear.js:31
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan.js:223
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:223
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:294
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:297
 msgid "Port"
 msgstr "Puerto"
 
@@ -9364,7 +9395,7 @@ msgstr "Restaurar"
 msgid "Restore backup"
 msgstr "Restaurar copia de seguridad"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:366
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:369
 msgid ""
 "Retrieve the listener addresses from the Yggdrasil interface configuration."
 msgstr ""
@@ -9749,6 +9780,10 @@ msgstr ""
 "la verificación del formato de la imagen. ¡Úselo solo si está seguro de que "
 "el firmware es correcto y está diseñado para su dispositivo!"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:52
+msgid "Select Batman VLAN device…"
+msgstr ""
+
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2983
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3182
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3358
@@ -9786,7 +9821,7 @@ msgstr ""
 "Enviar peticiones echo LCP cada intervalo de segundos dado, solo efectivo "
 "usado conjuntamente con el umbral de fallo"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:290
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:293
 msgid "Send multicast beacon"
 msgstr "Enviar baliza multicast"
 
@@ -10885,7 +10920,7 @@ msgstr ""
 "ninguna parte pero aún marca la solicitud para que ningún servidor de "
 "nombres ascendente añada información de la dirección del cliente."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:320
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:323
 msgid ""
 "The checkbox cannot be modified unless the <code>yggdrasil-jumper</code> "
 "package is installed."
@@ -11563,7 +11598,7 @@ msgstr "Tono"
 msgid "Total Available"
 msgstr "Total disponible"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:347
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:350
 msgid "Trace"
 msgstr "Rastro"
 
@@ -12429,7 +12464,7 @@ msgstr "Estado de WPS"
 msgid "Waiting for device..."
 msgstr "Esperando al dispositivo..."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:344
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:347
 msgid "Warn"
 msgstr "Advertir"
 

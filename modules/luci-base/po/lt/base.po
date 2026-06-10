@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2026-05-07 13:14+0000\n"
+"PO-Revision-Date: 2026-05-31 16:42+0000\n"
 "Last-Translator: Džiugas Januševičius <dziugas1959@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/openwrt/luci/"
 "lt/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1330
 msgid "!known (not known)"
@@ -63,7 +63,7 @@ msgstr ""
 "„%s“ prideda – „/24“ ir „/96“ užklausėjo potinklius, skirtiems IPv4 ir IPv6 "
 "užklausėjams atitinkamai."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:311
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:314
 msgid ""
 "%s is an independent project that aims to reduce latency of a connection "
 "over Yggdrasil network transparently, utilizing NAT traversal to bypass "
@@ -626,6 +626,10 @@ msgstr "„ADSL2+ (G.992.5) Annex M“"
 msgid "ANSI T1.413"
 msgstr "„ANSI T1.413“"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:66
+msgid "AP Isolation"
+msgstr "Prieigos taško izoliavimas"
+
 #: protocols/luci-proto-3g/htdocs/luci-static/resources/protocol/3g.js:95
 #: protocols/luci-proto-mbim/htdocs/luci-static/resources/protocol/mbim.js:65
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:65
@@ -903,7 +907,7 @@ msgstr ""
 "Pridėti vietinio domeno-srities priesagą į vardus, pateikiamų iš skleidėjo/"
 "vedėjo failų."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:283
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:285
 msgid "Add multicast rule"
 msgstr "Pridėto daugiadresinę transliavimo taisyklę"
 
@@ -970,7 +974,7 @@ msgstr "Pridėdant IPv6 į IPv4 rinkinį ir atvirkščiai nepavyksta."
 msgid "Additional Peers"
 msgstr "Papildomi lygiarangiai"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:376
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:379
 msgid "Additional configuration settings (in TOML format)."
 msgstr "Papildomi konfigūracijos nustatymai („TOML“ formatu)."
 
@@ -1110,7 +1114,7 @@ msgstr ""
 msgid "Allocate IPs sequentially"
 msgstr "Paskirstyti IP(dgs.) nuosekliai"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:355
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:358
 msgid "Allocate listen addresses"
 msgstr "Paskirti laukiančius/-ias prisijungimo/jungties ryšio adresus"
 
@@ -1124,7 +1128,7 @@ msgstr ""
 msgid "Allow AP mode to disconnect STAs based on low ACK condition"
 msgstr "Leisti „AP“ veiksena atjungti „STA“ pagal mažo „ACK“ kiekio sąlygą"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:356
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:359
 msgid ""
 "Allow Yggdrasil Jumper to configure Yggdrasil with proper listen address and "
 "random port automatically."
@@ -1446,7 +1450,7 @@ msgstr "Autoritetas"
 msgid "Authorization Required"
 msgstr "Reikalingas prieigos teisių suteikimas"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:365
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:368
 msgid "Autofill listen addresses"
 msgstr ""
 "Automatiškai užpildyti laukiančio/-ios prisijungimo/jungties ryšio adresus"
@@ -1607,6 +1611,10 @@ msgstr "„Batman“ įrenginys"
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_hardif.js:10
 msgid "Batman Interface"
 msgstr "„Batman“ sąsajas ir/arba sietuvas"
+
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:11
+msgid "Batman VLAN Interface"
+msgstr ""
 
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:81
 msgid ""
@@ -2646,7 +2654,7 @@ msgstr "Duomenų perduota"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:186
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:199
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:159
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:346
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:349
 msgid "Debug"
 msgstr "Derinimas/Trukdžių šalinimas"
 
@@ -2824,6 +2832,7 @@ msgstr "Paskirties/Kelionės tikslo zona"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:281
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:355
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:391
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:48
 #: protocols/luci-proto-external/htdocs/luci-static/resources/protocol/external.js:29
 msgid "Device"
 msgstr "Įrenginys"
@@ -2870,7 +2879,7 @@ msgid "Device unreachable! Still waiting for device..."
 msgstr "Įrenginys nepasiekiamas! Vis dar laukiama įrenginio..."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1378
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:287
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:289
 msgid "Devices"
 msgstr "Įrenginiai"
 
@@ -3484,6 +3493,16 @@ msgstr ""
 "Įjungti <abbr title=\"angl. Stateless Address Auto Config | liet. "
 "Neįsimenamasis automatinis adreso konfigūravimas\">„SLAAC“</abbr>"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:67
+msgid ""
+"Enable AP Isolation to isolate wireless clients connected to this Batman "
+"VLAN on this AP from wireless clients connected to this Batman VLAN on "
+"different APs. To isolate all wireless clients connected to this Batman VLAN "
+"on all APs from each other, be sure to enable this option on all APs, and be "
+"sure to enable additional wireless client isolation options ('isolate' and "
+"'bridge_isolate') for all associated wireless interfaces on all APs."
+msgstr ""
+
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:190
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:412
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:418
@@ -3560,7 +3579,7 @@ msgstr "Įjungti/Įgalinti „VLAN“ funkcija/veiksmumą"
 msgid "Enable WPS pushbutton, requires WPA(2)-PSK/WPA3-SAE"
 msgstr "Įjungti „WPS“ mygtuko paspaudimą, reikalaują „WPA(2)-PSK“/„WPA3-SAE“"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:319
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:322
 msgid "Enable Yggdrasil Jumper"
 msgstr "Įjungti/Įgalinti „Yggdrasil Jumper“"
 
@@ -3807,7 +3826,7 @@ msgstr "Šalinama..."
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/syslog.js:48
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:190
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:156
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:343
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:346
 msgid "Error"
 msgstr "Klaida"
 
@@ -3980,7 +3999,7 @@ msgstr "Papildomas „DHCP“ registravimas"
 msgid "Extra SSH command options"
 msgstr "Papildomi „SSH“ komandos pasirinkimai"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:375
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:378
 msgid "Extra config"
 msgstr "Papildoma konfigūracija"
 
@@ -5323,6 +5342,12 @@ msgstr ""
 "įtakos išsiunčiamiems lygiarangiams ar nuorodų vietiniams lygiarangiams, "
 "aptiktiems naudojant daugiaadresinės transliacijas."
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:49
+msgid ""
+"If not listed, please open the drop-down list and type in the name of the "
+"Batman VLAN device in the 'custom' field."
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1128
 msgid ""
 "If set, downstream subnets are only allocated from the given IPv6 prefix "
@@ -5536,7 +5561,7 @@ msgstr "Pasirinktas tik vidaus kanalo"
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/syslog.js:51
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:187
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:158
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:345
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:348
 msgid "Info"
 msgstr "Informacija"
 
@@ -5874,7 +5899,7 @@ msgstr "Invertuoti atitikmenį"
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:223
 msgctxt "VLAN port state"
 msgid "Is Primary VLAN"
-msgstr "Yra pagrindinis „VLAN“"
+msgstr "Yra pirminis/pagrindinis „VLAN“"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1213
 msgid "Isolate Clients"
@@ -5888,7 +5913,7 @@ msgstr ""
 "Atrodo, kad bandote įkelti laikmeną, kuris netelpa į išliekamają atmintį, "
 "prašome patikrinti laikmenos failą!"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:312
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:315
 msgid ""
 "It periodically probes for active sessions and automatically establishes "
 "direct peerings over internet with remote nodes running Yggdrasil Jumper "
@@ -5920,7 +5945,7 @@ msgstr "Prisijungiamas prie tinklo: %q"
 msgid "Jump to rule"
 msgstr "Eiti prie taisyklės"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:303
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:306
 msgid "Jumper"
 msgstr "„Jumper“"
 
@@ -6307,7 +6332,7 @@ msgstr ""
 "Laukti (-iama/-s) prisijungimo/jungties ryšio tik duotoms sąsajoms ir/ar "
 "sietuvams ir (teigti) grįžtamąjį ryšį, jei jis aiškiai neįtrauktas."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:292
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:295
 msgid "Listen to multicast beacons"
 msgstr ""
 "Laukti (-iama/-s) prisijungimo/jungties ryšio daugiaadresiniams transliavimo "
@@ -6522,7 +6547,7 @@ msgstr "Prisijungti"
 msgid "Log in…"
 msgstr "Prisijungti…"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:340
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:343
 msgid "Log level"
 msgstr "Žurnalo lygis"
 
@@ -6895,7 +6920,7 @@ msgstr "Metodas nerastas"
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/routes.js:199
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/routes.js:225
 msgid "Metric"
-msgstr "Metrinė"
+msgstr "Metrika"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1084
 msgid ""
@@ -7143,7 +7168,7 @@ msgstr "Daugiaadresinio transliavimo veiksena"
 msgid "Multicast routing"
 msgstr "Daugiaadresinio transliavimo kelvada"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:281
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:283
 msgid "Multicast rules"
 msgstr "Daugiaadresinio transliavimo taisyklės"
 
@@ -7721,7 +7746,7 @@ msgstr "Sekundžių skaičius, tarp išsiųstų mokymosi paketų"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3107
 msgid "OK"
-msgstr ""
+msgstr "Gerai"
 
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:69
 msgid "Obfuscated Group Password"
@@ -7744,7 +7769,7 @@ msgstr "Gauti IPv6 adresą"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/none.js:19
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:87
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:342
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:345
 msgid "Off"
 msgstr "Išjungtas/Išgalintas"
 
@@ -8409,7 +8434,7 @@ msgstr "Perduoti (Dubliuoti fizinį įrenginį į vieną „MAC VLAN“)"
 #: protocols/luci-proto-openconnect/htdocs/luci-static/resources/protocol/openconnect.js:146
 #: protocols/luci-proto-openfortivpn/htdocs/luci-static/resources/protocol/openfortivpn.js:103
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:58
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:298
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:301
 #: themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/sysauth.ut:19
 msgid "Password"
 msgstr "Slaptažodis"
@@ -8554,7 +8579,7 @@ msgstr "Lygiarangio adresai"
 msgid "Peer device name"
 msgstr "Lygiarangio įrenginio pavadinimas"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:279
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:280
 msgid "Peer interface"
 msgstr "Lygiarangio sąsają ir/arba sietuvas"
 
@@ -8633,6 +8658,12 @@ msgstr ""
 "Prašome įvesti savo naudotojo/vartotojo vardą (t.y. slapyvardį) ir "
 "slaptažodį."
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:63
+msgid ""
+"Please open the drop-down list and select or type in the name of the Batman "
+"VLAN device."
+msgstr ""
+
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4632
 msgid "Please select the file to upload."
 msgstr "Pasirinkite failą, kurį norite įkelti."
@@ -8650,7 +8681,7 @@ msgstr "Politika: <strong>%h</strong> (%h)"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/dropbear.js:31
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan.js:223
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:223
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:294
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:297
 msgid "Port"
 msgstr "Prievadas"
 
@@ -9549,7 +9580,7 @@ msgstr "Atkurti/Atstatyti (-ymas)"
 msgid "Restore backup"
 msgstr "Atkurti/Atstatyti atsarginę kopiją"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:366
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:369
 msgid ""
 "Retrieve the listener addresses from the Yggdrasil interface configuration."
 msgstr ""
@@ -9947,6 +9978,10 @@ msgstr ""
 "Programos ir moduliai diegiami per „opkg“, jeigu Jūsų įteiktas failas "
 "baigiasi „*.ipk“, tada sustokite!"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:52
+msgid "Select Batman VLAN device…"
+msgstr ""
+
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2983
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3182
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3358
@@ -9985,7 +10020,7 @@ msgstr ""
 "Siųsti „LCP“ aido užklausas nurodytu intervalu sekundėmis, veikia tik kartu "
 "su gedimo slenksčiu"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:290
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:293
 msgid "Send multicast beacon"
 msgstr "Siųsti daugiaadresinio transliavimo švyturį"
 
@@ -10578,7 +10613,7 @@ msgstr "Paleidimas"
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/view/modemmanager/status.js:90
 #: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:139
 msgid "State"
-msgstr "Būklė/Būsena"
+msgstr "Būklę/Būseną"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:35
 msgid "Static IPv4 Routes"
@@ -10633,7 +10668,7 @@ msgstr ""
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:499
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/startup.js:101
 msgid "Stop"
-msgstr "Sustabdyti"
+msgstr "Stabdyti"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/60_wifi.js:136
 msgid "Stop WPS"
@@ -11093,7 +11128,7 @@ msgstr ""
 "nepersiunčia nė vieno, bet vis tiek pažymi užklausą, kad joks išsiunčiamo "
 "srauto serverių pavadinimas nepridės ir kliento adreso informacijos."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:320
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:323
 msgid ""
 "The checkbox cannot be modified unless the <code>yggdrasil-jumper</code> "
 "package is installed."
@@ -11772,7 +11807,7 @@ msgstr "Tonas"
 msgid "Total Available"
 msgstr "Iš viso pasiekiama"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:347
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:350
 msgid "Trace"
 msgstr "Atsekamumas"
 
@@ -11880,8 +11915,8 @@ msgstr "„Tunelio“ – Tinklo protokolo, skirto šifruoti/pereiti į kitą ti
 #: modules/luci-compat/luasrc/model/network.lua:1431
 msgid "Tunnel Interface"
 msgstr ""
-"„Tunelio“ – Tinklo protokolo, skirto šifruoti/pereiti į kitą tinklą sąsają "
-"ir/arba sietuvą"
+"„Tunelio“ – Tinklo protokolas, skirtas šifruoti/pereiti į kito tinklo sąsaja "
+"ir/arba sietuvas"
 
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/464xlat.js:44
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/dslite.js:57
@@ -12032,7 +12067,7 @@ msgstr "Nepavyko paleisti iš naujo užkardos: %s"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:372
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/startup.js:56
 msgid "Unable to save contents: %s"
-msgstr "Nepavyko išsaugoti turinį: %s"
+msgstr "Nepavyko išsaugoti turinių: %s"
 
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:14
 msgid "Unable to set allowed mode list."
@@ -12166,7 +12201,7 @@ msgstr "Lygiarangis be pavadinimo"
 
 #: modules/luci-compat/luasrc/view/cbi/tblsection.htm:151
 msgid "Up"
-msgstr "Viršun"
+msgstr "Viršun/Aukštyn"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4724
 msgid "Upload"
@@ -12649,7 +12684,7 @@ msgstr "„WPS“ būsena"
 msgid "Waiting for device..."
 msgstr "Laukiama įrenginio..."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:344
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:347
 msgid "Warn"
 msgstr "Įspėti"
 

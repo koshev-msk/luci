@@ -60,7 +60,7 @@ msgid ""
 "requestors, respectively."
 msgstr ""
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:311
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:314
 msgid ""
 "%s is an independent project that aims to reduce latency of a connection "
 "over Yggdrasil network transparently, utilizing NAT traversal to bypass "
@@ -586,6 +586,10 @@ msgstr "ADSL2+ (G.992.5) Annex M"
 msgid "ANSI T1.413"
 msgstr "ANSI T1.413"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:66
+msgid "AP Isolation"
+msgstr ""
+
 #: protocols/luci-proto-3g/htdocs/luci-static/resources/protocol/3g.js:95
 #: protocols/luci-proto-mbim/htdocs/luci-static/resources/protocol/mbim.js:65
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:65
@@ -857,7 +861,7 @@ msgstr ""
 msgid "Add local domain suffix to names served from hosts files."
 msgstr "Host dosyalarından sunulan adlara yerel etki alanı son eki ekle."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:283
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:285
 msgid "Add multicast rule"
 msgstr "Çok noktaya yayın kuralı ekle"
 
@@ -921,7 +925,7 @@ msgstr ""
 msgid "Additional Peers"
 msgstr ""
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:376
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:379
 msgid "Additional configuration settings (in TOML format)."
 msgstr "Ek yapılandırma ayarları (TOML formatında)."
 
@@ -1059,7 +1063,7 @@ msgstr ""
 msgid "Allocate IPs sequentially"
 msgstr "Sırayla IP tahsis et"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:355
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:358
 msgid "Allocate listen addresses"
 msgstr "Dinleme adresleri tahsis edin"
 
@@ -1074,7 +1078,7 @@ msgid "Allow AP mode to disconnect STAs based on low ACK condition"
 msgstr ""
 "Düşük ACK durumuna göre AP modunun STA'ların bağlantısını kesmesine izin ver"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:356
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:359
 msgid ""
 "Allow Yggdrasil Jumper to configure Yggdrasil with proper listen address and "
 "random port automatically."
@@ -1391,7 +1395,7 @@ msgstr "Yetkili"
 msgid "Authorization Required"
 msgstr "İzin Gerekli"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:365
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:368
 msgid "Autofill listen addresses"
 msgstr "Dinleme adreslerini otomatik doldur"
 
@@ -1549,6 +1553,10 @@ msgstr "Batman Aygıtı"
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_hardif.js:10
 msgid "Batman Interface"
 msgstr "Batman Arayüzü"
+
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:11
+msgid "Batman VLAN Interface"
+msgstr ""
 
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:81
 msgid ""
@@ -2561,7 +2569,7 @@ msgstr "İletilen Veriler"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:186
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:199
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:159
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:346
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:349
 msgid "Debug"
 msgstr "Hata ayıklama"
 
@@ -2734,6 +2742,7 @@ msgstr "Hedef bölge"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:281
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:355
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:391
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:48
 #: protocols/luci-proto-external/htdocs/luci-static/resources/protocol/external.js:29
 msgid "Device"
 msgstr "Aygıt"
@@ -2780,7 +2789,7 @@ msgid "Device unreachable! Still waiting for device..."
 msgstr "Aygıta ulaşılamıyor! Hâlâ aygıt bekleniyor..."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1378
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:287
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:289
 msgid "Devices"
 msgstr "Aygıtlar"
 
@@ -3370,6 +3379,16 @@ msgid "Enable <abbr title=\"Stateless Address Auto Config\">SLAAC</abbr>"
 msgstr ""
 "<abbr title=\"Stateless Address Auto Config\">SLAAC</abbr> 'ı etkinleştir"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:67
+msgid ""
+"Enable AP Isolation to isolate wireless clients connected to this Batman "
+"VLAN on this AP from wireless clients connected to this Batman VLAN on "
+"different APs. To isolate all wireless clients connected to this Batman VLAN "
+"on all APs from each other, be sure to enable this option on all APs, and be "
+"sure to enable additional wireless client isolation options ('isolate' and "
+"'bridge_isolate') for all associated wireless interfaces on all APs."
+msgstr ""
+
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:190
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:412
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:418
@@ -3446,7 +3465,7 @@ msgstr "VLAN işlevselliğini etkinleştirin"
 msgid "Enable WPS pushbutton, requires WPA(2)-PSK/WPA3-SAE"
 msgstr "WPS düğmesini etkinleştirin, WPA(2)-PSK/WPA3-SAE gerektirir"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:319
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:322
 msgid "Enable Yggdrasil Jumper"
 msgstr "Yggdrasil Jumper'ı Etkinleştir"
 
@@ -3688,7 +3707,7 @@ msgstr "Siliniyor..."
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/syslog.js:48
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:190
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:156
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:343
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:346
 msgid "Error"
 msgstr "Hata"
 
@@ -3856,7 +3875,7 @@ msgstr "Ekstra DHCP günlüğü"
 msgid "Extra SSH command options"
 msgstr "Ekstra SSH komut seçenekleri"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:375
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:378
 msgid "Extra config"
 msgstr "Ekstra yapılandırma"
 
@@ -5159,6 +5178,12 @@ msgstr ""
 "eşleşmeleri veya çok noktaya yayın yoluyla keşfedilen bağlantı yerel "
 "eşlerini etkilemez."
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:49
+msgid ""
+"If not listed, please open the drop-down list and type in the name of the "
+"Batman VLAN device in the 'custom' field."
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1128
 msgid ""
 "If set, downstream subnets are only allocated from the given IPv6 prefix "
@@ -5369,7 +5394,7 @@ msgstr ""
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/syslog.js:51
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:187
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:158
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:345
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:348
 msgid "Info"
 msgstr "Bilgi"
 
@@ -5719,7 +5744,7 @@ msgstr ""
 "Flash belleğe sığmayan bir görüntüyü flaş etmeye çalıştığınız anlaşılıyor, "
 "lütfen görüntü dosyasını doğrulayın!"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:312
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:315
 msgid ""
 "It periodically probes for active sessions and automatically establishes "
 "direct peerings over internet with remote nodes running Yggdrasil Jumper "
@@ -5751,7 +5776,7 @@ msgstr "Ağa Katılıyor: %q"
 msgid "Jump to rule"
 msgstr "Kurala git"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:303
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:306
 msgid "Jumper"
 msgstr "Jumper"
 
@@ -6127,7 +6152,7 @@ msgid ""
 "explicitly."
 msgstr "Bu arayüzleri dinlemeyi ve geri dönüşü sınırlayın."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:292
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:295
 msgid "Listen to multicast beacons"
 msgstr "Çok noktaya yayın işaretlerini dinleyin"
 
@@ -6337,7 +6362,7 @@ msgstr "Oturum Aç"
 msgid "Log in…"
 msgstr "Giriş yap…"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:340
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:343
 msgid "Log level"
 msgstr "Günlük seviyesi"
 
@@ -6942,7 +6967,7 @@ msgstr "Çok noktaya yayın modu"
 msgid "Multicast routing"
 msgstr "Çok noktaya yayın yönlendirme"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:281
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:283
 msgid "Multicast rules"
 msgstr "Çok noktaya yayın kuralları"
 
@@ -7532,7 +7557,7 @@ msgstr "IPv6 Adresini Al"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/none.js:19
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:87
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:342
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:345
 msgid "Off"
 msgstr "Kapalı"
 
@@ -8175,7 +8200,7 @@ msgstr "Geçiş (Fiziksel aygıtı tek bir MAC VLAN'a yansıt)"
 #: protocols/luci-proto-openconnect/htdocs/luci-static/resources/protocol/openconnect.js:146
 #: protocols/luci-proto-openfortivpn/htdocs/luci-static/resources/protocol/openfortivpn.js:103
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:58
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:298
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:301
 #: themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/sysauth.ut:19
 msgid "Password"
 msgstr "Şifre"
@@ -8318,7 +8343,7 @@ msgstr "Eş adresler"
 msgid "Peer device name"
 msgstr "Eş aygıt adı"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:279
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:280
 msgid "Peer interface"
 msgstr "Eş arayüz"
 
@@ -8393,6 +8418,12 @@ msgstr "Pktler."
 msgid "Please enter your username and password."
 msgstr "Lütfen kullanıcı adınızı ve şifrenizi giriniz."
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:63
+msgid ""
+"Please open the drop-down list and select or type in the name of the Batman "
+"VLAN device."
+msgstr ""
+
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4632
 msgid "Please select the file to upload."
 msgstr "Lütfen yüklenecek dosyayı seçin."
@@ -8410,7 +8441,7 @@ msgstr "Politika: <strong>%h</strong> (%h)"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/dropbear.js:31
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan.js:223
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:223
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:294
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:297
 msgid "Port"
 msgstr "Bağlantı noktası"
 
@@ -9293,7 +9324,7 @@ msgstr "Geri yükle"
 msgid "Restore backup"
 msgstr "Yedeklemeyi geri yükle"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:366
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:369
 msgid ""
 "Retrieve the listener addresses from the Yggdrasil interface configuration."
 msgstr "Dinleyici adreslerini Yggdrasil arayüz yapılandırmasından alın."
@@ -9684,6 +9715,10 @@ msgstr ""
 "zorla' seçeneğini seçin. Yalnızca donanım yazılımının doğru olduğundan ve "
 "aygıtınız için tasarlandığından eminseniz kullanın!"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:52
+msgid "Select Batman VLAN device…"
+msgstr ""
+
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2983
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3182
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3358
@@ -9721,7 +9756,7 @@ msgstr ""
 "LCP yankı isteklerini saniye cinsinden belirtilen aralıkta gönderin, "
 "yalnızca hata eşiği ile bağlantılı olarak etkilidir"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:290
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:293
 msgid "Send multicast beacon"
 msgstr "Çok noktaya yayın işaretini gönder"
 
@@ -10802,7 +10837,7 @@ msgid ""
 "address information either."
 msgstr ""
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:320
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:323
 msgid ""
 "The checkbox cannot be modified unless the <code>yggdrasil-jumper</code> "
 "package is installed."
@@ -11466,7 +11501,7 @@ msgstr "Ton"
 msgid "Total Available"
 msgstr "Toplam Mevcut"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:347
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:350
 msgid "Trace"
 msgstr "İzleme"
 
@@ -12331,7 +12366,7 @@ msgstr "WPS durumu"
 msgid "Waiting for device..."
 msgstr "Aygıt bekleniyor..."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:344
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:347
 msgid "Warn"
 msgstr "Uyarı"
 

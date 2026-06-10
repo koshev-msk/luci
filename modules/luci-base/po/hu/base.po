@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2026-03-28 14:53+0000\n"
+"PO-Revision-Date: 2026-05-09 17:06+0000\n"
 "Last-Translator: hmzs <hmzs@1szer1.hu>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/openwrt/luci/"
 "hu/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1330
 msgid "!known (not known)"
@@ -65,7 +65,7 @@ msgstr ""
 "%s hozzáadja a kérelmező <code>/24</code> és <code>/96</code> alhálózatait "
 "az IPv4, illetve az IPv6-kérelmezőkhöz."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:311
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:314
 msgid ""
 "%s is an independent project that aims to reduce latency of a connection "
 "over Yggdrasil network transparently, utilizing NAT traversal to bypass "
@@ -608,6 +608,10 @@ msgstr "ADSL2+ (G.992.5) M melléklet"
 msgid "ANSI T1.413"
 msgstr "ANSI T1.413"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:66
+msgid "AP Isolation"
+msgstr ""
+
 #: protocols/luci-proto-3g/htdocs/luci-static/resources/protocol/3g.js:95
 #: protocols/luci-proto-mbim/htdocs/luci-static/resources/protocol/mbim.js:65
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:65
@@ -892,7 +896,7 @@ msgstr ""
 "Helyi tartomány-utótag hozzáadása a <em>hosts</em> fájlokból kiszolgált "
 "nevekhez."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:283
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:285
 msgid "Add multicast rule"
 msgstr "Csoport-küldési szabály hozzáadása"
 
@@ -958,7 +962,7 @@ msgstr ""
 msgid "Additional Peers"
 msgstr "További partnerek"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:376
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:379
 msgid "Additional configuration settings (in TOML format)."
 msgstr "További konfigurációs beállítások (TOML formátumban)."
 
@@ -1097,7 +1101,7 @@ msgstr ""
 msgid "Allocate IPs sequentially"
 msgstr "IP-címek kiosztása egymás után"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:355
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:358
 msgid "Allocate listen addresses"
 msgstr "Figyelési címek kiosztása"
 
@@ -1115,7 +1119,7 @@ msgstr ""
 "alacsony <abbr title=\"Csomagfogadás nyugtázása (ACKnowledgement)\">ACK</"
 "abbr> feltételek alapján."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:356
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:359
 msgid ""
 "Allow Yggdrasil Jumper to configure Yggdrasil with proper listen address and "
 "random port automatically."
@@ -1439,7 +1443,7 @@ msgstr "Hiteles"
 msgid "Authorization Required"
 msgstr "Hitelesítés szükséges"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:365
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:368
 msgid "Autofill listen addresses"
 msgstr "Figyelési címek automatikus kitöltése"
 
@@ -1596,6 +1600,10 @@ msgstr "BATMAN eszköz"
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_hardif.js:10
 msgid "Batman Interface"
 msgstr "BATMAN csatoló"
+
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:11
+msgid "Batman VLAN Interface"
+msgstr ""
 
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:81
 msgid ""
@@ -2628,7 +2636,7 @@ msgstr "Küldött adat"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:186
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:199
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:159
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:346
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:349
 msgid "Debug"
 msgstr "Hibakeresés"
 
@@ -2806,6 +2814,7 @@ msgstr "Célzóna"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:281
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:355
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:391
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:48
 #: protocols/luci-proto-external/htdocs/luci-static/resources/protocol/external.js:29
 msgid "Device"
 msgstr "Eszköz"
@@ -2852,7 +2861,7 @@ msgid "Device unreachable! Still waiting for device..."
 msgstr "Az eszköz elérhetetlen! Várakozás tovább az eszközre…"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1378
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:287
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:289
 msgid "Devices"
 msgstr "Eszközök"
 
@@ -3462,6 +3471,16 @@ msgstr "STP engedélyezése"
 msgid "Enable <abbr title=\"Stateless Address Auto Config\">SLAAC</abbr>"
 msgstr "SLAAC engedélyezése"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:67
+msgid ""
+"Enable AP Isolation to isolate wireless clients connected to this Batman "
+"VLAN on this AP from wireless clients connected to this Batman VLAN on "
+"different APs. To isolate all wireless clients connected to this Batman VLAN "
+"on all APs from each other, be sure to enable this option on all APs, and be "
+"sure to enable additional wireless client isolation options ('isolate' and "
+"'bridge_isolate') for all associated wireless interfaces on all APs."
+msgstr ""
+
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:190
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:412
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:418
@@ -3544,7 +3563,7 @@ msgstr "VLAN funkcionalitás engedélyezése"
 msgid "Enable WPS pushbutton, requires WPA(2)-PSK/WPA3-SAE"
 msgstr "WPS nyomógomb engedélyezése (WPA2-PSK vagy WPA3-SAE szükséges)"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:319
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:322
 msgid "Enable Yggdrasil Jumper"
 msgstr "Yggdrasil Jumper engedélyezése"
 
@@ -3801,7 +3820,7 @@ msgstr "Törlés…"
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/syslog.js:48
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:190
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:156
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:343
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:346
 msgid "Error"
 msgstr "Hiba"
 
@@ -3968,7 +3987,7 @@ msgstr "További DHCP naplózás"
 msgid "Extra SSH command options"
 msgstr "További SSH parancs lehetőségek"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:375
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:378
 msgid "Extra config"
 msgstr "További beállítás"
 
@@ -5285,6 +5304,12 @@ msgstr ""
 "érinti a kimenő partner-kapcsolatokat, sem a csoport-küldéssel felfedezett "
 "helyi partnereket."
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:49
+msgid ""
+"If not listed, please open the drop-down list and type in the name of the "
+"Batman VLAN device in the 'custom' field."
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1128
 msgid ""
 "If set, downstream subnets are only allocated from the given IPv6 prefix "
@@ -5496,7 +5521,7 @@ msgstr ""
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/syslog.js:51
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:187
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:158
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:345
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:348
 msgid "Info"
 msgstr "Infó"
 
@@ -5858,7 +5883,7 @@ msgstr ""
 "Úgy tűnik, hogy olyan képfájlt próbál beírni, amely nem fér bele a flash-"
 "memóriába. Ellenőrizze a képfájlt!"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:312
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:315
 msgid ""
 "It periodically probes for active sessions and automatically establishes "
 "direct peerings over internet with remote nodes running Yggdrasil Jumper "
@@ -5887,7 +5912,7 @@ msgstr "Csatlakozás hálózathoz: %q"
 msgid "Jump to rule"
 msgstr "Ugrás a szabályhoz"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:303
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:306
 msgid "Jumper"
 msgstr ""
 
@@ -6274,7 +6299,7 @@ msgid ""
 "explicitly."
 msgstr "Figyelés korlátozása ezekre a csatolókra és a visszacsatolásra."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:292
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:295
 msgid "Listen to multicast beacons"
 msgstr "Csoport-küldésű alapjelek figyelése"
 
@@ -6488,7 +6513,7 @@ msgstr "Bejelentkezés"
 msgid "Log in…"
 msgstr "Bejelentkezés…"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:340
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:343
 msgid "Log level"
 msgstr "Naplózás szintje"
 
@@ -7102,7 +7127,7 @@ msgstr "Csoport-küldési mód"
 msgid "Multicast routing"
 msgstr "Csoport-küldési útválasztás"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:281
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:283
 msgid "Multicast rules"
 msgstr "Csoport-küldési szabályok"
 
@@ -7696,7 +7721,7 @@ msgstr "IPv6-cím beszerzése"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/none.js:19
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:87
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:342
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:345
 msgid "Off"
 msgstr "Ki"
 
@@ -8361,7 +8386,7 @@ msgstr "Átengedés (Fizikai eszköz tükrözése egyetlen MAC VLAN-hoz)"
 #: protocols/luci-proto-openconnect/htdocs/luci-static/resources/protocol/openconnect.js:146
 #: protocols/luci-proto-openfortivpn/htdocs/luci-static/resources/protocol/openfortivpn.js:103
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:58
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:298
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:301
 #: themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/sysauth.ut:19
 msgid "Password"
 msgstr "Jelszó"
@@ -8507,7 +8532,7 @@ msgstr "Partner címek"
 msgid "Peer device name"
 msgstr "Partner eszköznév"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:279
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:280
 msgid "Peer interface"
 msgstr "Partner csatoló"
 
@@ -8584,6 +8609,12 @@ msgstr "csom."
 msgid "Please enter your username and password."
 msgstr "Adja meg a felhasználónevét és a jelszavát."
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:63
+msgid ""
+"Please open the drop-down list and select or type in the name of the Batman "
+"VLAN device."
+msgstr ""
+
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4632
 msgid "Please select the file to upload."
 msgstr "Válassza ki a feltöltendő fájlt."
@@ -8601,7 +8632,7 @@ msgstr "Szabályzat: <strong>%h</strong> (%h)"
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/dropbear.js:31
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan.js:223
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:223
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:294
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:297
 msgid "Port"
 msgstr "Port"
 
@@ -9505,7 +9536,7 @@ msgstr "Visszaállítás"
 msgid "Restore backup"
 msgstr "Biztonsági mentés visszaállítása"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:366
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:369
 msgid ""
 "Retrieve the listener addresses from the Yggdrasil interface configuration."
 msgstr ""
@@ -9891,6 +9922,10 @@ msgstr ""
 "ellenőrzési HIBA ellenére is beírja a fájlt. Csak akkor használja, ha biztos "
 "abban hogy a firmware helyes, és az eszközéhez készült!"
 
+#: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv_vlan.js:52
+msgid "Select Batman VLAN device…"
+msgstr ""
+
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2983
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3182
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3358
@@ -9932,7 +9967,7 @@ msgstr ""
 "abbr> visszhang kérések küldése a másodpercben megadott időközönként.<br /"
 ">Csak hibaküszöbszinttel együtt van hatása."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:290
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:293
 msgid "Send multicast beacon"
 msgstr "Csoport-küldésű alapjel"
 
@@ -11054,7 +11089,7 @@ msgstr ""
 "128) a teljes címet továbbítja, a nulla pedig semmit, de megjelöli a kérést, "
 "így a felsőbb rétegű névszerverek sem adnak hozzá kliens címinformációkat."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:320
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:323
 msgid ""
 "The checkbox cannot be modified unless the <code>yggdrasil-jumper</code> "
 "package is installed."
@@ -11696,7 +11731,7 @@ msgstr "Tónus"
 msgid "Total Available"
 msgstr "Összes elérhető"
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:347
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:350
 msgid "Trace"
 msgstr ""
 
@@ -12565,7 +12600,7 @@ msgstr "WPS állapot"
 msgid "Waiting for device..."
 msgstr "Várakozás a készülékre..."
 
-#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:344
+#: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:347
 msgid "Warn"
 msgstr "Figyelmeztetés"
 
