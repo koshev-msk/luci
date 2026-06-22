@@ -15,9 +15,11 @@ function getStatusBackgroundClass(status) {
 		case 'online':
 			return 'label success';
 		case 'offline':
-			return 'label error';
-		case 'notracking':
 			return 'label warning';
+                case 'disabled':
+			return 'label';
+		case 'notracking':
+			return 'label';
 		default:
 			return 'label';
 	}
