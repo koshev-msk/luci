@@ -66,9 +66,7 @@ return view.extend({
 								.querySelector('select.cbi-section-create-name');
 							var name = select ? select.value : '';
 							if (!name) return;
-							return this.map.save(null, true).then(L.bind(function() {
-								return this.addOption(name);
-							}, this));
+							return this.handleAdd(ev, name);
 						})
 					}, _('Add'))
 				])
