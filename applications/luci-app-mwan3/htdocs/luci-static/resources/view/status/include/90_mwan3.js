@@ -1,6 +1,7 @@
 'use strict';
 'require baseclass';
 'require rpc';
+'require uci';
 
 const callMwan3Status = rpc.declare({
 	object: 'mwan3',
@@ -28,12 +29,20 @@ return baseclass.extend({
 	title: _('MultiWAN Manager'),
 
 	load: function() {
-		return Promise.all([
-			callMwan3Status("interfaces"),
-		]);
+		return uci.load('mwan3').then(function() {
+			var globals = uci.sections('mwan3', 'globals');
+			if (!globals || !globals[0] || globals[0].show_overview !== '1')
+				return null;
+			return Promise.all([
+				callMwan3Status("interfaces"),
+			]);
+		});
 	},
 
 	render: function (result) {
+		if (!result)
+			return null;
+
 		if (!result[0]?.interfaces || Object.keys(result[0].interfaces).length === 0)
 			return null;
 
