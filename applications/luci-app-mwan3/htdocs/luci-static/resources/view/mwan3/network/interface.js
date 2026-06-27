@@ -29,26 +29,51 @@ return view.extend({
 		s.anonymous = false;
 		s.nodescriptions = true;
 
-		/* This name length error check can likely be removed when mwan3 migrates to nftables */
 		s.renderSectionAdd = function(extra_class) {
-			var el = form.GridSection.prototype.renderSectionAdd.apply(this, arguments),
-				nameEl = el.querySelector('.cbi-section-create-name');
-			ui.addValidator(nameEl, 'uciname', true, function(v) {
-				let sections = [
-					...uci.sections('mwan3', 'interface'),
-					...uci.sections('mwan3', 'member'),
-					...uci.sections('mwan3', 'policy'),
-					...uci.sections('mwan3', 'rule')
-				];
+			var usedNames = [
+				...uci.sections('mwan3', 'interface'),
+				...uci.sections('mwan3', 'member'),
+				...uci.sections('mwan3', 'policy'),
+				...uci.sections('mwan3', 'rule')
+			].map(function(sec) { return sec['.name']; });
 
-				for (let j = 0; j < sections.length; j++) {
-					if (sections[j]['.name'] == v) {
-						return _('Interfaces may not share the same name as configured members, policies or rules.');
-					}
-				}
-				if (v.length > 15) return _('Name length shall not exceed 15 characters');
-				return true;
-			}, 'blur', 'keyup');
+			var available = uci.sections('network', 'interface')
+				.map(function(sec) { return sec['.name']; })
+				.filter(function(name) {
+					return name !== 'loopback' &&
+					       name.length <= 15 &&
+					       usedNames.indexOf(name) === -1;
+				});
+
+			var el = E('div', { 'class': 'cbi-section-create' + (extra_class ? ' ' + extra_class : '') }, [
+				E('div', { 'class': 'cbi-section-create-name-container' }, [
+					E('select', {
+						'class': 'cbi-section-create-name',
+						'style': 'min-width: 12em'
+					}, available.length
+						? available.map(function(name) {
+							return E('option', { 'value': name }, name);
+						})
+						: [E('option', { 'value': '', 'disabled': true, 'selected': true },
+							_('No available interfaces'))]
+					),
+					E('button', {
+						'class': 'cbi-button cbi-button-add',
+						'title': _('Add'),
+						'disabled': available.length === 0 || null,
+						'click': ui.createHandlerFn(this, function(ev) {
+							var select = ev.target.closest('.cbi-section-create')
+								.querySelector('select.cbi-section-create-name');
+							var name = select ? select.value : '';
+							if (!name) return;
+							return this.map.save(null, true).then(L.bind(function() {
+								return this.addOption(name);
+							}, this));
+						})
+					}, _('Add'))
+				])
+			]);
+
 			return el;
 		};
 

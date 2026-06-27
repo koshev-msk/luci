@@ -84,7 +84,12 @@ return network.registerProtocol('modemmanager', {
 		o.value('eap', 'EAP');
 		o.value('', _('None'));
 		o.default = 'none';
+<<<<<<< HEAD
 
+=======
+		// Disabled by koshev-msk. Use bands or modes via luci-app-mmconfig. Need code from select bands on proto application
+		/*
+>>>>>>> 8b7f2a7cb8 (luci-app-mwan3: add selectable list interfaces setting)
 		o = s.taboption('general', form.ListValue, 'allowedmode', _('Allowed network technology'),
 			_('Setting the allowed network technology.'));
 		o.value('2g');
