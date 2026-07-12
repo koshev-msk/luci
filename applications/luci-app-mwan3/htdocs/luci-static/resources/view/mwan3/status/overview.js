@@ -3,6 +3,8 @@
 'require view';
 'require rpc';
 
+// modefied by koshev-msk
+
 const callMwan3Status = rpc.declare({
 	object: 'mwan3',
 	method: 'status',
