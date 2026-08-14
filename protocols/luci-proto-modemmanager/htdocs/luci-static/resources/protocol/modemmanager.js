@@ -147,6 +147,9 @@ return network.registerProtocol('modemmanager', {
 		o.disabled = '0';
 		o.default = '';
 
+		o = s.taboption('advanced', form.Flag, 'peerdns', _('Use DNS servers advertised by peer'), _('If unchecked, the advertised DNS server addresses are ignored'));
+		o.default = o.enabled;
+
 		o = s.taboption('advanced', form.Value, 'mtu', _('Override MTU'));
 		o.placeholder = dev ? (dev.getMTU() || '1500') : '1500';
 		o.datatype    = 'max(9200)';
