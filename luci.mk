@@ -89,8 +89,10 @@ define findrev
       set -- $$(git log -1 --format="%ct %h" --abbrev=7 -- $(if $(1),. ':(exclude)po',po)); \
       if [ -n "$$1" ]; then
         secs="$$(($$1 % 86400))"; \
-        yday="$$(date --utc --date="@$$1" "+%y.%j")"; \
-        printf '%s.%05d~%s' "$$yday" "$$secs" "$$2"; \
+        year="$$(date --utc --date="@$$1" "+%Y")"; \
+        day="$$(date --utc --date="@$$1" "+%j")"; \
+        year="$$(($$year - 1900 + 100))"; \
+        printf '%03d.%s.%05d~%s' "$$year" "$$day" "$$secs" "$$2"; \
       else \
         echo "0"; \
       fi; \
@@ -129,7 +131,7 @@ PKG_GITBRANCH?=$(if $(DUMP),x,$(strip $(shell \
 			variant="LuCI Master"; \
 		fi; \
 	fi; \
-	echo "$$variant" \
+echo "$$variant" \
 )))
 
 include $(INCLUDE_DIR)/package.mk
@@ -138,9 +140,6 @@ include $(INCLUDE_DIR)/package.mk
 #               usually one of the LUCI_MENU.* definitions
 # LUCI_SUBMENU_DEFAULT: the regular SUBMENU defined by LUCI_TYPE or derived from the packagename
 # LUCI_SUBMENU_FORCED: manually forced value SUBMENU to set to by explicit definition
-#                      can be any string, "none" disables the creation of a submenu
-#                      most useful in combination with LUCI_CATEGORY, to make the package appear
-#                      anywhere in the menu structure
 LUCI_SUBMENU_DEFAULT=$(if $(LUCI_MENU.$(LUCI_TYPE)),$(LUCI_MENU.$(LUCI_TYPE)),$(LUCI_MENU.app))
 LUCI_SUBMENU=$(if $(LUCI_SUBMENU_FORCED),$(LUCI_SUBMENU_FORCED),$(LUCI_SUBMENU_DEFAULT))
 
@@ -282,12 +281,12 @@ endif
 define SubstituteVersion
 	$(FIND) $(1) -type f -name '*.htm' | while read src; do \
 		$(SED) 's/<%# *\([^ ]*\)PKG_VERSION *%>/\1$(if $(PKG_VERSION),$(PKG_VERSION),$(PKG_SRC_VERSION))/g' \
-		    -e 's/"\(<%= *\(media\|resource\) *%>[^"]*\.\(js\|css\)\)"/"\1?v=$(if $(PKG_VERSION),$(PKG_VERSION),$(PKG_SRC_VERSION))"/g' \
+		    -e 's/"\(<%= *\(media\|resource\) *%>[^\"]*\.\(js\|css\)\)"/"\1?v=$(if $(PKG_VERSION),$(PKG_VERSION),$(PKG_SRC_VERSION))"/g' \
 			"$$$$src"; \
 	done; \
 	$(FIND) $(1) -type f -name '*.ut' | while read src; do \
 		$(SED) 's/{# *\([^ ]*\)PKG_VERSION *#}/\1$(if $(PKG_VERSION),$(PKG_VERSION),$(PKG_SRC_VERSION))/g' \
-		    -e 's/"\({{ *\(media\|resource\) *}}[^"]*\.\(js\|css\)\)"/"\1?v=$(if $(PKG_VERSION),$(PKG_VERSION),$(PKG_SRC_VERSION))"/g' \
+		    -e 's/"\({{ *\(media\|resource\) *}}[^\"]*\.\(js\|css\)\)"/"\1?v=$(if $(PKG_VERSION),$(PKG_VERSION),$(PKG_SRC_VERSION))"/g' \
 			"$$$$src"; \
 	done
 endef
@@ -335,16 +334,6 @@ define LuciTranslation
 
   define Package/luci-i18n-$(LUCI_BASENAME)-$(1)/description
     Translation for $(PKG_NAME) - $(LUCI_LANG.$(2))
-  endef
-
-  define Package/luci-i18n-$(LUCI_BASENAME)-$(1)/install
-	$$(INSTALL_DIR) $$(1)/etc/uci-defaults
-	echo "uci set luci.languages.$(subst -,_,$(1))='$(LUCI_LANG.$(2))'; uci commit luci" \
-		> $$(1)/etc/uci-defaults/luci-i18n-$(LUCI_BASENAME)-$(1)
-	$$(INSTALL_DIR) $$(1)$(LUCI_LIBRARYDIR)/i18n
-	$(foreach po,$(wildcard ${CURDIR}/po/$(2)/*.po), \
-		po2lmo $(po) \
-			$$(1)$(LUCI_LIBRARYDIR)/i18n/$(basename $(notdir $(po))).$(1).lmo;)
   endef
 
   LUCI_BUILD_PACKAGES += luci-i18n-$(LUCI_BASENAME)-$(1)
