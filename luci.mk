@@ -89,9 +89,10 @@ define findrev
       set -- $$(git log -1 --format="%ct %h" --abbrev=7 -- $(if $(1),. ':(exclude)po',po)); \
       if [ -n "$$1" ]; then
         secs="$$(($$1 % 86400))"; \
-        year="$$(date --utc --date="@$$1" "+%Y")"; \
-        day="$$(date --utc --date="@$$1" "+%j")"; \
-        year="$$(($$year - 1900 + 100))"; \
+        yday="$$(date --utc --date="@$$1" "+%y.%j")"; \
+        year="$${yday%.*}"; \
+        day="$${yday#*.}"; \
+        year="$$(($$year + 100))"; \
         printf '%03d.%s.%05d~%s' "$$year" "$$day" "$$secs" "$$2"; \
       else \
         echo "0"; \
