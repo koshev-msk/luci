@@ -10,6 +10,7 @@
 "require rpc";
 "require view";
 "require https-dns-proxy.status as hdp";
+/* globals hdp */
 
 var pkg = hdp.pkg;
 
@@ -185,7 +186,7 @@ return view.extend({
 			)
 		);
 		o.optional = true;
-		o.placeholder = "heartbeat.melmac.ca";
+		o.placeholder = "heartbeat.mossdef.org";
 
 		o = s.taboption(
 			"service",
@@ -237,14 +238,14 @@ return view.extend({
 		o = s.taboption(
 			"global",
 			form.ListValue,
-			"force_ipv6_resolvers",
-			_("Use IPv6 resolvers")
+			"force_ip_family",
+			_("DNS resolver IP family")
 		);
 		o.optional = true;
-		o.rmempty = true;
-		o.value("", _("Use any family DNS resolvers"));
-		o.value("1", _("Force use of IPv6 DNS resolvers"));
-		o.default = "";
+		o.value("auto", _("Automatic (dual-stack)"));
+		o.value("ipv4", _("IPv4 only"));
+		o.value("ipv6", _("IPv6 only"));
+		o.default = "auto";
 
 		o = s.taboption("global", form.ListValue, "verbosity", _("Logging Verbosity Level"));
 		o.optional = true;
@@ -382,6 +383,7 @@ return view.extend({
 		var _provider;
 		_provider = s.option(form.ListValue, "_provider", _("Provider"));
 		_provider.modalonly = true;
+		_provider.forcewrite = true;
 		_provider.cfgvalue = function (section_id) {
 			let resolver = this.map.data.get(
 				this.map.config,
@@ -479,6 +481,18 @@ return view.extend({
 						_paramList.value(val, descr);
 					});
 					_paramList.depends("_provider", prov.template);
+					_paramList.cfgvalue = function (section_id) {
+						let resolver = this.map.data.get(
+							this.map.config,
+							section_id,
+							"resolver_url"
+						);
+						if (resolver === undefined || resolver === null)
+							return prov.params.option.default || null;
+						let regexp = pkg.templateToRegexp(prov.template);
+						let match = resolver.match(regexp);
+						return (match && match[1]) || prov.params.option.default || null;
+					};
 					_paramList.write = function (section_id, formvalue) { };
 					_paramList.remove = function (section_id, formvalue) { };
 				} else if (prov.params.option.type === "text") {
@@ -655,12 +669,13 @@ return view.extend({
 		o.default = "";
 		o.depends("force_http1", "");
 
-		o = s.option(form.ListValue, "force_ipv6_resolvers", _("Use IPv6 resolvers"));
+		o = s.option(form.ListValue, "force_ip_family", _("DNS resolver IP family"));
 		o.modalonly = true;
 		o.optional = true;
-		o.rmempty = true;
-		o.value("", _("Use any family DNS resolvers"));
-		o.value("1", _("Force use of IPv6 DNS resolvers"));
+		o.value("", _("Use global setting"));
+		o.value("auto", _("Automatic (dual-stack)"));
+		o.value("ipv4", _("IPv4 only"));
+		o.value("ipv6", _("IPv6 only"));
 		o.default = "";
 
 		return Promise.all([status.render(), m.render()]);

@@ -84,14 +84,6 @@ return view.extend({
 		o.optional = true;
 		o.placeholder = 15;
 
-		o = s.option(form.Value, 'runas', _('RunAs User'), _('Drop privileges to this user'));
-		o.optional = true;
-		o.placeholder = 'nut'
-
-		o = s.option(form.Value, 'statepath', _('Path to state file'));
-		o.optional = true;
-		o.placeholder = '/var/run/nut'
-
 		o = s.option(form.Value, 'maxconn', _('Maximum connections'));
 		o.optional = true;
 		o.datatype = 'uinteger'
@@ -136,10 +128,6 @@ return view.extend({
 		o.optional = true;
 		o.default = false;
 
-		o = s.option(form.Value, 'user', _('RunAs User'), _('User as which to execute driver; requires device file accessed by driver to be read-write for that user.'));
-		o.optional = true;
-		o.placeholder = 'nut';
-
 		// Drivers
 		s = m.section(form.TypedSection, 'driver', _('Driver Configuration'),
 			_('The name of this section will be used as UPS name elsewhere'));
@@ -154,7 +142,7 @@ return view.extend({
 		o.optional = true;
 		o.placeholder = 'private';
 
-		o = s.option(form.Value, 'desc', _('Description (Display)'));
+		o = s.option(form.Value, 'desc', _('Description (Display)'), _('This is passed through to the driver, so make sure your driver supports this option'));
 		o.optional = true;
 
 		o = s.option(form.ListValue, 'driver', _('Driver'),
@@ -190,10 +178,10 @@ return view.extend({
 		o.datatype = 'uinteger';
 		o.placeholder = 45;
 
-		o = s.option(form.Value, 'mfr', _('Manufacturer (Display)'));
+		o = s.option(form.Value, 'mfr', _('Manufacturer (Display)'), _('This is passed through to the driver, so make sure your driver supports this option'));
 		o.optional = true;
 
-		o = s.option(form.Value, 'model', _('Model (Display)'));
+		o = s.option(form.Value, 'model', _('Model (Display)'), _('This is passed through to the driver, so make sure your driver supports this option'));
 		o.optional = true;
 
 		o = s.option(form.Flag, 'nolock', _('No Lock'), _('Do not lock port when starting driver'));
@@ -244,7 +232,7 @@ return view.extend({
 		o = s.option(form.Value, 'sdtime', _('Additional Shutdown Time(s)'));
 		o.optional = true;
 
-		o = s.option(form.Value, 'serial', _('Serial Number'));
+		o = s.option(form.Value, 'serial', _('Serial Number'),  _('This is passed through to the driver, so make sure your driver supports this option'));
 		o.optional = true;
 
 		o = s.option(form.Value, 'snmp_retries', _('SNMP retries'));

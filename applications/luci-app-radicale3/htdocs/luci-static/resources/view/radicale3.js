@@ -31,7 +31,7 @@ const callEncrypt = rpc.declare({
 const callPackageList = rpc.declare({
 	object: 'rpc-sys',
 	method: 'packagelist',
-	params: [],
+	params: ['all'],
 	expect: {},
 });
 
@@ -39,7 +39,7 @@ return view.extend({
 	load() {
 		return Promise.all([
 			L.resolveDefault(callServiceList('radicale3')),
-			L.resolveDefault(callPackageList()),
+			L.resolveDefault(callPackageList(true)),
 			uci.load('radicale3'),
 		]);
 	},
@@ -53,11 +53,11 @@ return view.extend({
 
 		button = '';
 
-		if ((radicale_address == '127.0.0.1') || (radicale_address == '::1')) {
+		if ((radicale_address == '127.0.0.1') || (radicale_address == '[::1]') || radicale_host == 'localhost') {
 			ui.addNotification(_('Need a listen address'),
 				_('Radicale needs a non-loopback IP address for your browser to access the web interface'));
 		} else {
-			if (radicale_address == '0.0.0.0' || radicale_address == '::') {
+			if (radicale_address == '0.0.0.0' || radicale_address == '[::]') {
 				radicale_address = window.location.hostname;
 			}
 			radicale_port = radicale_host.substring(radicale_host.lastIndexOf(':') + 1) || '5232';
@@ -84,8 +84,8 @@ return view.extend({
 
 		o = s.taboption('main', form.DynamicList, 'host', _('Host:port'));
 		o.optional = true;
-		o.datatype = 'or(hostport(0),ipaddrport(0))';
-		o.default = ['127.0.0.1:5232', '::1:5232'];
+		o.datatype = 'or(hostport(0),ipaddrport(1))';
+		o.default = ['127.0.0.1:5232', '[::1]:5232'];
 
 		s.tab('advanced', _('Advanced'));
 
@@ -453,21 +453,19 @@ return view.extend({
 		o = s.taboption('main', form.ListValue, 'level', _('Log Level'));
 		s.rmempty = true;
 		o.value('', _('Default (info)'));
+		o.value('trace', _('Trace'));
 		o.value('debug', _('Debug'));
 		o.value('info', _('Info'));
+		o.value('notice', _('Notice'));
 		o.value('warning', _('Warning'));
 		o.value('error', _('Error'));
 		o.value('critical', _('Critical'));
+		o.value('alert', _('Alert'));
 		o.default = '';
 
 		// TODO: Add more logging options
 
 		s.tab('advanced', _('Advanced'));
-
-		o = s.taboption('advanced', form.Flag, 'trace_on_debug', _('Trace on debug'), _('Do not filter debug messages starting with \'TRACE\''));
-		o.rmempty = true;
-		o.default = o.disabled;
-		o.depends('level', 'debug');
 
 		o = s.taboption('advanced', form.Flag, 'mask_passwords', _('Mask Passwords'), _('Redact passwords in logs'));
 		o.rmempty = true;
