@@ -85,6 +85,8 @@ return network.registerProtocol('modemmanager', {
 		o.value('', _('None'));
 		o.default = 'none';
 
+		// Disabled by koshev-msk. Use bands or modes via luci-app-mmconfig. Need code from select bands on proto application
+		/*
 		o = s.taboption('general', form.ListValue, 'allowedmode', _('Allowed network technology'),
 			_('Setting the allowed network technology.'));
 		o.value('2g');
@@ -123,6 +125,7 @@ return network.registerProtocol('modemmanager', {
 		o.depends('allowedmode','5g|4g|2g');
 		o.depends('allowedmode','5g|4g|3g');
 		o.depends('allowedmode','5g|4g|3g|2g');
+		*/
 
 		o = s.taboption('general', form.Value, 'username', _('PAP/CHAP username'));
 		o.depends({'allowedauth': 'pap', '!contains': true });
@@ -144,6 +147,11 @@ return network.registerProtocol('modemmanager', {
 		o.value('ipv4', _('IPv4 only'));
 		o.value('ipv6', _('IPv6 only'));
 		o.default = 'ipv4v6';
+
+		o = s.taboption('general', form.Flag, 'allow_roaming', _('Allow Roaming'), _('Allow connect to roaming Networks'));
+		o.enabled = '';
+		o.disabled = '0';
+		o.default = '';
 
 		o = s.taboption('advanced', form.Value, 'mtu', _('Override MTU'));
 		o.placeholder = dev ? (dev.getMTU() || '1500') : '1500';

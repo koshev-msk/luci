@@ -38,6 +38,11 @@ return view.extend({
 		o.datatype = 'uinteger';
 		o.value('220', _('Routing table %d').format('220'));
 
+		o = s.option(form.Flag, 'show_overview', _('Show on overview'),
+			_('Show MultiWAN status section on the overview page'));
+		o.default = o.enabled;
+		o.rmempty = false;
+
 		return m.render();
 	}
 })
