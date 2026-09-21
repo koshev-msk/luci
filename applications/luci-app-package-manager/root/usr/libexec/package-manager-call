@@ -41,6 +41,22 @@ case "$action" in
 						action="del"
 					;;
 				esac
+				# Packages uploaded through the LuCI UI land in /tmp with
+				# no signature apk can verify. Installs from a repo (plain
+				# package name) still go through normal signature checks;
+				# installing a /tmp file shifts responsibility for
+				# trusting it onto whoever uploaded it.
+				if [ "$action" = "add" ]; then
+					for arg; do
+						case "$arg" in
+							/tmp/*)
+								cmd="$cmd --allow-untrusted"
+								break
+							;;
+						esac
+					done
+				fi
+
 			fi
 
 			# APK have --autoremove enabled by default and
