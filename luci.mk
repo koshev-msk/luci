@@ -90,10 +90,13 @@ define findrev
   $(shell \
     if git log -1 >/dev/null 2>/dev/null; then \
       set -- $$(git log -1 --format="%ct %h" --abbrev=7 -- $(if $(1),. ':(exclude)po',po)); \
-      if [ -n "$$1" ]; then
+      if [ -n "$$1" ]; then \
         secs="$$(($$1 % 86400))"; \
         yday="$$(date --utc --date="@$$1" "+%y.%j")"; \
-        printf '%s.%05d~%s' "$$yday" "$$secs" "$$2"; \
+        year="$${yday%.*}"; \
+        day="$${yday#*.}"; \
+        year="$$(($$year + 100))"; \
+        printf '%03d.%s.%05d~%s' "$$year" "$$day" "$$secs" "$$2"; \
       else \
         echo "0"; \
       fi; \
